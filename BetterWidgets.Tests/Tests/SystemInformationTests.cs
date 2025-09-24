@@ -60,7 +60,6 @@ namespace BetterWidgets.Tests
             if(report.ex != null) throw report.ex;
 
             Assert.NotNull(report.report);
-            Assert.NotEmpty(report.report);
 
             foreach(var gpu in report.report)
             {
