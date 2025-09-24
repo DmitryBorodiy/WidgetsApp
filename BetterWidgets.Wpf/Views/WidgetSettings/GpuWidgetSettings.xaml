@@ -1,0 +1,83 @@
+﻿<c:WidgetSettingsView
+    x:Class="BetterWidgets.Views.WidgetSettings.GpuWidgetSettings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c="clr-namespace:BetterWidgets.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:BetterWidgets.Views.WidgetSettings"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:r="clr-namespace:BetterWidgets.Resources"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:viewModel="clr-namespace:BetterWidgets.ViewModel.WidgetsSettingsViews"
+    x:Name="Root"
+    Title="{x:Static r:Resources.GpuWidgetSettings}"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <c:WidgetSettingsView.DataContext>
+        <viewModel:GpuWidgetSettingsViewModel />
+    </c:WidgetSettingsView.DataContext>
+
+    <c:WidgetSettingsView.Settings>
+        <c:CardSettingView
+            Title="{x:Static r:Resources.EnableChartAnimation}"
+            Id="gpu.chartAnimation"
+            Subtitle="{x:Static r:Resources.EnableGPUChartAnimationSubtitle}">
+            <c:CardSettingView.Icon>
+                <ui:SymbolIcon Symbol="DataBarVertical20" />
+            </c:CardSettingView.Icon>
+            <c:CardSettingView.Header>
+                <ui:ToggleSwitch IsChecked="{Binding EnableChartAnimation, Mode=TwoWay}" />
+            </c:CardSettingView.Header>
+        </c:CardSettingView>
+        <c:CardSettingView
+            Title="{x:Static r:Resources.ChartOpacity}"
+            Id="gpu.chartOpacity"
+            Subtitle="{x:Static r:Resources.ChartOpacitySubtitle}">
+            <c:CardSettingView.Icon>
+                <ui:SymbolIcon Symbol="DarkTheme20" />
+            </c:CardSettingView.Icon>
+            <c:CardSettingView.Header>
+                <Slider
+                    MinWidth="130"
+                    VerticalAlignment="Center"
+                    LargeChange="0.1"
+                    Maximum="1"
+                    Minimum="0.1"
+                    SmallChange="0.1"
+                    Value="{Binding ChartOpacity, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            </c:CardSettingView.Header>
+        </c:CardSettingView>
+        <c:CardSettingView
+            Title="{x:Static r:Resources.UpdateInterval}"
+            Id="gpu.updateTick"
+            Subtitle="{x:Static r:Resources.UpdateIntervalSubtitle}">
+            <c:CardSettingView.Icon>
+                <ui:SymbolIcon Symbol="Timer20" />
+            </c:CardSettingView.Icon>
+            <c:CardSettingView.Header>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock
+                        Grid.Column="0"
+                        VerticalAlignment="Center"
+                        Text="{x:Static r:Resources.Miliseconds}" />
+                    <ui:NumberBox
+                        Grid.Column="1"
+                        Margin="5,0,0,0"
+                        VerticalAlignment="Center"
+                        LargeChange="100"
+                        Maximum="10000"
+                        Minimum="1000"
+                        SmallChange="100"
+                        Value="{Binding UpdateInterval, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                </Grid>
+            </c:CardSettingView.Header>
+        </c:CardSettingView>
+    </c:WidgetSettingsView.Settings>
+
+</c:WidgetSettingsView>

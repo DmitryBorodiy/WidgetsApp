@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="BetterWidgets.Views.Dialogs.InputDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:BetterWidgets.Views.Dialogs"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:r="clr-namespace:BetterWidgets.Resources"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    x:Name="Root"
+    d:DesignHeight="250"
+    d:DesignWidth="250"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary>
+            <Style BasedOn="{StaticResource {x:Type ui:TextBox}}" TargetType="ui:TextBox">
+                <Setter Property="RenderTransformOrigin" Value="0.5,0.5" />
+                <Setter Property="RenderTransform">
+                    <Setter.Value>
+                        <ScaleTransform ScaleX="1" ScaleY="1" />
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid x:Name="RootLayout">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <ui:TextBlock
+            d:Text="Rename task"
+            FontSize="20"
+            FontWeight="SemiBold"
+            Text="{Binding ElementName=Root, Path=Title, Mode=OneWay}" />
+
+        <ui:TextBlock
+            Grid.Row="1"
+            Margin="0,8,0,0"
+            d:Text="Task name"
+            Text="{Binding ElementName=Root, Path=Subtitle, Mode=OneWay}" />
+        <ui:TextBox
+            Grid.Row="2"
+            Margin="0,5,0,0"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Top"
+            PlaceholderEnabled="True"
+            PlaceholderText="{Binding ElementName=Root, Path=PlaceholderText, Mode=OneWay}"
+            Text="{Binding ElementName=Root, Path=Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+    </Grid>
+</Page>

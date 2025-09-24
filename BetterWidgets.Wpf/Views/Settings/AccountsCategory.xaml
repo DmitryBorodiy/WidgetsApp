@@ -1,0 +1,52 @@
+﻿<c:SettingCategory
+    x:Class="BetterWidgets.Views.Settings.AccountsCategory"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c="clr-namespace:BetterWidgets.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:BetterWidgets.Views.Settings"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:r="clr-namespace:BetterWidgets.Resources"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:vm="clr-namespace:BetterWidgets.ViewModel.SettingsViews"
+    Title="{x:Static r:Resources.Accounts}"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    Subtitle="{x:Static r:Resources.AccountsSubtitle}"
+    mc:Ignorable="d">
+    <c:SettingCategory.Icon>
+        <ui:SymbolIcon Symbol="Person20" />
+    </c:SettingCategory.Icon>
+
+    <c:SettingCategory.Settings>
+        <c:CardSettingView
+            Title="{x:Static r:Resources.MicrosoftAccount}"
+            Id="accounts.microsoft"
+            Subtitle="{x:Static r:Resources.MicrosoftAccountSubtitle}">
+            <c:CardSettingView.DataContext>
+                <vm:SettingsViewModel />
+            </c:CardSettingView.DataContext>
+            <c:CardSettingView.Icon>
+                <ui:ImageIcon Source="pack://application:,,,/Assets/microsoft-ic.png" />
+            </c:CardSettingView.Icon>
+            <c:CardSettingView.Header>
+                <StackPanel
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
+                    <ui:Button
+                        VerticalAlignment="Center"
+                        Command="{Binding SignInCommand}"
+                        Content="{x:Static r:Resources.SignInLabel}"
+                        Visibility="{Binding IsSignedIn, Mode=OneWay, Converter={StaticResource BoolToVisibilityInvert}}" />
+                    <ui:Button
+                        VerticalAlignment="Center"
+                        Command="{Binding SignOutCommand}"
+                        Content="{x:Static r:Resources.SignOutLabel}"
+                        Visibility="{Binding IsSignedIn, Mode=OneWay, Converter={StaticResource BoolToVisibility}}" />
+                </StackPanel>
+            </c:CardSettingView.Header>
+        </c:CardSettingView>
+    </c:SettingCategory.Settings>
+
+</c:SettingCategory>

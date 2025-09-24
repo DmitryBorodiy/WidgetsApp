@@ -1,0 +1,60 @@
+﻿<c:Widget
+    x:Class="BetterWidgets.Widgets.BlankWidget"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c="clr-namespace:BetterWidgets.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:h="clr-namespace:BetterWidgets.Helpers"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:vm="clr-namespace:BetterWidgets.ViewModel.Widgets"
+    x:Name="BlankWidgetUI"
+    Width="260"
+    Height="250"
+    MinWidth="100"
+    MinHeight="120"
+    AppearedCommand="{Binding AppearedCommand}"
+    AppearedCommandParameter="{Binding ElementName=BlankWidgetUI}"
+    IsTitleBarEnabled="True"
+    Style="{StaticResource DefaultWidgetStyle}"
+    mc:Ignorable="d">
+    <c:Widget.DataContext>
+        <vm:BlankWidgetViewModel />
+    </c:Widget.DataContext>
+    <c:Widget.TitleBar>
+        <c:WidgetTitleBar
+            x:Name="TitleBarUI"
+            Title="{Binding Widget.Title, Mode=OneWay}"
+            Grid.Row="0"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Top"
+            Background="Transparent"
+            CloseCommand="{Binding CloseCommand}"
+            Icon="{Binding Widget.Icon, Mode=OneWay}"
+            IsPinned="{Binding ElementName=BlankWidgetUI, Path=IsPinned, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+    </c:Widget.TitleBar>
+
+    <Grid x:Name="RootLayout">
+        <StackPanel
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            h:MarginSetter.Margin="3">
+            <ui:TextBlock
+                x:Name="LabelUI"
+                FontSize="20"
+                Text="{Binding CounterLabel, Mode=OneWay}" />
+            <ui:Button
+                HorizontalAlignment="Center"
+                Command="{Binding CountCommand}"
+                Content="Click me!" />
+            <ui:Button
+                HorizontalAlignment="Center"
+                Appearance="Primary"
+                Click="OnHelloClick"
+                Content="Say hello" />
+            <ui:TextBlock HorizontalAlignment="Center" Text="{Binding StateLabel, Mode=OneWay}" />
+            <ui:TextBlock HorizontalAlignment="Center" Text="{Binding Widget.IsPinnedDesktop, Mode=OneWay}" />
+        </StackPanel>
+    </Grid>
+
+</c:Widget>

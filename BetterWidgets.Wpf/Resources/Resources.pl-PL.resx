@@ -1,0 +1,989 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppName" xml:space="preserve">
+    <value>Lepsze widżety</value>
+  </data>
+  <data name="WidgetsLabel" xml:space="preserve">
+    <value>Widżety</value>
+  </data>
+  <data name="SearchWidgets" xml:space="preserve">
+    <value>Widżety wyszukiwania...</value>
+  </data>
+  <data name="SettingsLabel" xml:space="preserve">
+    <value>Ustawienia</value>
+  </data>
+  <data name="ProposeLabel" xml:space="preserve">
+    <value>Zaproponuj funkcję</value>
+  </data>
+  <data name="PinOnDesktop" xml:space="preserve">
+    <value>Przypinanie na pulpicie</value>
+  </data>
+  <data name="PrivacyLabel" xml:space="preserve">
+    <value>Prywatność</value>
+  </data>
+  <data name="ShareLabel" xml:space="preserve">
+    <value>Udostępnij</value>
+  </data>
+  <data name="AboutLabel" xml:space="preserve">
+    <value>Około</value>
+  </data>
+  <data name="AboutSubtitle" xml:space="preserve">
+    <value>O aktualnej wersji aplikacji i weryfikacji aktualizacji.</value>
+  </data>
+  <data name="Clipboard" xml:space="preserve">
+    <value>Schowek</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Lokalizacja</value>
+  </data>
+  <data name="AllowLabel" xml:space="preserve">
+    <value>Pozwolić</value>
+  </data>
+  <data name="DenyLabel" xml:space="preserve">
+    <value>Zaprzeczać</value>
+  </data>
+  <data name="RequestAccessDialogTitle" xml:space="preserve">
+    <value>Dostęp z uprawnieniami</value>
+  </data>
+  <data name="RequestAccessSubtitle" xml:space="preserve">
+    <value>Czy na pewno chcesz zapewnić dostęp do {0}?</value>
+  </data>
+  <data name="RequestAccessTitle" xml:space="preserve">
+    <value>Zezwalanie na dostęp do {0}</value>
+  </data>
+  <data name="AppBuildLabel" xml:space="preserve">
+    <value>Kompilacja aplikacji</value>
+  </data>
+  <data name="AppChanelLabel" xml:space="preserve">
+    <value>Kanał aplikacji</value>
+  </data>
+  <data name="AppDeveloperLabel" xml:space="preserve">
+    <value>Wywoływacz</value>
+  </data>
+  <data name="AppVersionLabel" xml:space="preserve">
+    <value>Wersja aplikacji</value>
+  </data>
+  <data name="WeatherWidgetSettingsTitle" xml:space="preserve">
+    <value>Ustawienia pogody</value>
+  </data>
+  <data name="WeatherWidgetSubtitle" xml:space="preserve">
+    <value>Widget pogody dostarcza aktualnych informacji o temperaturze, wilgotności, wietrze i prognozie na nadchodzące dni.</value>
+  </data>
+  <data name="WeatherWidgetTitle" xml:space="preserve">
+    <value>Pogoda</value>
+  </data>
+  <data name="UnpinFromDesktop" xml:space="preserve">
+    <value>Odepnij od pulpitu</value>
+  </data>
+  <data name="AccountInfo" xml:space="preserve">
+    <value>Informacje o koncie osobistym</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Zamykać</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Odświeżyć</value>
+  </data>
+  <data name="SignOutLabel" xml:space="preserve">
+    <value>Wyloguj się</value>
+  </data>
+  <data name="SignInLabel" xml:space="preserve">
+    <value>Rejestrowanie</value>
+  </data>
+  <data name="DefaultLocation" xml:space="preserve">
+    <value>Lokalizacja domyślna</value>
+  </data>
+  <data name="DefaultWeatherLocation" xml:space="preserve">
+    <value>Domyślna lokalizacja pogody</value>
+  </data>
+  <data name="DetectLocation" xml:space="preserve">
+    <value>Wykrywanie lokalizacji</value>
+  </data>
+  <data name="LiveBackgroundSettingSubtitle" xml:space="preserve">
+    <value>Włącz animowane tła pogodowe, aby widżet był bardziej żywy i wciągający.</value>
+  </data>
+  <data name="LiveBackgroundSettingTitle" xml:space="preserve">
+    <value>Włącz tło na żywo</value>
+  </data>
+  <data name="WeatherLocationSetting" xml:space="preserve">
+    <value>Lokalizacja pogodowa</value>
+  </data>
+  <data name="WeatherLocationSettingSubtitle" xml:space="preserve">
+    <value>Ustaw preferowaną lokalizację, aby otrzymywać dokładne lokalne aktualizacje pogody w widżecie.</value>
+  </data>
+  <data name="CelsiusUnits" xml:space="preserve">
+    <value>Celsjusza</value>
+  </data>
+  <data name="FahrenheitUnits" xml:space="preserve">
+    <value>Stopnie Fahrenheita</value>
+  </data>
+  <data name="GeolocationPermissionDialogSubtitle" xml:space="preserve">
+    <value>Aby skorzystać z tej funkcji, musisz przyznać dostęp do geolokalizacji w ustawieniach systemu Windows.</value>
+  </data>
+  <data name="GeolocationPermissionDialogTitle" xml:space="preserve">
+    <value>Dostęp do geolokalizacji</value>
+  </data>
+  <data name="LocationBoxPlaceholder" xml:space="preserve">
+    <value>Wprowadź lokalizację</value>
+  </data>
+  <data name="Minutes" xml:space="preserve">
+    <value>Min</value>
+  </data>
+  <data name="OpenSettingsLabel" xml:space="preserve">
+    <value>Otwórz ustawienia</value>
+  </data>
+  <data name="UpdateInterval" xml:space="preserve">
+    <value>Interwał aktualizacji</value>
+  </data>
+  <data name="UpdateIntervalSubtitle" xml:space="preserve">
+    <value>Określ, jak często widżet jest aktualizowany, aby wyświetlać najnowsze informacje o pogodzie.</value>
+  </data>
+  <data name="WeatherTempUnits" xml:space="preserve">
+    <value>Jednostki pogodowe</value>
+  </data>
+  <data name="WeatherTempUnitsSubtitle" xml:space="preserve">
+    <value>Wybierz między stopniami Celsjusza i Fahrenheita, aby wyświetlić temperaturę w preferowanych jednostkach.</value>
+  </data>
+  <data name="MeterSec" xml:space="preserve">
+    <value>m/s</value>
+  </data>
+  <data name="MilesHour" xml:space="preserve">
+    <value>ml/godz.</value>
+  </data>
+  <data name="AutorunSettingSubitle" xml:space="preserve">
+    <value>Umożliwia automatyczne uruchamianie aplikacji po zalogowaniu.</value>
+  </data>
+  <data name="AutorunSettingTitle" xml:space="preserve">
+    <value>Włącz automatyczne uruchamianie</value>
+  </data>
+  <data name="GeneralSettings" xml:space="preserve">
+    <value>Ustawienia ogólne</value>
+  </data>
+  <data name="GeneralSettingsSubtitle" xml:space="preserve">
+    <value>Główne ustawienia aplikacji pozwalają na zarządzanie ogólnymi parametrami, autostartem i dodatkowymi funkcjami ułatwiającymi obsługę.</value>
+  </data>
+  <data name="ClipboardPermissionSubtitle" xml:space="preserve">
+    <value>Zezwala widżetowi na odczytywanie lub zapisywanie danych ze schowka.</value>
+  </data>
+  <data name="LocationPermissionSubtitle" xml:space="preserve">
+    <value>Zezwala widżetowi na dostęp do lokalizacji urządzenia.</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Uprawnienia</value>
+  </data>
+  <data name="PermissionsSubtitle" xml:space="preserve">
+    <value>Widżet "{0}" prosi o następujące uprawnienia. Będą one używane, gdy uzyskuje dostęp do poufnych danych lub funkcji.</value>
+  </data>
+  <data name="SecurityLabel" xml:space="preserve">
+    <value>Bezpieczeństwo</value>
+  </data>
+  <data name="SecuritySubtitle" xml:space="preserve">
+    <value>Ustawienia zabezpieczeń widżetów, zarządzanie uprawnieniami i ustawienia logowania.</value>
+  </data>
+  <data name="WindowsHello" xml:space="preserve">
+    <value>Windows Hello</value>
+  </data>
+  <data name="WindowsHelloLockTime" xml:space="preserve">
+    <value>Czas blokady weryfikacji tożsamości</value>
+  </data>
+  <data name="WindowsHelloLockTimeSubtitle" xml:space="preserve">
+    <value>Ten zakres czasu określa, kiedy okno dialogowe potwierdzenia Windows Hello zostanie ponownie zażądane przy następnym weryfikowaniu tożsamości.</value>
+  </data>
+  <data name="WindowsHelloSubtitle" xml:space="preserve">
+    <value>Włącz lub wyłącz funkcję Windows Hello, aby zweryfikować swoją tożsamość, gdy widżety proszą o pozwolenie.</value>
+  </data>
+  <data name="AccentColorSettingSubtitle" xml:space="preserve">
+    <value>Dostosuj kolor akcentu głównej powłoki i widżetów.</value>
+  </data>
+  <data name="AccentColorSettingTitle" xml:space="preserve">
+    <value>Kolor akcentujący</value>
+  </data>
+  <data name="AppearanceSettingsSubtitle" xml:space="preserve">
+    <value>Dostosuj wygląd aplikacji i widżetów.</value>
+  </data>
+  <data name="AppearanceSettingsTitle" xml:space="preserve">
+    <value>Wygląd</value>
+  </data>
+  <data name="DarkThemeSubtitle" xml:space="preserve">
+    <value>Włącz lub wyłącz ciemny motyw dla powłoki aplikacji i widżetów.</value>
+  </data>
+  <data name="DarkThemeTitle" xml:space="preserve">
+    <value>Ciemny motyw</value>
+  </data>
+  <data name="PermssionsSettingSubtitle" xml:space="preserve">
+    <value>Zarządzanie dostępem do funkcji i danych aplikacji. Wybierz uprawnienia, które chcesz udzielić, aby zapewnić wygodę i bezpieczeństwo użytkowania.</value>
+  </data>
+  <data name="WidgetTransparency" xml:space="preserve">
+    <value>Przezroczystość widżetu</value>
+  </data>
+  <data name="WidgetTransparencySubtitle" xml:space="preserve">
+    <value>Kontroluj przezroczystość widżetu: zmniejsz wartość, aby była mniej zauważalna i mniej odwracała uwagę od głównej treści.</value>
+  </data>
+  <data name="Appointments" xml:space="preserve">
+    <value>Terminy</value>
+  </data>
+  <data name="AppointmentsPermissionSubtitle" xml:space="preserve">
+    <value>Zapewnia dostęp do wydarzeń w kalendarzu.</value>
+  </data>
+  <data name="ClockSettings" xml:space="preserve">
+    <value>Ustawienia zegara</value>
+  </data>
+  <data name="ClockWidgetSubtitle" xml:space="preserve">
+    <value>Lekki i responsywny widżet czasu, który dokładnie wyświetla aktualną godzinę i datę, z konfigurowalnymi formatami i minimalnym zużyciem zasobów.</value>
+  </data>
+  <data name="ClockWidgetTitle" xml:space="preserve">
+    <value>Zegar</value>
+  </data>
+  <data name="DateFormatSubtitle" xml:space="preserve">
+    <value>Włącz wyświetlanie daty i skonfiguruj format daty.</value>
+  </data>
+  <data name="CalendarDateFormatSubtitle" xml:space="preserve">
+    <value>Dostosuj format daty wyświetlany w niektórych scenariuszach użycia kalendarza.</value>
+  </data>
+  <data name="DateFormatTitle" xml:space="preserve">
+    <value>Format daty</value>
+  </data>
+  <data name="DateDisplay" xml:space="preserve">
+    <value>Wyświetlanie daty</value>
+  </data>
+  <data name="NoNetworkSubtitle" xml:space="preserve">
+    <value>Nie ma dostępu do Internetu, sprawdź połączenie sieciowe i spróbuj ponownie.</value>
+  </data>
+  <data name="NoNetworkTitle" xml:space="preserve">
+    <value>Brak połączenia sieciowego</value>
+  </data>
+  <data name="OpenCalendar" xml:space="preserve">
+    <value>Otwórz kalendarz</value>
+  </data>
+  <data name="OpenClockAlarms" xml:space="preserve">
+    <value>Otwórz Alarmy i zegar</value>
+  </data>
+  <data name="TimeFormatSubtitle" xml:space="preserve">
+    <value>Format wyświetlania czasu konfiguracji</value>
+  </data>
+  <data name="TimeFormatTitle" xml:space="preserve">
+    <value>Format czasu</value>
+  </data>
+  <data name="CloseLabel" xml:space="preserve">
+    <value>Zamykać</value>
+  </data>
+  <data name="PinLabel" xml:space="preserve">
+    <value>Szpilka</value>
+  </data>
+  <data name="AnalogClock" xml:space="preserve">
+    <value>Zegar analogowy</value>
+  </data>
+  <data name="DigitalClock" xml:space="preserve">
+    <value>Zegar cyfrowy</value>
+  </data>
+  <data name="EmptyInputMessage" xml:space="preserve">
+    <value>Pole nie może być puste.</value>
+  </data>
+  <data name="InvalidDateMessage" xml:space="preserve">
+    <value>Nieprawidłowy format daty.</value>
+  </data>
+  <data name="InvalidTimeMessage" xml:space="preserve">
+    <value>Nieprawidłowy format czasu.</value>
+  </data>
+  <data name="DisableBackgroundSetting" xml:space="preserve">
+    <value>Wyłącz tło</value>
+  </data>
+  <data name="DisableBackgroundSettingSubtitle" xml:space="preserve">
+    <value>Wyłącza dekorację tła widżetu, czyniąc go przezroczystym i umożliwiając wyświetlanie elementów interfejsu bez dodatkowego tła.</value>
+  </data>
+  <data name="ShowAppointmentsSetting" xml:space="preserve">
+    <value>Pokaż nominacje</value>
+  </data>
+  <data name="ShowAppointmentsSettingSubtitle" xml:space="preserve">
+    <value>Włącz wyświetlanie wydarzeń w kalendarzu w widżecie zegara.</value>
+  </data>
+  <data name="EnableShadowEffect" xml:space="preserve">
+    <value>Włącz cień</value>
+  </data>
+  <data name="EnableShadowEffectSubtitle" xml:space="preserve">
+    <value>Dodaje subtelny cień za tekstem na widżecie zegara cyfrowego, zwiększając czytelność i głębię wizualną.</value>
+  </data>
+  <data name="AddTimeZone" xml:space="preserve">
+    <value>Dodaj strefę czasową</value>
+  </data>
+  <data name="CancelLabel" xml:space="preserve">
+    <value>Anuluj</value>
+  </data>
+  <data name="SelectLabel" xml:space="preserve">
+    <value>Wybrać</value>
+  </data>
+  <data name="TimeZoneLabel" xml:space="preserve">
+    <value>Strefa czasowa</value>
+  </data>
+  <data name="TimeZonesSubtitle" xml:space="preserve">
+    <value>Wybierz strefę czasową, w której czas zostanie dodany pod dodatkowym zegarem.</value>
+  </data>
+  <data name="TimeZonesTitle" xml:space="preserve">
+    <value>Strefy czasowe</value>
+  </data>
+  <data name="ChoosePictureLabel" xml:space="preserve">
+    <value>Wybierz zdjęcie</value>
+  </data>
+  <data name="CustomClockFace" xml:space="preserve">
+    <value>Niestandardowa tarcza zegara</value>
+  </data>
+  <data name="RemoveLabel" xml:space="preserve">
+    <value>Usunąć</value>
+  </data>
+  <data name="ShowClockFace" xml:space="preserve">
+    <value>Pokaż tarczę zegara</value>
+  </data>
+  <data name="ShowClockFaceSubtitle" xml:space="preserve">
+    <value>Wyświetla tarczę zegara ze znacznikami godzin na tle zegara.</value>
+  </data>
+  <data name="TimeZonesEmptySubtitle" xml:space="preserve">
+    <value>W tym miejscu zostaną wyświetlone strefy czasowe dla widżetu zegara. Dodając strefę czasową, możesz łatwo przełączać się między nimi w widżecie.</value>
+  </data>
+  <data name="TimeZonesEmptyTitle" xml:space="preserve">
+    <value>Niestandardowe strefy czasowe</value>
+  </data>
+  <data name="CannotGetWeatherSubtitle" xml:space="preserve">
+    <value>Wystąpił błąd podczas pobierania pogody.</value>
+  </data>
+  <data name="CannotGetWeatherTitle" xml:space="preserve">
+    <value>Nie mogę dostać pogody</value>
+  </data>
+  <data name="CalendarWidgetSettings" xml:space="preserve">
+    <value>Ustawienia kalendarza</value>
+  </data>
+  <data name="CalendarWidgetSubtitle" xml:space="preserve">
+    <value>Wyświetla bieżącą datę, nadchodzące wydarzenia i przypomnienia, pomagając szybko śledzić ważne zadania i terminy.</value>
+  </data>
+  <data name="CalendarWidgetTitle" xml:space="preserve">
+    <value>Kalendarz</value>
+  </data>
+  <data name="CreateEvent" xml:space="preserve">
+    <value>Utwórz wydarzenie</value>
+  </data>
+  <data name="AppointmentSampleEndTime" xml:space="preserve">
+    <value>2h</value>
+  </data>
+  <data name="AppointmentSampleStartTime" xml:space="preserve">
+    <value>19 sierpnia - 12:00</value>
+  </data>
+  <data name="AppointmentSampleTitle" xml:space="preserve">
+    <value>Twoje spotkanie</value>
+  </data>
+  <data name="AllDay" xml:space="preserve">
+    <value>Cały dzień</value>
+  </data>
+  <data name="AppointmentsPermissionRequestSubtitle" xml:space="preserve">
+    <value>Przyznaj uprawnienia do wyświetlania wydarzeń w kalendarzu i zarządzania nimi.</value>
+  </data>
+  <data name="DeleteAppointmentSubtitle" xml:space="preserve">
+    <value>Czy na pewno chcesz usunąć to wydarzenie z kalendarza?</value>
+  </data>
+  <data name="DeleteAppointmentTitle" xml:space="preserve">
+    <value>Usuń zdarzenie</value>
+  </data>
+  <data name="DeleteLabel" xml:space="preserve">
+    <value>Usunąć</value>
+  </data>
+  <data name="NetworkNeededTitle" xml:space="preserve">
+    <value>Potrzebujesz do tego internetu</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nie</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Tak</value>
+  </data>
+  <data name="TodayLabel" xml:space="preserve">
+    <value>Dzisiaj</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Tworzyć</value>
+  </data>
+  <data name="MSAccount" xml:space="preserve">
+    <value>Konto Microsoft</value>
+  </data>
+  <data name="SignInMessage" xml:space="preserve">
+    <value>Aby w pełni wykorzystać możliwości tego widżetu, zalecamy zalogowanie się na swoje konto Microsoft.</value>
+  </data>
+  <data name="CalendarTimeFormatSubtitle" xml:space="preserve">
+    <value>Dostosuj format czasu wyświetlany w niektórych scenariuszach użycia kalendarza.</value>
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>Piątek</value>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value>Poniedziałek</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>Sobota</value>
+  </data>
+  <data name="StartWeekFrom" xml:space="preserve">
+    <value>Rozpocznij tydzień od</value>
+  </data>
+  <data name="StartWeekFromSubtitle" xml:space="preserve">
+    <value>Wybierz dzień, w którym chcesz rozpocząć tydzień.</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>Niedziela</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>Czwartek</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>Wtorek</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>Środa</value>
+  </data>
+  <data name="DefaultCalendar" xml:space="preserve">
+    <value>Kalendarz domyślny</value>
+  </data>
+  <data name="StatusColors" xml:space="preserve">
+    <value>Kolory statusu</value>
+  </data>
+  <data name="StatusColorsSubtitle" xml:space="preserve">
+    <value>Wybierz kolory stanu dla wydarzeń w kalendarzu.</value>
+  </data>
+  <data name="Busy" xml:space="preserve">
+    <value>Zajęty</value>
+  </data>
+  <data name="Free" xml:space="preserve">
+    <value>Wolny</value>
+  </data>
+  <data name="Oof" xml:space="preserve">
+    <value>Poza biurem</value>
+  </data>
+  <data name="SelectColor" xml:space="preserve">
+    <value>Wybierz kolor</value>
+  </data>
+  <data name="Tentative" xml:space="preserve">
+    <value>Niepewny</value>
+  </data>
+  <data name="WorkingElsewhere" xml:space="preserve">
+    <value>Praca w innym miejscu</value>
+  </data>
+  <data name="SelectCalendar" xml:space="preserve">
+    <value>Wybierz kalendarz</value>
+  </data>
+  <data name="AccentColor" xml:space="preserve">
+    <value>Kolor akcentujący</value>
+  </data>
+  <data name="Accounts" xml:space="preserve">
+    <value>Konta</value>
+  </data>
+  <data name="AccountSettings" xml:space="preserve">
+    <value>Ustawienia konta</value>
+  </data>
+  <data name="AccountsSubtitle" xml:space="preserve">
+    <value>Skonfiguruj konta do korzystania z widżetów. Zalogowanie się na konto umożliwia aktywację dodatkowych lub podstawowych funkcji niektórych widżetów.</value>
+  </data>
+  <data name="EnterEventName" xml:space="preserve">
+    <value>Wprowadź nazwę wydarzenia</value>
+  </data>
+  <data name="RequiresRestart" xml:space="preserve">
+    <value>Wymaga ponownego uruchomienia</value>
+  </data>
+  <data name="RequiresRestartSubtitle" xml:space="preserve">
+    <value>Aby zastosować to ustawienie, należy ponownie uruchomić aplikację.</value>
+  </data>
+  <data name="SubjectFieldEmpty" xml:space="preserve">
+    <value>Pole tematu nie może być puste.</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Redagować</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Zapisać</value>
+  </data>
+  <data name="LanguageSetting" xml:space="preserve">
+    <value>Język widżetu</value>
+  </data>
+  <data name="LanguageSettingSubtitle" xml:space="preserve">
+    <value>Wybierz domyślny język widżetów i powłoki.</value>
+  </data>
+  <data name="Restart" xml:space="preserve">
+    <value>Restart</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Widok</value>
+  </data>
+  <data name="FindPlace" xml:space="preserve">
+    <value>Znajdź miejsce</value>
+  </data>
+  <data name="PlaceSearchPlaceholder" xml:space="preserve">
+    <value>Szukaj miejsc</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Szukać</value>
+  </data>
+  <data name="PlaceNameCannotBeEmpty" xml:space="preserve">
+    <value>Nazwa miejsca nie może być pusta.</value>
+  </data>
+  <data name="PlaceNameValidationError" xml:space="preserve">
+    <value>Nazwa miasta zawiera nieprawidłowe znaki.</value>
+  </data>
+  <data name="TodoWidgetSubtitle" xml:space="preserve">
+    <value>Ten widżet wyświetla zadania z list zadań do wykonania firmy Microsoft i umożliwia szybkie tworzenie i edytowanie zadań.</value>
+  </data>
+  <data name="TodoWidgetTitle" xml:space="preserve">
+    <value>Do zrobienia</value>
+  </data>
+  <data name="Tasks" xml:space="preserve">
+    <value>Zadania</value>
+  </data>
+  <data name="TasksPermissionSubtitle" xml:space="preserve">
+    <value>Zezwala widżetom na dostęp do list zadań i zarządzanie nimi.</value>
+  </data>
+  <data name="AddTask" xml:space="preserve">
+    <value>Dodaj zadanie</value>
+  </data>
+  <data name="NoTasksSubtitle" xml:space="preserve">
+    <value>Usiądź wygodnie i zrelaksuj się lub dodaj nowe zadanie za pomocą powyższego przycisku.</value>
+  </data>
+  <data name="NoTasksTitle" xml:space="preserve">
+    <value>Jesteś wolny</value>
+  </data>
+  <data name="SelectList" xml:space="preserve">
+    <value>Wybierz listę</value>
+  </data>
+  <data name="ToDoSettings" xml:space="preserve">
+    <value>Aby wykonać ustawienia</value>
+  </data>
+  <data name="TomorrowLabel" xml:space="preserve">
+    <value>Jutro</value>
+  </data>
+  <data name="YesterdayLabel" xml:space="preserve">
+    <value>Wczoraj</value>
+  </data>
+  <data name="DefaultTodoList" xml:space="preserve">
+    <value>Domyślna lista zadań do wykonania</value>
+  </data>
+  <data name="DefaultTodoListSubtitle" xml:space="preserve">
+    <value>Wybierz, która lista zadań będzie wyświetlana domyślnie.</value>
+  </data>
+  <data name="ShowCompletedTasks" xml:space="preserve">
+    <value>Pokaż ukończone zadania</value>
+  </data>
+  <data name="ShowCompletedTasksSubtitle" xml:space="preserve">
+    <value>Włącz wyświetlanie ukończonych zadań na listach.</value>
+  </data>
+  <data name="DeleteTaskSubtitle" xml:space="preserve">
+    <value>Czy na pewno chcesz usunąć to zadanie?</value>
+  </data>
+  <data name="DeleteTaskTitle" xml:space="preserve">
+    <value>Usuń zadanie</value>
+  </data>
+  <data name="ReminderLabel" xml:space="preserve">
+    <value>Przypomnienie</value>
+  </data>
+  <data name="DueDateLabel" xml:space="preserve">
+    <value>Termin</value>
+  </data>
+  <data name="CreateSubTask" xml:space="preserve">
+    <value>Dodaj zadanie listy kontrolnej</value>
+  </data>
+  <data name="EnterTaskName" xml:space="preserve">
+    <value>Co chcesz zrobić?</value>
+  </data>
+  <data name="Rename" xml:space="preserve">
+    <value>Przemianować</value>
+  </data>
+  <data name="CannotDeleteTaskError" xml:space="preserve">
+    <value>Nie możesz teraz usunąć tego zadania, spróbuj ponownie później.</value>
+  </data>
+  <data name="Checklist" xml:space="preserve">
+    <value>Lista kontrolna</value>
+  </data>
+  <data name="CannotSetReminderDate" xml:space="preserve">
+    <value>Nie możemy teraz ustawić daty przypomnienia, spróbuj ponownie później.</value>
+  </data>
+  <data name="CannotChangeTaskTitle" xml:space="preserve">
+    <value>Nie możemy w tej chwili zaktualizować tytułu zadania, spróbuj ponownie później.</value>
+  </data>
+  <data name="SetDueDate" xml:space="preserve">
+    <value>Ustawianie terminu</value>
+  </data>
+  <data name="SetReminder" xml:space="preserve">
+    <value>Ustawianie przypomnienia</value>
+  </data>
+  <data name="ViewInMSTodo" xml:space="preserve">
+    <value>Zobacz w To do zrobienia</value>
+  </data>
+  <data name="ChooseListIcon" xml:space="preserve">
+    <value>Wybierz ikonę listy</value>
+  </data>
+  <data name="PickIcon" xml:space="preserve">
+    <value>Ikona wyboru</value>
+  </data>
+  <data name="SearchEmoji" xml:space="preserve">
+    <value>Szukaj emotikonów...</value>
+  </data>
+  <data name="RemoveIcon" xml:space="preserve">
+    <value>Usuń ikonę</value>
+  </data>
+  <data name="Notes" xml:space="preserve">
+    <value>Notatki</value>
+  </data>
+  <data name="NotesPermissionSubtitle" xml:space="preserve">
+    <value>Zezwala widżetom na dostęp do notatek tekstowych i zarządzanie nimi.</value>
+  </data>
+  <data name="NotesSubtitle" xml:space="preserve">
+    <value>Ten widżet umożliwia przypinanie notatek do pulpitu, obsługuje znaczniki i podświetlanie kodu.</value>
+  </data>
+  <data name="Beep" xml:space="preserve">
+    <value>Sygnał</value>
+  </data>
+  <data name="CheckTaskSound" xml:space="preserve">
+    <value>Dźwięk sprawdzania zadań</value>
+  </data>
+  <data name="CheckTaskSoundSubtitle" xml:space="preserve">
+    <value>Wybierz dźwięk, który będzie odtwarzany po zakończeniu zadania.</value>
+  </data>
+  <data name="EnableCheckTaskSound" xml:space="preserve">
+    <value>Włącz dźwięk sprawdzania zadań</value>
+  </data>
+  <data name="EnableCheckTaskSoundSubtitle" xml:space="preserve">
+    <value>Odtwórz dźwięk po zakończeniu zadania.</value>
+  </data>
+  <data name="Asterisk" xml:space="preserve">
+    <value>Gwiazdka</value>
+  </data>
+  <data name="Exclamation" xml:space="preserve">
+    <value>Wykrzyknik</value>
+  </data>
+  <data name="Hand" xml:space="preserve">
+    <value>Ręka</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>Pytanie</value>
+  </data>
+  <data name="MaxTasksNumber" xml:space="preserve">
+    <value>Maksymalna liczba zadań do wyświetlenia</value>
+  </data>
+  <data name="MaxTasksNumberSubtitle" xml:space="preserve">
+    <value>Wybierz maksymalną liczbę zadań do wyświetlenia na liście.</value>
+  </data>
+  <data name="SortBy" xml:space="preserve">
+    <value>Sortuj wg:</value>
+  </data>
+  <data name="SortByDate" xml:space="preserve">
+    <value>Według daty</value>
+  </data>
+  <data name="SortByImportance" xml:space="preserve">
+    <value>Według ważności</value>
+  </data>
+  <data name="SortByName" xml:space="preserve">
+    <value>Według nazwy</value>
+  </data>
+  <data name="TaskSorting" xml:space="preserve">
+    <value>Sortowanie zadań</value>
+  </data>
+  <data name="TaskSortingSubtitle" xml:space="preserve">
+    <value>Konfigurowanie sortowania zadań</value>
+  </data>
+  <data name="StickyNotesSettings" xml:space="preserve">
+    <value>Ustawienia karteczek samoprzylepnych</value>
+  </data>
+  <data name="AllNotes" xml:space="preserve">
+    <value>Lista wszystkich notatek</value>
+  </data>
+  <data name="NewNote" xml:space="preserve">
+    <value>Nowa notatka</value>
+  </data>
+  <data name="NotePlaceholder" xml:space="preserve">
+    <value>Po jednym słowie następuje drugie. Po prostu zacznij pisać...</value>
+  </data>
+  <data name="NoPermission" xml:space="preserve">
+    <value>Brak pozwolenia</value>
+  </data>
+  <data name="NoPermissionSubtitle" xml:space="preserve">
+    <value>Dostęp do funkcji «{0}» wymaga pozwolenia, możesz udzielić pozwolenia teraz lub zrobić to później w ustawieniach.</value>
+  </data>
+  <data name="Unpin" xml:space="preserve">
+    <value>Odpiąć</value>
+  </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Kopiować</value>
+  </data>
+  <data name="Cut" xml:space="preserve">
+    <value>Ciąć</value>
+  </data>
+  <data name="Paste" xml:space="preserve">
+    <value>Wklejać</value>
+  </data>
+  <data name="DeleteNote" xml:space="preserve">
+    <value>Usuń notatkę</value>
+  </data>
+  <data name="DeleteNoteSubtitle" xml:space="preserve">
+    <value>Czy naprawdę chcesz usunąć tę notatkę?</value>
+  </data>
+  <data name="Bold" xml:space="preserve">
+    <value>Śmiały</value>
+  </data>
+  <data name="Italic" xml:space="preserve">
+    <value>Kursywa</value>
+  </data>
+  <data name="Underline" xml:space="preserve">
+    <value>Podkreślać</value>
+  </data>
+  <data name="EnterNoteName" xml:space="preserve">
+    <value>Wprowadź tytuł notatki...</value>
+  </data>
+  <data name="Redo" xml:space="preserve">
+    <value>Ponowić</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>Cofnąć</value>
+  </data>
+  <data name="PickColor" xml:space="preserve">
+    <value>Wybierz kolor</value>
+  </data>
+  <data name="Bullets" xml:space="preserve">
+    <value>Przełączanie punktorów</value>
+  </data>
+  <data name="Numbering" xml:space="preserve">
+    <value>Przełącz nmbering</value>
+  </data>
+  <data name="DecreaseFontSize" xml:space="preserve">
+    <value>Zmniejsz rozmiar czcionki</value>
+  </data>
+  <data name="IncreaseFontSize" xml:space="preserve">
+    <value>Zwiększ rozmiar czcionki</value>
+  </data>
+  <data name="SelectFont" xml:space="preserve">
+    <value>Wybierz czcionkę</value>
+  </data>
+  <data name="CannotSaveChanges" xml:space="preserve">
+    <value>Nie można zapisać zmian</value>
+  </data>
+  <data name="CannotSaveChangesSubtitle" xml:space="preserve">
+    <value>Wystąpił błąd podczas zapisywania zmian, spróbuj ponownie później.</value>
+  </data>
+  <data name="EnableSoundEffects" xml:space="preserve">
+    <value>Włącz efekty dźwiękowe</value>
+  </data>
+  <data name="EnableSoundEffectsSubtitle" xml:space="preserve">
+    <value>Włącz efekty dźwiękowe podczas interakcji z nutami.</value>
+  </data>
+  <data name="DefaultFont" xml:space="preserve">
+    <value>Czcionka domyślna</value>
+  </data>
+  <data name="DefaultNotesFontSubtitle" xml:space="preserve">
+    <value>Wybierz domyślną czcionkę notatek</value>
+  </data>
+  <data name="DefaultFontSize" xml:space="preserve">
+    <value>Domyślny rozmiar czcionki</value>
+  </data>
+  <data name="DefaultFontSizeSubtitle" xml:space="preserve">
+    <value>Wybierz domyślny rozmiar czcionki dla notatek.</value>
+  </data>
+  <data name="UpdateNotesIntervalSubtitle" xml:space="preserve">
+    <value>Określ, jak często widżet ma być aktualizowany, aby wyświetlać najnowsze notatki programu Sticky Notes z konta Microsoft.</value>
+  </data>
+  <data name="UpdateTasksIntervalSubtitle" xml:space="preserve">
+    <value>Określ, jak często widżet jest aktualizowany, aby wyświetlać najnowsze zadania z aplikacji Microsoft To Do.</value>
+  </data>
+  <data name="NotesPermissionNeeded" xml:space="preserve">
+    <value>Dostęp do notatek</value>
+  </data>
+  <data name="NotesPermissionNeededMessage" xml:space="preserve">
+    <value>Aby przeglądać, tworzyć lub edytować notatki, zezwól na dostęp.</value>
+  </data>
+  <data name="SettingNeeded" xml:space="preserve">
+    <value>Wymagana konfiguracja</value>
+  </data>
+  <data name="SettingNeededSubtitle" xml:space="preserve">
+    <value>Aby wyświetlić dane na tym widżecie, przejdź do ustawień.</value>
+  </data>
+  <data name="SetupWeatherGeolocationMessage" xml:space="preserve">
+    <value>Aby widżet mógł wyświetlać pogodę w Twojej lokalizacji, zalecamy zezwolenie na dostęp do Twojej lokalizacji.</value>
+  </data>
+  <data name="SetupWeatherLocationMessage" xml:space="preserve">
+    <value>Aby włączyć wyświetlanie pogody w Twojej lokalizacji, podaj nazwę miasta lub miejscowości.</value>
+  </data>
+  <data name="NothingHere" xml:space="preserve">
+    <value>Nic tu nie ma</value>
+  </data>
+  <data name="TasksEmptyMessage" xml:space="preserve">
+    <value>Na bieżącej liście nie ma żadnych zadań.</value>
+  </data>
+  <data name="NotesEmptyMessage" xml:space="preserve">
+    <value>Nie ma żadnych karteczek samoprzylepnych, ale możesz je utworzyć już teraz!</value>
+  </data>
+  <data name="LeaveFeedback" xml:space="preserve">
+    <value>Wystaw opinię</value>
+  </data>
+  <data name="ChooseLocation" xml:space="preserve">
+    <value>Wybierz lokalizację</value>
+  </data>
+  <data name="ChooseLocationSubtitle" xml:space="preserve">
+    <value>Aby pokazać nam pogodę, określ swój region lub włącz geolokalizację w ustawieniach.</value>
+  </data>
+  <data name="MicrosoftAccount" xml:space="preserve">
+    <value>Konto Microsoft</value>
+  </data>
+  <data name="MicrosoftAccountSubtitle" xml:space="preserve">
+    <value>Zezwala niektórym widżetom na interakcję z usługami Microsoft 365.</value>
+  </data>
+  <data name="AddWidget" xml:space="preserve">
+    <value>Dodaj widżet</value>
+  </data>
+  <data name="HideWidgets" xml:space="preserve">
+    <value>Ukrywanie widżetów</value>
+  </data>
+  <data name="EnableTrayIcon" xml:space="preserve">
+    <value>Włącz ikonę zasobnika systemowego</value>
+  </data>
+  <data name="EnableTrayIconSubtitle" xml:space="preserve">
+    <value>Włącz ikonę w zasobniku systemowym, aby uzyskać szybki dostęp i kontrolę nad widżetami.</value>
+  </data>
+  <data name="FeatureUnavailable" xml:space="preserve">
+    <value>Ta funkcja nie jest obecnie dostępna w tej wersji aplikacji.</value>
+  </data>
+  <data name="AllowShare" xml:space="preserve">
+    <value>Zezwalaj na udostępnianie</value>
+  </data>
+  <data name="AllowShareSubtitle" xml:space="preserve">
+    <value>Zezwalaj widżetom na udostępnianie zawartości.</value>
+  </data>
+  <data name="FutureFeature" xml:space="preserve">
+    <value>Przyszła funkcja</value>
+  </data>
+  <data name="ShareImage" xml:space="preserve">
+    <value>Podziel się obrazem</value>
+  </data>
+  <data name="CantShare" xml:space="preserve">
+    <value>Nie można udostępniać</value>
+  </data>
+  <data name="CantShareSubtitle" xml:space="preserve">
+    <value>Widżet nie może teraz udostępniać zawartości. {0}</value>
+  </data>
+  <data name="AutoSave" xml:space="preserve">
+    <value>Automatyczne zapisywanie</value>
+  </data>
+  <data name="AutoSaveSubtitle" xml:space="preserve">
+    <value>Włącz automatyczne zapisywanie notatek, aby zaoszczędzić czas.</value>
+  </data>
+  <data name="TaskDesciptionPlaceholder" xml:space="preserve">
+    <value>Dodaj opis zadania tutaj...</value>
+  </data>
+  <data name="TaskDescription" xml:space="preserve">
+    <value>Opis</value>
+  </data>
+  <data name="TaskEnableTextWrapping" xml:space="preserve">
+    <value>Włączanie zawijania tekstu</value>
+  </data>
+  <data name="TaskEnableTextWrappingSubtitle" xml:space="preserve">
+    <value>Włącz zawijanie tekstu dla tytułów zadań.</value>
+  </data>
+  <data name="OpenShellOnStart" xml:space="preserve">
+    <value>Uruchamianie powłoki podczas uruchamiania aplikacji</value>
+  </data>
+  <data name="OpenShellOnStartSubtitle" xml:space="preserve">
+    <value>Automatycznie otwieraj główne okno aplikacji podczas uruchamiania systemu.</value>
+  </data>
+  <data name="ClockFontFamilySubtitle" xml:space="preserve">
+    <value>Wybierz czcionkę wyświetlania zegara cyfrowego.</value>
+  </data>
+  <data name="CustomFont" xml:space="preserve">
+    <value>Czcionka niestandardowa</value>
+  </data>
+  <data name="MoveTo" xml:space="preserve">
+    <value>Przenieś się do</value>
+  </data>
+  <data name="SelectTask" xml:space="preserve">
+    <value>Wybierz zadanie</value>
+  </data>
+  <data name="SelectTaskMessage" xml:space="preserve">
+    <value>Aby wykonać akcję, wybierz zadanie.</value>
+  </data>
+  <data name="CannotMoveTask" xml:space="preserve">
+    <value>Nie można przenieść zadania</value>
+  </data>
+  <data name="CpuWidget" xml:space="preserve">
+    <value>Monitor procesora</value>
+  </data>
+  <data name="CpuWidgetSubtitle" xml:space="preserve">
+    <value>Miej oko na swój procesor dzięki aktualizacjom w czasie rzeczywistym na temat jego wydajności i użytkowania.</value>
+  </data>
+  <data name="SystemInformation" xml:space="preserve">
+    <value>Informacje o systemie i monitorowanie</value>
+  </data>
+  <data name="SystemInformationPermissionSubtitle" xml:space="preserve">
+    <value>Pozwala uzyskać aktualne informacje o sprzęcie i systemie.</value>
+  </data>
+  <data name="CannotGetCpuData" xml:space="preserve">
+    <value>Nie można pobrać danych procesora</value>
+  </data>
+  <data name="PermissionNeeded" xml:space="preserve">
+    <value>Wymagane pozwolenie</value>
+  </data>
+  <data name="SystemInformationAccessNeeded" xml:space="preserve">
+    <value>Ten widżet wymaga uprawnienia do żądania informacji o systemie, podaj to zezwolenie na wyświetlanie danych.</value>
+  </data>
+  <data name="NoCpuData" xml:space="preserve">
+    <value>Obecnie nie można uzyskać informacji o procesorze, usługa WMI nie zawiera żadnych danych.</value>
+  </data>
+  <data name="NoData" xml:space="preserve">
+    <value>Brak informacji</value>
+  </data>
+  <data name="GrandAccess" xml:space="preserve">
+    <value>Wielki dostęp</value>
+  </data>
+  <data name="WidgetNeedsPermission" xml:space="preserve">
+    <value>Aby uzyskać widżet danych, musisz mieć uprawnienia.</value>
+  </data>
+  <data name="CpuWidgetSettings" xml:space="preserve">
+    <value>Ustawienia widżetu procesora</value>
+  </data>
+  <data name="EnableChartAnimation" xml:space="preserve">
+    <value>Włączanie animacji wykresu</value>
+  </data>
+  <data name="EnableCPUChartAnimationSubtitle" xml:space="preserve">
+    <value>Włącz animację wykresu wykorzystania procesora CPU.</value>
+  </data>
+  <data name="ChartOpacity" xml:space="preserve">
+    <value>Przezroczystość wykresu</value>
+  </data>
+  <data name="ChartOpacitySubtitle" xml:space="preserve">
+    <value>Skonfiguruj stopień przezroczystości wykresu.</value>
+  </data>
+  <data name="Miliseconds" xml:space="preserve">
+    <value>Ms</value>
+  </data>
+  <data name="GpuWidget" xml:space="preserve">
+    <value>GPU Monitor</value>
+    <comment>GPU Monitor</comment>
+  </data>
+  <data name="GpuWidgetSubtitle" xml:space="preserve">
+    <value>Widżet GPU zapewnia monitorowanie użycia karty graficznej w czasie rzeczywistym. Wyświetla aktualny procent obciążenia GPU, pomagając śledzić wydajność.</value>
+    <comment>The GPU Widget provides real-time monitoring of your graphics card usage. It displays the current GPU load percentage, helping you track performance.</comment>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>Nie powiodło się</value>
+  </data>
+  <data name="GpuWidgetSettings" xml:space="preserve">
+    <value>Ustawienia widżetu GPU</value>
+  </data>
+  <data name="EnableGPUChartAnimationSubtitle" xml:space="preserve">
+    <value>Włącz animację wykresu wykorzystania procesora GPU.</value>
+  </data>
+  <data name="ShowAllList" xml:space="preserve">
+    <value>Pokaż wszystkie widżety</value>
+  </data>
+  <data name="ShowInTray" xml:space="preserve">
+    <value>Pokaż w menu zasobnika</value>
+  </data>
+</root>

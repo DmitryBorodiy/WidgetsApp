@@ -1,0 +1,989 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppName" xml:space="preserve">
+    <value>Better Widgets</value>
+  </data>
+  <data name="WidgetsLabel" xml:space="preserve">
+    <value>Виджеты</value>
+  </data>
+  <data name="SearchWidgets" xml:space="preserve">
+    <value>Поиск виджетов...</value>
+  </data>
+  <data name="SettingsLabel" xml:space="preserve">
+    <value>Параметры</value>
+  </data>
+  <data name="ProposeLabel" xml:space="preserve">
+    <value>Предложить функцию</value>
+  </data>
+  <data name="PrivacyLabel" xml:space="preserve">
+    <value>Конфиденциальность</value>
+  </data>
+  <data name="ShareLabel" xml:space="preserve">
+    <value>Поделится</value>
+  </data>
+  <data name="PinOnDesktop" xml:space="preserve">
+    <value>Закрепить</value>
+  </data>
+  <data name="AboutLabel" xml:space="preserve">
+    <value>О программе</value>
+  </data>
+  <data name="AboutSubtitle" xml:space="preserve">
+    <value>О текущей версии приложения и проверка обновлений.</value>
+  </data>
+  <data name="Clipboard" xml:space="preserve">
+    <value>Буфер обмена</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Местоположение</value>
+  </data>
+  <data name="RequestAccessSubtitle" xml:space="preserve">
+    <value>Вы уверены, что хотите предоставить доступ к {0}?</value>
+  </data>
+  <data name="RequestAccessTitle" xml:space="preserve">
+    <value>Предоставление доступа к {0}</value>
+  </data>
+  <data name="AllowLabel" xml:space="preserve">
+    <value>Разрешать</value>
+  </data>
+  <data name="DenyLabel" xml:space="preserve">
+    <value>Отрицать</value>
+  </data>
+  <data name="RequestAccessDialogTitle" xml:space="preserve">
+    <value>Разрешительный доступ</value>
+  </data>
+  <data name="AppBuildLabel" xml:space="preserve">
+    <value>Сборка приложения</value>
+  </data>
+  <data name="AppChanelLabel" xml:space="preserve">
+    <value>Приложение chanel</value>
+  </data>
+  <data name="AppVersionLabel" xml:space="preserve">
+    <value>Версия приложения</value>
+  </data>
+  <data name="AppDeveloperLabel" xml:space="preserve">
+    <value>Разработчик</value>
+  </data>
+  <data name="WeatherWidgetSubtitle" xml:space="preserve">
+    <value>В виджете погоды представлена актуальная информация о температуре, влажности, ветре и прогнозе на ближайшие дни.</value>
+  </data>
+  <data name="WeatherWidgetTitle" xml:space="preserve">
+    <value>Погода</value>
+  </data>
+  <data name="WeatherWidgetSettingsTitle" xml:space="preserve">
+    <value>Настройки погоды</value>
+  </data>
+  <data name="UnpinFromDesktop" xml:space="preserve">
+    <value>Открепление от рабочего стола</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Обновить</value>
+  </data>
+  <data name="AccountInfo" xml:space="preserve">
+    <value>Информация о личном кабинете</value>
+  </data>
+  <data name="SignOutLabel" xml:space="preserve">
+    <value>Выйти из системы</value>
+  </data>
+  <data name="SignInLabel" xml:space="preserve">
+    <value>Войти</value>
+  </data>
+  <data name="DefaultLocation" xml:space="preserve">
+    <value>Местоположение по умолчанию</value>
+  </data>
+  <data name="DefaultWeatherLocation" xml:space="preserve">
+    <value>Местоположение при погоде по умолчанию</value>
+  </data>
+  <data name="DetectLocation" xml:space="preserve">
+    <value>Определение местоположения</value>
+  </data>
+  <data name="LiveBackgroundSettingSubtitle" xml:space="preserve">
+    <value>Включите анимированный фон погоды, чтобы виджет выглядел более живым и захватывающим.</value>
+  </data>
+  <data name="LiveBackgroundSettingTitle" xml:space="preserve">
+    <value>Включение фонового режима в реальном времени</value>
+  </data>
+  <data name="WeatherLocationSetting" xml:space="preserve">
+    <value>Погода в расположении</value>
+  </data>
+  <data name="WeatherLocationSettingSubtitle" xml:space="preserve">
+    <value>Установите предпочтительное местоположение, чтобы получать точные обновления местной погоды в виджете.</value>
+  </data>
+  <data name="CelsiusUnits" xml:space="preserve">
+    <value>Цельсий</value>
+  </data>
+  <data name="FahrenheitUnits" xml:space="preserve">
+    <value>Фаренгейты</value>
+  </data>
+  <data name="WeatherTempUnits" xml:space="preserve">
+    <value>Единицы измерения погоды</value>
+  </data>
+  <data name="WeatherTempUnitsSubtitle" xml:space="preserve">
+    <value>Выберите между градусами Цельсия и Фаренгейта, чтобы отобразить температуру в предпочитаемых единицах измерения.</value>
+  </data>
+  <data name="UpdateInterval" xml:space="preserve">
+    <value>Интервал обновления</value>
+  </data>
+  <data name="UpdateIntervalSubtitle" xml:space="preserve">
+    <value>Укажите, как часто виджет обновляется, чтобы отображать самую свежую информацию о погоде.</value>
+  </data>
+  <data name="Minutes" xml:space="preserve">
+    <value>Мин</value>
+  </data>
+  <data name="GeolocationPermissionDialogSubtitle" xml:space="preserve">
+    <value>Чтобы воспользоваться этой функцией, нужно предоставить доступ к геолокации в настройках Windows.</value>
+  </data>
+  <data name="GeolocationPermissionDialogTitle" xml:space="preserve">
+    <value>Доступ к геолокации</value>
+  </data>
+  <data name="LocationBoxPlaceholder" xml:space="preserve">
+    <value>Введите местоположение</value>
+  </data>
+  <data name="OpenSettingsLabel" xml:space="preserve">
+    <value>Откройте настройки</value>
+  </data>
+  <data name="MeterSec" xml:space="preserve">
+    <value>м/сек</value>
+  </data>
+  <data name="MilesHour" xml:space="preserve">
+    <value>мл/час</value>
+  </data>
+  <data name="GeneralSettings" xml:space="preserve">
+    <value>Общие настройки</value>
+  </data>
+  <data name="GeneralSettingsSubtitle" xml:space="preserve">
+    <value>Основные настройки приложения позволяют управлять общими параметрами, автозапуском и дополнительными функциями для удобства использования.</value>
+  </data>
+  <data name="AutorunSettingSubitle" xml:space="preserve">
+    <value>Включает автоматический запуск приложения при входе в систему.</value>
+  </data>
+  <data name="AutorunSettingTitle" xml:space="preserve">
+    <value>Включить автозапуск</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Разрешения</value>
+  </data>
+  <data name="PermissionsSubtitle" xml:space="preserve">
+    <value>Включите разрешения для виджета '{0}', эти разрешения будут использоваться в будущем, когда виджет запрашивает конфиденциальные данные, указанные ниже.</value>
+  </data>
+  <data name="SecurityLabel" xml:space="preserve">
+    <value>Безопасность</value>
+  </data>
+  <data name="SecuritySubtitle" xml:space="preserve">
+    <value>Настройки безопасности виджета, управление разрешениями и настройки входа в систему.</value>
+  </data>
+  <data name="WindowsHello" xml:space="preserve">
+    <value>Windows Hello</value>
+  </data>
+  <data name="WindowsHelloSubtitle" xml:space="preserve">
+    <value>Включите или отключите Windows Hello, чтобы подтвердить свою личность, когда виджеты запрашивают разрешение.</value>
+  </data>
+  <data name="WindowsHelloLockTime" xml:space="preserve">
+    <value>Время блокировки проверки личности</value>
+  </data>
+  <data name="WindowsHelloLockTimeSubtitle" xml:space="preserve">
+    <value>Этот диапазон времени указывает, когда диалоговое окно подтверждения Windows Hello будет запрошено снова при следующей проверке вашей личности.</value>
+  </data>
+  <data name="ClipboardPermissionSubtitle" xml:space="preserve">
+    <value>Позволяет виджету считывать или записывать данные из буфера обмена.</value>
+  </data>
+  <data name="LocationPermissionSubtitle" xml:space="preserve">
+    <value>Позволяет виджету получать доступ к местоположению вашего устройства.</value>
+  </data>
+  <data name="PermssionsSettingSubtitle" xml:space="preserve">
+    <value>Управляйте доступом к функциям и данным приложения. Выберите, какие разрешения вы хотите предоставить, чтобы обеспечить комфортную и безопасную работу.</value>
+  </data>
+  <data name="AppearanceSettingsSubtitle" xml:space="preserve">
+    <value>Настройте внешний вид приложения и виджетов.</value>
+  </data>
+  <data name="AppearanceSettingsTitle" xml:space="preserve">
+    <value>Внешность</value>
+  </data>
+  <data name="DarkThemeSubtitle" xml:space="preserve">
+    <value>Включите или отключите темную тему для оболочки приложения и виджетов.</value>
+  </data>
+  <data name="DarkThemeTitle" xml:space="preserve">
+    <value>Темная тема</value>
+  </data>
+  <data name="AccentColorSettingSubtitle" xml:space="preserve">
+    <value>Настройте основную оболочку и акцентный цвет виджетов.</value>
+  </data>
+  <data name="AccentColorSettingTitle" xml:space="preserve">
+    <value>Акцентный цвет</value>
+  </data>
+  <data name="WidgetTransparency" xml:space="preserve">
+    <value>Прозрачность виджета</value>
+  </data>
+  <data name="WidgetTransparencySubtitle" xml:space="preserve">
+    <value>Контролируйте непрозрачность виджета: уменьшите значение, чтобы сделать его менее заметным и меньше отвлекающим от основного контента.</value>
+  </data>
+  <data name="NoNetworkSubtitle" xml:space="preserve">
+    <value>Доступ к Интернету недоступен, проверьте подключение к сети и повторите попытку.</value>
+  </data>
+  <data name="NoNetworkTitle" xml:space="preserve">
+    <value>Нет подключения к сети</value>
+  </data>
+  <data name="Appointments" xml:space="preserve">
+    <value>Встречи</value>
+  </data>
+  <data name="AppointmentsPermissionSubtitle" xml:space="preserve">
+    <value>Предоставляет доступ к событиям календаря.</value>
+  </data>
+  <data name="ClockWidgetSubtitle" xml:space="preserve">
+    <value>Легкий и отзывчивый виджет времени, который точно отображает текущее время и дату, с настраиваемыми форматами и минимальным использованием ресурсов.</value>
+  </data>
+  <data name="ClockWidgetTitle" xml:space="preserve">
+    <value>Часы</value>
+  </data>
+  <data name="ClockSettings" xml:space="preserve">
+    <value>Настройки часов</value>
+  </data>
+  <data name="OpenClockAlarms" xml:space="preserve">
+    <value>Откройте программу «Будильники и часы»</value>
+  </data>
+  <data name="OpenCalendar" xml:space="preserve">
+    <value>Открыть календарь</value>
+  </data>
+  <data name="DateFormatSubtitle" xml:space="preserve">
+    <value>Настройка формата отображения даты</value>
+  </data>
+  <data name="DateFormatTitle" xml:space="preserve">
+    <value>Формат даты</value>
+  </data>
+  <data name="TimeFormatSubtitle" xml:space="preserve">
+    <value>Настройка формата отображения времени</value>
+  </data>
+  <data name="TimeFormatTitle" xml:space="preserve">
+    <value>Формат времени</value>
+  </data>
+  <data name="CloseLabel" xml:space="preserve">
+    <value>Закрывать</value>
+  </data>
+  <data name="PinLabel" xml:space="preserve">
+    <value>Булавка</value>
+  </data>
+  <data name="EmptyInputMessage" xml:space="preserve">
+    <value>Поле не может быть пустым.</value>
+  </data>
+  <data name="InvalidDateMessage" xml:space="preserve">
+    <value>Неправильный формат даты.</value>
+  </data>
+  <data name="InvalidTimeMessage" xml:space="preserve">
+    <value>Неправильный формат времени.</value>
+  </data>
+  <data name="AnalogClock" xml:space="preserve">
+    <value>Аналоговые часы</value>
+  </data>
+  <data name="DigitalClock" xml:space="preserve">
+    <value>Цифровые часы</value>
+  </data>
+  <data name="DisableBackgroundSetting" xml:space="preserve">
+    <value>Отключить фон</value>
+  </data>
+  <data name="DisableBackgroundSettingSubtitle" xml:space="preserve">
+    <value>Отключает оформление фона виджета, делая его прозрачным и позволяя отображать элементы интерфейса без дополнительного фона.</value>
+  </data>
+  <data name="ShowAppointmentsSetting" xml:space="preserve">
+    <value>Показать назначение</value>
+  </data>
+  <data name="ShowAppointmentsSettingSubtitle" xml:space="preserve">
+    <value>Включите отображение событий календаря на виджете часов.</value>
+  </data>
+  <data name="EnableShadowEffect" xml:space="preserve">
+    <value>Включить тень</value>
+  </data>
+  <data name="EnableShadowEffectSubtitle" xml:space="preserve">
+    <value>Добавляет едва заметную тень за текстом на виджете цифровых часов, улучшая читаемость и визуальную глубину.</value>
+  </data>
+  <data name="DateDisplay" xml:space="preserve">
+    <value>Отображение даты</value>
+  </data>
+  <data name="AddTimeZone" xml:space="preserve">
+    <value>Добавить часовой пояс</value>
+  </data>
+  <data name="TimeZoneLabel" xml:space="preserve">
+    <value>Часовой пояс</value>
+  </data>
+  <data name="TimeZonesSubtitle" xml:space="preserve">
+    <value>Выберите часовой пояс, в который будет добавлено время под дополнительными часами.</value>
+  </data>
+  <data name="TimeZonesTitle" xml:space="preserve">
+    <value>Часовые пояса</value>
+  </data>
+  <data name="CancelLabel" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="SelectLabel" xml:space="preserve">
+    <value>Выбрать</value>
+  </data>
+  <data name="TimeZonesEmptySubtitle" xml:space="preserve">
+    <value>Здесь будут отображаться часовые пояса для виджета часов. Добавив часовые пояса, вы можете легко переключаться между ними в виджете.</value>
+  </data>
+  <data name="TimeZonesEmptyTitle" xml:space="preserve">
+    <value>Пользовательские часовые пояса</value>
+  </data>
+  <data name="RemoveLabel" xml:space="preserve">
+    <value>Убирать</value>
+  </data>
+  <data name="ChoosePictureLabel" xml:space="preserve">
+    <value>Выбрать картинку</value>
+  </data>
+  <data name="CustomClockFace" xml:space="preserve">
+    <value>Пользовательский циферблат</value>
+  </data>
+  <data name="ShowClockFace" xml:space="preserve">
+    <value>Показать циферблат</value>
+  </data>
+  <data name="ShowClockFaceSubtitle" xml:space="preserve">
+    <value>Отображение циферблата с часовыми метками на фоне часов.</value>
+  </data>
+  <data name="CannotGetWeatherSubtitle" xml:space="preserve">
+    <value>Произошла ошибка при получении данных о погоде.</value>
+  </data>
+  <data name="CannotGetWeatherTitle" xml:space="preserve">
+    <value>Не могу узнать погоду</value>
+  </data>
+  <data name="CalendarWidgetSubtitle" xml:space="preserve">
+    <value>Отображает текущую дату, предстоящие события и напоминания, помогая вам быстро отслеживать важные задачи и встречи.</value>
+  </data>
+  <data name="CalendarWidgetTitle" xml:space="preserve">
+    <value>Календарь</value>
+  </data>
+  <data name="CreateEvent" xml:space="preserve">
+    <value>Создать событие</value>
+  </data>
+  <data name="CalendarWidgetSettings" xml:space="preserve">
+    <value>Настройки календаря</value>
+  </data>
+  <data name="AppointmentSampleEndTime" xml:space="preserve">
+    <value>2 ч</value>
+  </data>
+  <data name="AppointmentSampleStartTime" xml:space="preserve">
+    <value>19 авг - 12:00 PM</value>
+  </data>
+  <data name="AppointmentSampleTitle" xml:space="preserve">
+    <value>Ваша встреча</value>
+  </data>
+  <data name="AllDay" xml:space="preserve">
+    <value>Весь день</value>
+  </data>
+  <data name="AppointmentsPermissionRequestSubtitle" xml:space="preserve">
+    <value>Предоставьте разрешение на просмотр событий календаря и управление ими.</value>
+  </data>
+  <data name="DeleteAppointmentSubtitle" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить это событие календаря?</value>
+  </data>
+  <data name="DeleteAppointmentTitle" xml:space="preserve">
+    <value>Удалить событие</value>
+  </data>
+  <data name="DeleteLabel" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="NetworkNeededTitle" xml:space="preserve">
+    <value>Для этого вам нужен интернет</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="TodayLabel" xml:space="preserve">
+    <value>Сегодня</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Создавать</value>
+  </data>
+  <data name="MSAccount" xml:space="preserve">
+    <value>Учетная запись Майкрософт</value>
+  </data>
+  <data name="SignInMessage" xml:space="preserve">
+    <value>Чтобы получить максимальную отдачу от этого виджета, мы рекомендуем войти в свою учетную запись Microsoft.</value>
+  </data>
+  <data name="CalendarDateFormatSubtitle" xml:space="preserve">
+    <value>Настройте формат даты, отображаемый в некоторых сценариях использования календаря.</value>
+  </data>
+  <data name="StartWeekFrom" xml:space="preserve">
+    <value>Начало недели с</value>
+  </data>
+  <data name="StartWeekFromSubtitle" xml:space="preserve">
+    <value>Выберите, в какой день начать неделю.</value>
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>Пятница</value>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value>Понедельник</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>Суббота</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>Воскресенье</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>Четверг</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>Вторник</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>Среда</value>
+  </data>
+  <data name="CalendarTimeFormatSubtitle" xml:space="preserve">
+    <value>Настройте формат времени, отображаемый в некоторых сценариях использования календаря.</value>
+  </data>
+  <data name="DefaultCalendar" xml:space="preserve">
+    <value>Календарь по умолчанию</value>
+  </data>
+  <data name="StatusColors" xml:space="preserve">
+    <value>Цвета состояния</value>
+  </data>
+  <data name="StatusColorsSubtitle" xml:space="preserve">
+    <value>Выберите цвета статуса для событий календаря.</value>
+  </data>
+  <data name="Busy" xml:space="preserve">
+    <value>Занятый</value>
+  </data>
+  <data name="Free" xml:space="preserve">
+    <value>Свободный</value>
+  </data>
+  <data name="Oof" xml:space="preserve">
+    <value>Отсутствие на посту</value>
+  </data>
+  <data name="Tentative" xml:space="preserve">
+    <value>Предварительный</value>
+  </data>
+  <data name="WorkingElsewhere" xml:space="preserve">
+    <value>Работа в других местах</value>
+  </data>
+  <data name="SelectColor" xml:space="preserve">
+    <value>Выберите цвет</value>
+  </data>
+  <data name="SelectCalendar" xml:space="preserve">
+    <value>Выберите календарь</value>
+  </data>
+  <data name="EnterEventName" xml:space="preserve">
+    <value>Введите название события</value>
+  </data>
+  <data name="AccentColor" xml:space="preserve">
+    <value>Акцентный цвет</value>
+  </data>
+  <data name="AccountSettings" xml:space="preserve">
+    <value>Настройки учетной записи</value>
+  </data>
+  <data name="AccountsSubtitle" xml:space="preserve">
+    <value>Настройте учетные записи для использования виджетов. Вход в учетную запись позволяет активировать дополнительные или базовые функции некоторых виджетов.</value>
+  </data>
+  <data name="RequiresRestart" xml:space="preserve">
+    <value>Требуется перезагрузка</value>
+  </data>
+  <data name="RequiresRestartSubtitle" xml:space="preserve">
+    <value>Чтобы применить эту настройку, необходимо перезапустить приложение.</value>
+  </data>
+  <data name="Accounts" xml:space="preserve">
+    <value>Аккаунты</value>
+  </data>
+  <data name="SubjectFieldEmpty" xml:space="preserve">
+    <value>Поле темы не может быть пустым.</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Редактировать</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="LanguageSetting" xml:space="preserve">
+    <value>Язык виджета</value>
+  </data>
+  <data name="LanguageSettingSubtitle" xml:space="preserve">
+    <value>Выберите язык по умолчанию для виджетов и оболочки.</value>
+  </data>
+  <data name="Restart" xml:space="preserve">
+    <value>Перезапуск</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Вид</value>
+  </data>
+  <data name="FindPlace" xml:space="preserve">
+    <value>Найти место</value>
+  </data>
+  <data name="PlaceSearchPlaceholder" xml:space="preserve">
+    <value>Поиск мест</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Искать</value>
+  </data>
+  <data name="PlaceNameCannotBeEmpty" xml:space="preserve">
+    <value>Название места не может быть пустым.</value>
+  </data>
+  <data name="PlaceNameValidationError" xml:space="preserve">
+    <value>Название города содержит недопустимые символы.</value>
+  </data>
+  <data name="TodoWidgetSubtitle" xml:space="preserve">
+    <value>Этот виджет отображает задачи из списков задач Microsoft To Do и позволяет быстро создавать и редактировать задачи.</value>
+  </data>
+  <data name="TodoWidgetTitle" xml:space="preserve">
+    <value>Задачи</value>
+  </data>
+  <data name="Tasks" xml:space="preserve">
+    <value>Задачи</value>
+  </data>
+  <data name="TasksPermissionSubtitle" xml:space="preserve">
+    <value>Позволяет виджетам получать доступ к спискам задач и управлять ими.</value>
+  </data>
+  <data name="AddTask" xml:space="preserve">
+    <value>Добавить задачу</value>
+  </data>
+  <data name="NoTasksSubtitle" xml:space="preserve">
+    <value>Устройтесь поудобнее и расслабьтесь или добавьте новую задачу с помощью кнопки выше.</value>
+  </data>
+  <data name="NoTasksTitle" xml:space="preserve">
+    <value>Вы свободны</value>
+  </data>
+  <data name="SelectList" xml:space="preserve">
+    <value>Выбрать список</value>
+  </data>
+  <data name="ToDoSettings" xml:space="preserve">
+    <value>Настройки задач</value>
+  </data>
+  <data name="TomorrowLabel" xml:space="preserve">
+    <value>Завтра</value>
+  </data>
+  <data name="YesterdayLabel" xml:space="preserve">
+    <value>Вчера</value>
+  </data>
+  <data name="DefaultTodoList" xml:space="preserve">
+    <value>Список дел по умолчанию</value>
+  </data>
+  <data name="DefaultTodoListSubtitle" xml:space="preserve">
+    <value>Выберите, какой список задач будет отображаться по умолчанию.</value>
+  </data>
+  <data name="ShowCompletedTasks" xml:space="preserve">
+    <value>Показывайте выполненные задачи</value>
+  </data>
+  <data name="ShowCompletedTasksSubtitle" xml:space="preserve">
+    <value>Включите отображение выполненных задач в списках.</value>
+  </data>
+  <data name="DeleteTaskSubtitle" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить эту задачу?</value>
+  </data>
+  <data name="DeleteTaskTitle" xml:space="preserve">
+    <value>Удалить задачу</value>
+  </data>
+  <data name="ReminderLabel" xml:space="preserve">
+    <value>Напоминание</value>
+  </data>
+  <data name="DueDateLabel" xml:space="preserve">
+    <value>Срок</value>
+  </data>
+  <data name="CreateSubTask" xml:space="preserve">
+    <value>Добавить задачу с чек-листом</value>
+  </data>
+  <data name="EnterTaskName" xml:space="preserve">
+    <value>Чем вы хотите заняться?</value>
+  </data>
+  <data name="Rename" xml:space="preserve">
+    <value>Переименовать</value>
+  </data>
+  <data name="CannotDeleteTaskError" xml:space="preserve">
+    <value>Не могу удалить эту задачу прямо сейчас, пожалуйста, повторите попытку позже.</value>
+  </data>
+  <data name="Checklist" xml:space="preserve">
+    <value>Контрольный перечень</value>
+  </data>
+  <data name="CannotSetReminderDate" xml:space="preserve">
+    <value>Мы не можем установить дату напоминания прямо сейчас, пожалуйста, повторите попытку позже.</value>
+  </data>
+  <data name="CannotChangeTaskTitle" xml:space="preserve">
+    <value>Мы не можем обновить название задачи прямо сейчас, пожалуйста, повторите попытку позже.</value>
+  </data>
+  <data name="SetDueDate" xml:space="preserve">
+    <value>Установите срок выполнения</value>
+  </data>
+  <data name="SetReminder" xml:space="preserve">
+    <value>Установить напоминание</value>
+  </data>
+  <data name="ViewInMSTodo" xml:space="preserve">
+    <value>Посмотреть в разделе Чем заняться</value>
+  </data>
+  <data name="ChooseListIcon" xml:space="preserve">
+    <value>Выберите иконку списка</value>
+  </data>
+  <data name="PickIcon" xml:space="preserve">
+    <value>Иконка выбора</value>
+  </data>
+  <data name="SearchEmoji" xml:space="preserve">
+    <value>Поиск эмодзи...</value>
+  </data>
+  <data name="RemoveIcon" xml:space="preserve">
+    <value>Удалить значок</value>
+  </data>
+  <data name="Notes" xml:space="preserve">
+    <value>Примечания</value>
+  </data>
+  <data name="NotesPermissionSubtitle" xml:space="preserve">
+    <value>Позволяет виджетам получать доступ к текстовым заметкам и управлять ими.</value>
+  </data>
+  <data name="NotesSubtitle" xml:space="preserve">
+    <value>Этот виджет позволяет закреплять заметки на рабочем столе, поддерживает разметку и подсветку кода.</value>
+  </data>
+  <data name="Beep" xml:space="preserve">
+    <value>Звуковой сигнал</value>
+  </data>
+  <data name="CheckTaskSound" xml:space="preserve">
+    <value>Звук проверки задачи</value>
+  </data>
+  <data name="CheckTaskSoundSubtitle" xml:space="preserve">
+    <value>Выберите звук, который будет воспроизводиться после выполнения задания.</value>
+  </data>
+  <data name="EnableCheckTaskSound" xml:space="preserve">
+    <value>Включить звук проверки задачи</value>
+  </data>
+  <data name="EnableCheckTaskSoundSubtitle" xml:space="preserve">
+    <value>Воспроизведение звука после выполнения задачи.</value>
+  </data>
+  <data name="Asterisk" xml:space="preserve">
+    <value>Звездочка</value>
+  </data>
+  <data name="Exclamation" xml:space="preserve">
+    <value>Восклицание</value>
+  </data>
+  <data name="Hand" xml:space="preserve">
+    <value>Рука</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>Вопрос</value>
+  </data>
+  <data name="MaxTasksNumber" xml:space="preserve">
+    <value>Максимальное количество отображаемых задач</value>
+  </data>
+  <data name="MaxTasksNumberSubtitle" xml:space="preserve">
+    <value>Выберите максимальное количество задач, которые будут отображаться в списке.</value>
+  </data>
+  <data name="SortBy" xml:space="preserve">
+    <value>Сортировать по</value>
+  </data>
+  <data name="SortByDate" xml:space="preserve">
+    <value>По дате</value>
+  </data>
+  <data name="SortByImportance" xml:space="preserve">
+    <value>По важности</value>
+  </data>
+  <data name="SortByName" xml:space="preserve">
+    <value>По названию</value>
+  </data>
+  <data name="TaskSorting" xml:space="preserve">
+    <value>Сортировка задач</value>
+  </data>
+  <data name="TaskSortingSubtitle" xml:space="preserve">
+    <value>Настройка сортировки задач</value>
+  </data>
+  <data name="StickyNotesSettings" xml:space="preserve">
+    <value>Настройки заметок</value>
+  </data>
+  <data name="AllNotes" xml:space="preserve">
+    <value>Список всех заметок</value>
+  </data>
+  <data name="NewNote" xml:space="preserve">
+    <value>Новая заметка</value>
+  </data>
+  <data name="NotePlaceholder" xml:space="preserve">
+    <value>За одним словом следует другое. Просто начните печатать...</value>
+  </data>
+  <data name="NoPermission" xml:space="preserve">
+    <value>Без разрешения</value>
+  </data>
+  <data name="NoPermissionSubtitle" xml:space="preserve">
+    <value>Для доступа к функции «{0}» требуется разрешение, вы можете предоставить разрешение сейчас или сделать это позже в настройках.</value>
+  </data>
+  <data name="Unpin" xml:space="preserve">
+    <value>Откалывать</value>
+  </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Копировать</value>
+  </data>
+  <data name="Cut" xml:space="preserve">
+    <value>Резать</value>
+  </data>
+  <data name="Paste" xml:space="preserve">
+    <value>Паста</value>
+  </data>
+  <data name="DeleteNote" xml:space="preserve">
+    <value>Удалить примечание</value>
+  </data>
+  <data name="DeleteNoteSubtitle" xml:space="preserve">
+    <value>Вы действительно хотите удалить эту заметку?</value>
+  </data>
+  <data name="Bold" xml:space="preserve">
+    <value>Смелый</value>
+  </data>
+  <data name="Italic" xml:space="preserve">
+    <value>Курсив</value>
+  </data>
+  <data name="Underline" xml:space="preserve">
+    <value>Подчеркнуть</value>
+  </data>
+  <data name="EnterNoteName" xml:space="preserve">
+    <value>Введите заголовок заметки...</value>
+  </data>
+  <data name="Redo" xml:space="preserve">
+    <value>Повторить</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>Отменить</value>
+  </data>
+  <data name="PickColor" xml:space="preserve">
+    <value>Выберите цвет</value>
+  </data>
+  <data name="Bullets" xml:space="preserve">
+    <value>Переключение пуль</value>
+  </data>
+  <data name="Numbering" xml:space="preserve">
+    <value>Переключить nmbering</value>
+  </data>
+  <data name="DecreaseFontSize" xml:space="preserve">
+    <value>Уменьшение размера шрифта</value>
+  </data>
+  <data name="IncreaseFontSize" xml:space="preserve">
+    <value>Увеличение размера шрифта</value>
+  </data>
+  <data name="SelectFont" xml:space="preserve">
+    <value>Выберите шрифт</value>
+  </data>
+  <data name="CannotSaveChanges" xml:space="preserve">
+    <value>Не удается сохранить изменения</value>
+  </data>
+  <data name="CannotSaveChangesSubtitle" xml:space="preserve">
+    <value>Произошла ошибка сохранения изменений, пожалуйста, повторите попытку позже.</value>
+  </data>
+  <data name="EnableSoundEffects" xml:space="preserve">
+    <value>Включение звуковых эффектов</value>
+  </data>
+  <data name="EnableSoundEffectsSubtitle" xml:space="preserve">
+    <value>Включите звуковые эффекты при взаимодействии с заметками.</value>
+  </data>
+  <data name="DefaultFont" xml:space="preserve">
+    <value>Шрифт по умолчанию</value>
+  </data>
+  <data name="DefaultNotesFontSubtitle" xml:space="preserve">
+    <value>Выберите шрифт заметок по умолчанию</value>
+  </data>
+  <data name="DefaultFontSize" xml:space="preserve">
+    <value>Размер шрифта по умолчанию</value>
+  </data>
+  <data name="DefaultFontSizeSubtitle" xml:space="preserve">
+    <value>Выберите размер шрифта по умолчанию для заметок.</value>
+  </data>
+  <data name="UpdateNotesIntervalSubtitle" xml:space="preserve">
+    <value>Укажите, как часто мини-приложение обновляется, чтобы отображать последние заметки из учетной записи Майкрософт.</value>
+  </data>
+  <data name="UpdateTasksIntervalSubtitle" xml:space="preserve">
+    <value>Укажите, как часто мини-приложение обновляется, чтобы отображать последние задачи из Microsoft To Do.</value>
+  </data>
+  <data name="NotesPermissionNeeded" xml:space="preserve">
+    <value>Доступ к заметкам</value>
+  </data>
+  <data name="NotesPermissionNeededMessage" xml:space="preserve">
+    <value>Чтобы просматривать, создавать или редактировать заметки, пожалуйста, разрешите доступ.</value>
+  </data>
+  <data name="SettingNeeded" xml:space="preserve">
+    <value>Требуется настройка</value>
+  </data>
+  <data name="SettingNeededSubtitle" xml:space="preserve">
+    <value>Чтобы отобразить данные на этом виджете, перейдите в настройки.</value>
+  </data>
+  <data name="SetupWeatherGeolocationMessage" xml:space="preserve">
+    <value>Чтобы виджет мог отображать погоду в вашем местоположении, мы рекомендуем разрешить доступ к вашему местоположению.</value>
+  </data>
+  <data name="SetupWeatherLocationMessage" xml:space="preserve">
+    <value>Чтобы виджет мог отображать погоду в вашем населенном пункте, укажите название города или места.</value>
+  </data>
+  <data name="NothingHere" xml:space="preserve">
+    <value>Здесь ничего нет</value>
+  </data>
+  <data name="TasksEmptyMessage" xml:space="preserve">
+    <value>В текущем списке нет задач.</value>
+  </data>
+  <data name="NotesEmptyMessage" xml:space="preserve">
+    <value>Здесь нет никаких стикеров, но вы можете создать их прямо сейчас!</value>
+  </data>
+  <data name="LeaveFeedback" xml:space="preserve">
+    <value>Оставить отзыв</value>
+  </data>
+  <data name="ChooseLocation" xml:space="preserve">
+    <value>Выберите местоположение</value>
+  </data>
+  <data name="ChooseLocationSubtitle" xml:space="preserve">
+    <value>Чтобы показать нам погоду, укажите свой регион или включите геолокацию в настройках.</value>
+  </data>
+  <data name="MicrosoftAccount" xml:space="preserve">
+    <value>Учетная запись Майкрософт</value>
+  </data>
+  <data name="MicrosoftAccountSubtitle" xml:space="preserve">
+    <value>Позволяет некоторым виджетам взаимодействовать со службами Microsoft 365.</value>
+  </data>
+  <data name="AddWidget" xml:space="preserve">
+    <value>Добавить виджет</value>
+  </data>
+  <data name="HideWidgets" xml:space="preserve">
+    <value>Скрыть виджеты</value>
+  </data>
+  <data name="EnableTrayIcon" xml:space="preserve">
+    <value>Включить иконку в трее</value>
+  </data>
+  <data name="EnableTrayIconSubtitle" xml:space="preserve">
+    <value>Включите значок в системном трее для быстрого доступа и управления виджетами.</value>
+  </data>
+  <data name="FeatureUnavailable" xml:space="preserve">
+    <value>В настоящее время эта функция недоступна в данной версии приложения.</value>
+  </data>
+  <data name="AllowShare" xml:space="preserve">
+    <value>Разрешить общий доступ</value>
+  </data>
+  <data name="AllowShareSubtitle" xml:space="preserve">
+    <value>Разрешите виджетам делиться контентом.</value>
+  </data>
+  <data name="FutureFeature" xml:space="preserve">
+    <value>Будущая функция</value>
+  </data>
+  <data name="ShareImage" xml:space="preserve">
+    <value>Поделиться изображением</value>
+  </data>
+  <data name="CantShare" xml:space="preserve">
+    <value>Не удается поделиться</value>
+  </data>
+  <data name="CantShareSubtitle" xml:space="preserve">
+    <value>В данный момент виджет не может делиться контентом. {0}</value>
+  </data>
+  <data name="AutoSave" xml:space="preserve">
+    <value>Автосохранение</value>
+  </data>
+  <data name="AutoSaveSubtitle" xml:space="preserve">
+    <value>Включите автосохранение заметок, чтобы сэкономить время.</value>
+  </data>
+  <data name="TaskDesciptionPlaceholder" xml:space="preserve">
+    <value>Добавьте описание задачи здесь...</value>
+  </data>
+  <data name="TaskDescription" xml:space="preserve">
+    <value>Описание</value>
+  </data>
+  <data name="TaskEnableTextWrapping" xml:space="preserve">
+    <value>Включение переноса текста</value>
+  </data>
+  <data name="TaskEnableTextWrappingSubtitle" xml:space="preserve">
+    <value>Включите перенос текста для заголовков задач.</value>
+  </data>
+  <data name="OpenShellOnStart" xml:space="preserve">
+    <value>Запуск оболочки при запуске приложения</value>
+  </data>
+  <data name="OpenShellOnStartSubtitle" xml:space="preserve">
+    <value>Автоматически открывает главное окно программы при запуске системы.</value>
+  </data>
+  <data name="ClockFontFamilySubtitle" xml:space="preserve">
+    <value>Выберите шрифт дисплея цифровых часов.</value>
+  </data>
+  <data name="CustomFont" xml:space="preserve">
+    <value>Пользовательский шрифт</value>
+  </data>
+  <data name="MoveTo" xml:space="preserve">
+    <value>Перейти в</value>
+  </data>
+  <data name="SelectTask" xml:space="preserve">
+    <value>Выберите задачу</value>
+  </data>
+  <data name="SelectTaskMessage" xml:space="preserve">
+    <value>Чтобы завершить действие, выберите задачу.</value>
+  </data>
+  <data name="CannotMoveTask" xml:space="preserve">
+    <value>Не удается переместить задачу</value>
+  </data>
+  <data name="CpuWidget" xml:space="preserve">
+    <value>Монитор процессора</value>
+  </data>
+  <data name="CpuWidgetSubtitle" xml:space="preserve">
+    <value>Следите за своим процессором с помощью обновлений о его производительности и использовании в режиме реального времени.</value>
+  </data>
+  <data name="SystemInformation" xml:space="preserve">
+    <value>Системная информация и мониторинг</value>
+  </data>
+  <data name="SystemInformationPermissionSubtitle" xml:space="preserve">
+    <value>Позволяет получить актуальную информацию об аппаратном обеспечении и системе.</value>
+  </data>
+  <data name="CannotGetCpuData" xml:space="preserve">
+    <value>Не удается получить данные ЦП</value>
+  </data>
+  <data name="PermissionNeeded" xml:space="preserve">
+    <value>Требуется разрешение</value>
+  </data>
+  <data name="SystemInformationAccessNeeded" xml:space="preserve">
+    <value>Данный виджет требует разрешения на запрос информации о системе, предоставление данного разрешения на отображение данных.</value>
+  </data>
+  <data name="NoCpuData" xml:space="preserve">
+    <value>В настоящее время получить информацию о процессоре невозможно, WMI не содержит никаких данных.</value>
+  </data>
+  <data name="NoData" xml:space="preserve">
+    <value>Нет информации</value>
+  </data>
+  <data name="GrandAccess" xml:space="preserve">
+    <value>Общий доступ</value>
+  </data>
+  <data name="WidgetNeedsPermission" xml:space="preserve">
+    <value>Для получения данных виджету требуется разрешение.</value>
+  </data>
+  <data name="CpuWidgetSettings" xml:space="preserve">
+    <value>Настройки виджета процессора</value>
+  </data>
+  <data name="EnableChartAnimation" xml:space="preserve">
+    <value>Включить анимацию диаграммы</value>
+  </data>
+  <data name="EnableCPUChartAnimationSubtitle" xml:space="preserve">
+    <value>Включите анимацию графика загрузки процессора.</value>
+  </data>
+  <data name="ChartOpacity" xml:space="preserve">
+    <value>Непрозрачность диаграммы</value>
+  </data>
+  <data name="ChartOpacitySubtitle" xml:space="preserve">
+    <value>Настройте степень прозрачности диаграммы.</value>
+  </data>
+  <data name="Miliseconds" xml:space="preserve">
+    <value>Госпожа</value>
+  </data>
+  <data name="GpuWidget" xml:space="preserve">
+    <value>Монитор графического процессора</value>
+    <comment>GPU Monitor</comment>
+  </data>
+  <data name="GpuWidgetSubtitle" xml:space="preserve">
+    <value>Виджет графического процессора обеспечивает мониторинг использования видеокарты в режиме реального времени. Он отображает текущий процент загрузки графического процессора, помогая отслеживать производительность.</value>
+    <comment>The GPU Widget provides real-time monitoring of your graphics card usage. It displays the current GPU load percentage, helping you track performance.</comment>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>Неудавшийся</value>
+  </data>
+  <data name="GpuWidgetSettings" xml:space="preserve">
+    <value>Настройки виджета графического процессора</value>
+  </data>
+  <data name="EnableGPUChartAnimationSubtitle" xml:space="preserve">
+    <value>Включите анимацию графика использования графического процессора.</value>
+  </data>
+  <data name="ShowAllList" xml:space="preserve">
+    <value>Показать все виджеты</value>
+  </data>
+  <data name="ShowInTray" xml:space="preserve">
+    <value>Показать в меню в трее</value>
+  </data>
+</root>

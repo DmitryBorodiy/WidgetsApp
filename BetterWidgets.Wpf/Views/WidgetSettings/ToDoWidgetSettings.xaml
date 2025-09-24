@@ -1,0 +1,190 @@
+﻿<c:WidgetSettingsView
+    x:Class="BetterWidgets.Views.WidgetSettings.ToDoWidgetSettings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c="clr-namespace:BetterWidgets.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:r="clr-namespace:BetterWidgets.Resources"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:vm="clr-namespace:BetterWidgets.ViewModel.WidgetsSettingsViews"
+    xmlns:vmc="clr-namespace:BetterWidgets.ViewModel.Components"
+    x:Name="Root"
+    Title="{x:Static r:Resources.ToDoSettings}"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    BackCommand="{Binding GoBackCommand}"
+    LoadedCommand="{Binding LoadedCommand}"
+    mc:Ignorable="d">
+    <c:WidgetSettingsView.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="SystemSoundItemTemplate" DataType="vmc:SystemSoundView">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <ui:TextBlock
+                        Grid.Column="0"
+                        Margin="0,0,6,0"
+                        VerticalAlignment="Center"
+                        Text="{Binding DisplayName, Mode=OneWay}"
+                        TextTrimming="CharacterEllipsis" />
+                    <ui:Button
+                        Grid.Column="1"
+                        Command="{Binding PlayCommand, Mode=OneTime}"
+                        Style="{StaticResource FlatButton}">
+                        <ui:Button.Icon>
+                            <ui:SymbolIcon Symbol="Play20" />
+                        </ui:Button.Icon>
+                    </ui:Button>
+                </Grid>
+            </DataTemplate>
+        </ResourceDictionary>
+    </c:WidgetSettingsView.Resources>
+
+    <c:WidgetSettingsView.DataContext>
+        <vm:ToDoSettingsViewModel />
+    </c:WidgetSettingsView.DataContext>
+    <c:WidgetSettingsView.Settings>
+        <c:CardSettingView
+            Title="{x:Static r:Resources.ShowCompletedTasks}"
+            Id="todo.showCompletedTasks"
+            Subtitle="{x:Static r:Resources.ShowCompletedTasksSubtitle}">
+            <c:CardSettingView.Icon>
+                <ui:SymbolIcon Symbol="TaskListLtr20" />
+            </c:CardSettingView.Icon>
+
+            <c:CardSettingView.Header>
+                <ui:ToggleSwitch IsChecked="{Binding ShowCompletedTasks, Mode=TwoWay}" />
+            </c:CardSettingView.Header>
+        </c:CardSettingView>
+        <c:CardSettingView
+            Title="{x:Static r:Resources.DefaultTodoList}"
+            Id="todo.defaultList"
+            IsEnabled="{Binding IsSignedIn, Mode=OneWay}"
+            Subtitle="{x:Static r:Resources.DefaultTodoListSubtitle}">
+            <c:CardSettingView.Icon>
+                <ui:SymbolIcon Symbol="TaskListSquareLtr20" />
+            </c:CardSettingView.Icon>
+
+            <c:CardSettingView.Header>
+                <ComboBox
+                    Width="200"
+                    Margin="0,0,-9,0"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    ItemTemplate="{StaticResource TodoListItemTemplate}"
+                    ItemsSource="{Binding TodoLists, Mode=OneWay}"
+                    SelectedIndex="{Binding SelectedTodoList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            </c:CardSettingView.Header>
+        </c:CardSettingView>
+        <c:CardSettingView
+            Title="{x:Static r:Resources.MaxTasksNumber}"
+            Id="todo.maxItemsToDisplay"
+            IsEnabled="{Binding IsSignedIn, Mode=OneWay}"
+            Subtitle="{x:Static r:Resources.MaxTasksNumberSubtitle}">
+            <c:CardSettingView.Icon>
+                <ui:SymbolIcon Symbol="TaskListSquareLtr20" />
+            </c:CardSettingView.Icon>
+
+            <c:CardSettingView.Header>
+                <ui:NumberBox
+                    Width="130"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Maximum="66"
+                    Minimum="1"
+                    Value="{Binding MaxTasksCount, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            </c:CardSettingView.Header>
+        </c:CardSettingView>
+        <c:CardSettingView
+            Title="{x:Static r:Resources.TaskSorting}"
+            Id="todo.sortBy"
+            Subtitle="{x:Static r:Resources.TaskSortingSubtitle}">
+            <c:CardSettingView.Icon>
+                <ui:SymbolIcon Symbol="ArrowSort20" />
+            </c:CardSettingView.Icon>
+
+            <c:CardSettingView.Header>
+                <ComboBox
+                    Width="180"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    SelectedIndex="{Binding TasksSortBy, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                    <ComboBoxItem Content="{x:Static r:Resources.SortByName}" />
+                    <ComboBoxItem Content="{x:Static r:Resources.SortByDate}" />
+                    <ComboBoxItem Content="{x:Static r:Resources.SortByImportance}" />
+                </ComboBox>
+            </c:CardSettingView.Header>
+        </c:CardSettingView>
+        <c:CardSettingView
+            Title="{x:Static r:Resources.EnableCheckTaskSound}"
+            Id="todo.sounds.enableCheckSound"
+            Subtitle="{x:Static r:Resources.EnableCheckTaskSoundSubtitle}">
+            <c:CardSettingView.Icon>
+                <ui:SymbolIcon Symbol="MusicNote120" />
+            </c:CardSettingView.Icon>
+
+            <c:CardSettingView.Header>
+                <ui:ToggleSwitch IsChecked="{Binding IsTaskCheckSoundEnabled, Mode=TwoWay}" />
+            </c:CardSettingView.Header>
+        </c:CardSettingView>
+        <c:CardSettingView
+            Title="{x:Static r:Resources.TaskEnableTextWrapping}"
+            Id="todo.textWrapping"
+            Subtitle="{x:Static r:Resources.TaskEnableTextWrappingSubtitle}">
+            <c:CardSettingView.Icon>
+                <ui:SymbolIcon Symbol="TextWrap20" />
+            </c:CardSettingView.Icon>
+            <c:CardSettingView.Header>
+                <ui:ToggleSwitch IsChecked="{Binding EnableTextWrap, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            </c:CardSettingView.Header>
+        </c:CardSettingView>
+        <c:ExpanderSettingView
+            Title="{x:Static r:Resources.UpdateInterval}"
+            Id="todo.update"
+            Subtitle="{x:Static r:Resources.UpdateTasksIntervalSubtitle}">
+            <c:ExpanderSettingView.Icon>
+                <ui:SymbolIcon Symbol="ArrowSyncCircle20" />
+            </c:ExpanderSettingView.Icon>
+            <c:ExpanderSettingView.Header>
+                <ui:ToggleSwitch
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    IsChecked="{Binding IsUpdateEnabled, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            </c:ExpanderSettingView.Header>
+            <c:ExpanderSettingView.Content>
+                <StackPanel Margin="6,0">
+                    <Grid HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <ui:TextBlock
+                            Grid.Column="0"
+                            VerticalAlignment="Center"
+                            Text="{x:Static r:Resources.UpdateInterval}"
+                            TextTrimming="CharacterEllipsis" />
+
+                        <StackPanel Grid.Column="1" Orientation="Horizontal">
+                            <ui:TextBlock
+                                Margin="0,0,6,0"
+                                VerticalAlignment="Center"
+                                Text="{x:Static r:Resources.Minutes}" />
+                            <ui:NumberBox
+                                VerticalAlignment="Center"
+                                IsEnabled="{Binding IsUpdateEnabled, Mode=OneWay}"
+                                Maximum="1500"
+                                Minimum="5"
+                                Value="{Binding UpdateInterval, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </c:ExpanderSettingView.Content>
+        </c:ExpanderSettingView>
+    </c:WidgetSettingsView.Settings>
+
+</c:WidgetSettingsView>

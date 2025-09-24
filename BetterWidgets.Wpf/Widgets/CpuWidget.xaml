@@ -1,0 +1,393 @@
+﻿<c:Widget
+    x:Class="BetterWidgets.Widgets.CpuWidget"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c="clr-namespace:BetterWidgets.Controls"
+    xmlns:charts="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCore.SkiaSharpView.WPF"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:BetterWidgets.Widgets"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:r="clr-namespace:BetterWidgets.Resources"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:vm="clr-namespace:BetterWidgets.ViewModel.Widgets"
+    x:Name="Root"
+    Width="250"
+    Height="160"
+    MinWidth="120"
+    MinHeight="120"
+    d:DesignHeight="250"
+    d:DesignWidth="250"
+    AppearedCommand="{Binding AppearedCommand}"
+    AppearedCommandParameter="{Binding ElementName=Root}"
+    IsHideTitleBar="True"
+    IsLoading="{Binding IsLoading, Mode=OneWay}"
+    IsTitleBarEnabled="True"
+    SizeChangedCommand="{Binding SizeChangedCommand}"
+    Style="{StaticResource DefaultWidgetStyle}"
+    Topmost="{Binding ElementName=TitleBarUI, Path=IsPinned, Mode=OneWay}"
+    UnpinCommand="{Binding UnpinnedCommand}"
+    mc:Ignorable="d">
+    <c:Widget.DataContext>
+        <vm:CpuInformationViewModel />
+    </c:Widget.DataContext>
+    <c:Widget.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/Charts.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <Style x:Key="DefaultMainInfoStyle" TargetType="Grid">
+                <Setter Property="Grid.Row" Value="0" />
+                <Setter Property="Grid.Column" Value="0" />
+                <Setter Property="Margin" Value="15,7,0,0" />
+                <Setter Property="Background" Value="Transparent" />
+                <Setter Property="Visibility" Value="Visible" />
+            </Style>
+            <Style x:Key="DefaultCpuNameStyle" TargetType="Grid">
+                <Setter Property="Grid.Row" Value="0" />
+                <Setter Property="Grid.ColumnSpan" Value="2" />
+                <Setter Property="Margin" Value="100,15,16,0" />
+                <Setter Property="HorizontalAlignment" Value="Right" />
+                <Setter Property="Background" Value="Transparent" />
+                <Setter Property="Opacity" Value="0.8" />
+            </Style>
+            <Style x:Key="DefaultRadialIndicatorStyle" TargetType="Grid">
+                <Setter Property="Grid.RowSpan" Value="2" />
+                <Setter Property="Grid.ColumnSpan" Value="2" />
+                <Setter Property="VerticalAlignment" Value="Stretch" />
+                <Setter Property="HorizontalAlignment" Value="Stretch" />
+                <Setter Property="Visibility" Value="Collapsed" />
+            </Style>
+
+        </ResourceDictionary>
+    </c:Widget.Resources>
+    <c:Widget.TitleBar>
+        <c:WidgetTitleBar
+            x:Name="TitleBarUI"
+            Background="Transparent"
+            IconVisibility="Collapsed"
+            IsPinned="{Binding Root.IsPinned, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            TitleVisibility="Collapsed" />
+    </c:Widget.TitleBar>
+    <c:Widget.ContextMenu>
+        <ContextMenu>
+            <ui:MenuItem
+                Command="{Binding LaunchSettingsCommand}"
+                CommandParameter="{Binding ElementName=Root}"
+                Header="{x:Static r:Resources.SettingsLabel}">
+                <ui:MenuItem.Icon>
+                    <ui:SymbolIcon Symbol="Settings20" />
+                </ui:MenuItem.Icon>
+            </ui:MenuItem>
+        </ContextMenu>
+    </c:Widget.ContextMenu>
+
+    <Grid x:Name="RootLayout" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" MaxWidth="200" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <ToolTipService.ToolTip>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <ui:TextBlock
+                    Grid.Row="0"
+                    Grid.ColumnSpan="2"
+                    Text="{Binding CpuName, Mode=OneWay}"
+                    TextWrapping="Wrap" />
+                <ui:TextBlock
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    Text="{Binding CpuClock, Mode=OneWay}"
+                    TextWrapping="Wrap" />
+                <Grid
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Margin="0,3,7,0"
+                    HorizontalAlignment="Left">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <ui:SymbolIcon
+                        Grid.Column="0"
+                        FontSize="22"
+                        Symbol="DeveloperBoard20" />
+                    <ui:TextBlock
+                        Grid.Column="1"
+                        Margin="6,0,0,2"
+                        VerticalAlignment="Center"
+                        d:Text="12"
+                        FontSize="16"
+                        Text="{Binding CpuCores, Mode=OneWay}" />
+                </Grid>
+                <Grid
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Margin="0,3,7,0"
+                    HorizontalAlignment="Left">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <ui:SymbolIcon
+                        Grid.Column="0"
+                        FontSize="22"
+                        Symbol="Target20" />
+                    <ui:TextBlock
+                        Grid.Column="1"
+                        Margin="2,0,0,2"
+                        VerticalAlignment="Center"
+                        d:Text="15"
+                        FontSize="16"
+                        Text="{Binding CpuThreads, Mode=OneWay}" />
+                </Grid>
+            </Grid>
+        </ToolTipService.ToolTip>
+
+        <Grid
+            x:Name="UIMainInfo"
+            Panel.ZIndex="1"
+            Style="{StaticResource DefaultMainInfoStyle}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.Resources>
+                <ResourceDictionary>
+                    <Style
+                        x:Key="Default"
+                        BasedOn="{StaticResource DefaultMainInfoStyle}"
+                        TargetType="Grid" />
+                    <Style
+                        x:Key="Small"
+                        BasedOn="{StaticResource DefaultMainInfoStyle}"
+                        TargetType="Grid">
+                        <Setter Property="Visibility" Value="Collapsed" />
+                    </Style>
+                    <Style
+                        x:Key="Medium"
+                        BasedOn="{StaticResource DefaultMainInfoStyle}"
+                        TargetType="Grid" />
+                </ResourceDictionary>
+            </Grid.Resources>
+
+            <ui:TextBlock
+                x:Name="UILoadPercentageBox"
+                d:Text="56%"
+                FontSize="42"
+                FontWeight="SemiBold"
+                Text="{Binding CpuUtilizationPercent, Mode=OneWay}" />
+            <WrapPanel Grid.Row="1" Orientation="Horizontal">
+                <Grid x:Name="UICoresBox" Margin="0,3,7,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <ui:SymbolIcon
+                        Grid.Column="0"
+                        FontSize="22"
+                        Symbol="DeveloperBoard20" />
+                    <ui:TextBlock
+                        Grid.Column="1"
+                        Margin="6,0,0,2"
+                        VerticalAlignment="Center"
+                        d:Text="12"
+                        FontSize="16"
+                        Text="{Binding CpuCores, Mode=OneWay}" />
+                </Grid>
+                <Grid x:Name="UIThreadsBox" Margin="0,3,7,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <ui:SymbolIcon
+                        Grid.Column="0"
+                        FontSize="22"
+                        Symbol="Target20" />
+                    <ui:TextBlock
+                        Grid.Column="1"
+                        Margin="2,0,0,2"
+                        VerticalAlignment="Center"
+                        d:Text="15"
+                        FontSize="16"
+                        Text="{Binding CpuThreads, Mode=OneWay}" />
+                </Grid>
+            </WrapPanel>
+        </Grid>
+
+        <Grid
+            x:Name="UIProcName"
+            Panel.ZIndex="1"
+            Style="{StaticResource DefaultCpuNameStyle}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.Resources>
+                <ResourceDictionary>
+                    <Style
+                        x:Key="Default"
+                        BasedOn="{StaticResource DefaultCpuNameStyle}"
+                        TargetType="Grid" />
+                    <Style
+                        x:Key="Small"
+                        BasedOn="{StaticResource DefaultCpuNameStyle}"
+                        TargetType="Grid">
+                        <Setter Property="Visibility" Value="Collapsed" />
+                    </Style>
+                    <Style
+                        x:Key="Medium"
+                        BasedOn="{StaticResource DefaultCpuNameStyle}"
+                        TargetType="Grid" />
+                </ResourceDictionary>
+            </Grid.Resources>
+
+            <ui:TextBlock
+                Grid.Row="0"
+                d:Text="Intel Core i7"
+                FontSize="17"
+                Text="{Binding CpuName, Mode=OneWay}"
+                TextAlignment="Right"
+                TextTrimming="CharacterEllipsis" />
+            <ui:TextBlock
+                Grid.Row="1"
+                d:Text="3700 MHz"
+                d:Visibility="Visible"
+                FontSize="15"
+                Text="{Binding CpuClock, Mode=OneWay}"
+                TextAlignment="Right"
+                TextTrimming="CharacterEllipsis"
+                Visibility="{Binding HasClockInfo, Mode=OneWay, Converter={StaticResource BoolToVisibility}}" />
+        </Grid>
+
+        <charts:CartesianChart
+            Grid.Row="0"
+            Grid.RowSpan="2"
+            Grid.ColumnSpan="2"
+            Margin="-30,0,-30,0"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            AnimationsSpeed="{Binding EnableChartAnimation, Mode=OneWay}"
+            LegendPosition="Hidden"
+            Opacity="{Binding ChartOpacity, Mode=OneWay}"
+            Series="{Binding CpuUsageData, Mode=OneWay}"
+            TooltipPosition="Hidden"
+            XAxes="{StaticResource PerformanceWidgetsXAxis}"
+            YAxes="{StaticResource PerformanceWidgetsYAxis}">
+            <charts:CartesianChart.Resources>
+                <ResourceDictionary>
+                    <Style x:Key="Small" TargetType="charts:CartesianChart">
+                        <Setter Property="Visibility" Value="Collapsed" />
+                    </Style>
+                    <Style x:Key="Medium" TargetType="charts:CartesianChart">
+                        <Setter Property="Visibility" Value="Visible" />
+                    </Style>
+                </ResourceDictionary>
+            </charts:CartesianChart.Resources>
+        </charts:CartesianChart>
+
+        <Grid x:Name="UIRadialIndicatorView" Style="{StaticResource DefaultRadialIndicatorStyle}">
+            <Grid.Resources>
+                <ResourceDictionary>
+                    <Style
+                        x:Key="Default"
+                        BasedOn="{StaticResource DefaultRadialIndicatorStyle}"
+                        TargetType="Grid" />
+                    <Style
+                        x:Key="Small"
+                        BasedOn="{StaticResource DefaultRadialIndicatorStyle}"
+                        TargetType="Grid">
+                        <Setter Property="Visibility" Value="Visible" />
+                    </Style>
+                    <Style
+                        x:Key="Medium"
+                        BasedOn="{StaticResource DefaultRadialIndicatorStyle}"
+                        TargetType="Grid" />
+                </ResourceDictionary>
+            </Grid.Resources>
+
+            <Ellipse
+                Width="80"
+                Height="80"
+                Stroke="{DynamicResource CardBackground}"
+                StrokeThickness="10" />
+            <ui:ProgressRing
+                Width="80"
+                Height="80"
+                Progress="{Binding CpuUtilization, Mode=OneWay}"
+                RenderTransformOrigin="0.5,0.5">
+                <ui:ProgressRing.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1" />
+                        <SkewTransform />
+                        <RotateTransform />
+                        <TranslateTransform />
+                    </TransformGroup>
+                </ui:ProgressRing.RenderTransform>
+
+            </ui:ProgressRing>
+
+            <ui:SymbolIcon
+                Margin="0,0,0,20"
+                FontSize="20"
+                Symbol="DeveloperBoard20" />
+            <ui:TextBlock
+                Margin="0,24,0,2"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontSize="18"
+                FontWeight="SemiBold"
+                Text="{Binding CpuUtilizationPercent, Mode=OneWay}" />
+        </Grid>
+
+        <Grid
+            x:Name="UIRequestAccess"
+            Grid.RowSpan="2"
+            Grid.ColumnSpan="2"
+            Background="{ui:ThemeResource ApplicationBackgroundBrush}"
+            Visibility="{Binding IsPermissionUIVisible, Mode=OneWay, Converter={StaticResource BoolToVisibility}}">
+            <StackPanel
+                Margin="10,13,10,10"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+                <ui:TextBlock
+                    FontWeight="SemiBold"
+                    Text="{x:Static r:Resources.PermissionNeeded}"
+                    TextAlignment="Center"
+                    TextTrimming="CharacterEllipsis" />
+                <ui:TextBlock
+                    MaxWidth="200"
+                    Margin="0,9,0,0"
+                    Opacity="0.8"
+                    Text="{x:Static r:Resources.WidgetNeedsPermission}"
+                    TextAlignment="Center"
+                    TextWrapping="Wrap" />
+                <ui:HyperlinkButton
+                    Margin="0,5,0,0"
+                    HorizontalAlignment="Center"
+                    Command="{Binding RequestPermissionCommand}"
+                    CommandParameter="{Binding ElementName=Root}"
+                    Content="{x:Static r:Resources.GrandAccess}" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+
+</c:Widget>

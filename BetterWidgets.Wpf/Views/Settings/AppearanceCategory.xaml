@@ -1,0 +1,110 @@
+﻿<c:SettingCategory
+    x:Class="BetterWidgets.Views.Settings.AppearanceCategory"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c="clr-namespace:BetterWidgets.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:r="clr-namespace:BetterWidgets.Resources"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:vm="clr-namespace:BetterWidgets.ViewModel.SettingsViews"
+    Title="{x:Static r:Resources.AppearanceSettingsTitle}"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    Subtitle="{x:Static r:Resources.AppearanceSettingsSubtitle}"
+    mc:Ignorable="d">
+    <c:SettingCategory.Icon>
+        <ui:SymbolIcon Symbol="PaintBrush20" />
+    </c:SettingCategory.Icon>
+    <c:SettingCategory.DataContext>
+        <vm:AppearanceSettingsViewModel />
+    </c:SettingCategory.DataContext>
+
+    <c:SettingCategory.Settings>
+        <c:CardSettingView
+            Title="{x:Static r:Resources.DarkThemeTitle}"
+            Id="app.theme"
+            Subtitle="{x:Static r:Resources.DarkThemeSubtitle}">
+            <c:CardSettingView.Icon>
+                <ui:SymbolIcon Symbol="WeatherMoon20" />
+            </c:CardSettingView.Icon>
+
+            <c:CardSettingView.Header>
+                <ui:ToggleSwitch IsChecked="{Binding IsDarkMode, Mode=TwoWay}" />
+            </c:CardSettingView.Header>
+        </c:CardSettingView>
+        <c:CardSettingView
+            Title="{x:Static r:Resources.WidgetTransparency}"
+            Id="app.theme.widget.transparency"
+            Subtitle="{x:Static r:Resources.WidgetTransparencySubtitle}">
+            <c:CardSettingView.Icon>
+                <ui:SymbolIcon Symbol="Color20" />
+            </c:CardSettingView.Icon>
+
+            <c:CardSettingView.Header>
+                <Slider
+                    Width="200"
+                    Margin="10,0,0,0"
+                    VerticalAlignment="Center"
+                    LargeChange="0.1"
+                    Maximum="1"
+                    Minimum="0"
+                    SmallChange="0.1"
+                    Value="{Binding WidgetTransparency, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            </c:CardSettingView.Header>
+        </c:CardSettingView>
+        <c:ExpanderSettingView
+            Title="{x:Static r:Resources.AccentColorSettingTitle}"
+            Id="app.theme.color"
+            IsExpanded="{Binding IsCustomAccentColorEnabled, Mode=OneWay}"
+            Subtitle="{x:Static r:Resources.AccentColorSettingSubtitle}">
+            <c:ExpanderSettingView.Icon>
+                <ui:SymbolIcon Symbol="Color20" />
+            </c:ExpanderSettingView.Icon>
+
+            <c:ExpanderSettingView.Header>
+                <ui:ToggleSwitch VerticalAlignment="Center" IsChecked="{Binding IsCustomAccentColorEnabled, Mode=TwoWay}" />
+            </c:ExpanderSettingView.Header>
+            <c:ExpanderSettingView.Content>
+                <StackPanel Margin="10,5">
+                    <Grid HorizontalAlignment="Stretch" IsEnabled="{Binding IsCustomAccentColorEnabled, Mode=OneWay}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <ui:TextBlock
+                            Grid.Column="0"
+                            VerticalAlignment="Center"
+                            Text="{x:Static r:Resources.AccentColor}"
+                            TextTrimming="CharacterEllipsis" />
+                        <ui:Button
+                            Grid.Column="1"
+                            VerticalAlignment="Center"
+                            Command="{Binding PickColorCommand}"
+                            CommandParameter="AccentColor"
+                            Style="{StaticResource FlatButton}">
+                            <Rectangle
+                                MinWidth="32"
+                                MinHeight="22"
+                                RadiusX="5"
+                                RadiusY="5">
+                                <Rectangle.Fill>
+                                    <SolidColorBrush Color="{Binding AccentColor, Mode=OneWay}" />
+                                </Rectangle.Fill>
+                            </Rectangle>
+                        </ui:Button>
+                    </Grid>
+                    <ui:InfoBar
+                        Title="{x:Static r:Resources.RequiresRestart}"
+                        Margin="-2,10,-2,0"
+                        IsClosable="False"
+                        IsOpen="True"
+                        Message="{x:Static r:Resources.RequiresRestartSubtitle}"
+                        Severity="Warning" />
+                </StackPanel>
+            </c:ExpanderSettingView.Content>
+        </c:ExpanderSettingView>
+    </c:SettingCategory.Settings>
+
+</c:SettingCategory>

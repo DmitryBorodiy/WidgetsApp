@@ -1,0 +1,304 @@
+﻿<c:WidgetSettingsView
+    x:Class="BetterWidgets.Views.WidgetSettings.ClockWidgetSettings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c="clr-namespace:BetterWidgets.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:h="clr-namespace:BetterWidgets.Helpers"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:r="clr-namespace:BetterWidgets.Resources"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:v="clr-namespace:BetterWidgets.Behaviours.Validators"
+    xmlns:vm="clr-namespace:BetterWidgets.ViewModel.WidgetsSettingsViews"
+    Title="{x:Static r:Resources.ClockSettings}"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    BackCommand="{Binding BackCommand}"
+    LoadedCommand="{Binding LoadedCommand}"
+    mc:Ignorable="d">
+    <c:WidgetSettingsView.DataContext>
+        <vm:ClockWidgetSettingsViewModel />
+    </c:WidgetSettingsView.DataContext>
+
+    <c:WidgetSettingsView.Settings>
+        <c:CardSettingView Title="{x:Static r:Resources.TimeFormatTitle}" Subtitle="{x:Static r:Resources.TimeFormatSubtitle}">
+            <c:CardSettingView.Icon>
+                <ui:SymbolIcon Symbol="Clock20" />
+            </c:CardSettingView.Icon>
+
+            <c:CardSettingView.Header>
+                <ui:TextBox
+                    Width="150"
+                    VerticalAlignment="Center"
+                    Style="{StaticResource ValidationTextBoxStyle}">
+                    <ui:TextBox.Text>
+                        <Binding Path="TimeFormat" UpdateSourceTrigger="PropertyChanged">
+                            <Binding.ValidationRules>
+                                <v:NotEmptyValidator />
+                                <v:TimeFormatValidator />
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </ui:TextBox.Text>
+                </ui:TextBox>
+            </c:CardSettingView.Header>
+        </c:CardSettingView>
+        <c:ExpanderSettingView Title="{x:Static r:Resources.DateDisplay}" Subtitle="{x:Static r:Resources.DateFormatSubtitle}">
+            <c:ExpanderSettingView.Icon>
+                <ui:SymbolIcon Symbol="CalendarEdit20" />
+            </c:ExpanderSettingView.Icon>
+
+            <c:ExpanderSettingView.Header>
+                <ui:ToggleSwitch IsChecked="{Binding IsDateEnabled, Mode=TwoWay}" />
+            </c:ExpanderSettingView.Header>
+            <c:ExpanderSettingView.Content>
+                <Grid Margin="5,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <ui:TextBlock
+                        Grid.Column="0"
+                        VerticalAlignment="Center"
+                        Text="{x:Static r:Resources.DateFormatTitle}" />
+                    <ui:TextBox
+                        Grid.Column="1"
+                        Width="200"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                        Style="{StaticResource ValidationTextBoxStyle}">
+                        <ui:TextBox.Text>
+                            <Binding Path="DateFormat" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <v:NotEmptyValidator />
+                                    <v:DateFormatValidator />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </ui:TextBox.Text>
+                    </ui:TextBox>
+                </Grid>
+            </c:ExpanderSettingView.Content>
+        </c:ExpanderSettingView>
+        <c:CardSettingView Title="{x:Static r:Resources.DisableBackgroundSetting}" Subtitle="{x:Static r:Resources.DisableBackgroundSettingSubtitle}">
+            <c:CardSettingView.Icon>
+                <ui:SymbolIcon Symbol="PaintBrush20" />
+            </c:CardSettingView.Icon>
+
+            <c:CardSettingView.Header>
+                <ui:ToggleSwitch IsChecked="{Binding IsBackgroundDisabled, Mode=TwoWay}" />
+            </c:CardSettingView.Header>
+        </c:CardSettingView>
+        <c:CardSettingView Title="{x:Static r:Resources.EnableShadowEffect}" Subtitle="{x:Static r:Resources.EnableShadowEffectSubtitle}">
+            <c:CardSettingView.Icon>
+                <ui:SymbolIcon Symbol="SquareShadow20" />
+            </c:CardSettingView.Icon>
+
+            <c:CardSettingView.Header>
+                <ui:ToggleSwitch IsChecked="{Binding IsShadowEnabled, Mode=TwoWay}" />
+            </c:CardSettingView.Header>
+        </c:CardSettingView>
+        <c:CardSettingView Title="{x:Static r:Resources.ShowAppointmentsSetting}" Subtitle="{x:Static r:Resources.ShowAppointmentsSettingSubtitle}">
+            <c:CardSettingView.Icon>
+                <ui:SymbolIcon Symbol="CalendarAgenda24" />
+            </c:CardSettingView.Icon>
+
+            <c:CardSettingView.Header>
+                <ui:ToggleSwitch IsChecked="{Binding IsAppointmentsEnabled, Mode=TwoWay}" />
+            </c:CardSettingView.Header>
+        </c:CardSettingView>
+        <c:CardSettingView Title="{x:Static r:Resources.ShowClockFace}" Subtitle="{x:Static r:Resources.ShowClockFaceSubtitle}">
+            <c:CardSettingView.Icon>
+                <ui:SymbolIcon Symbol="NumberRow20" />
+            </c:CardSettingView.Icon>
+
+            <c:CardSettingView.Header>
+                <ui:ToggleSwitch Margin="3,0" IsChecked="{Binding IsClockFaceEnabled, Mode=TwoWay}" />
+            </c:CardSettingView.Header>
+        </c:CardSettingView>
+        <c:ExpanderSettingView Title="{x:Static r:Resources.CustomFont}" Subtitle="{x:Static r:Resources.ClockFontFamilySubtitle}">
+            <c:ExpanderSettingView.Icon>
+                <ui:SymbolIcon Symbol="TextFont20" />
+            </c:ExpanderSettingView.Icon>
+
+            <c:ExpanderSettingView.Header>
+                <ui:ToggleSwitch VerticalAlignment="Center" IsChecked="{Binding EnableCustomFont, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            </c:ExpanderSettingView.Header>
+            <c:ExpanderSettingView.Content>
+                <Grid Margin="9,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock
+                        Grid.Column="0"
+                        VerticalAlignment="Center"
+                        Text="{x:Static r:Resources.CustomFont}"
+                        TextWrapping="Wrap" />
+                    <ComboBox
+                        Grid.Column="1"
+                        Width="220"
+                        VerticalAlignment="Center"
+                        IsEnabled="{Binding EnableCustomFont, Mode=OneWay}"
+                        ItemsSource="{Binding FontsItemsSource, Mode=OneWay}"
+                        SelectedIndex="{Binding SelectedFontIndex, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                </Grid>
+            </c:ExpanderSettingView.Content>
+        </c:ExpanderSettingView>
+        <c:ExpanderSettingView Title="{x:Static r:Resources.TimeZonesTitle}" Subtitle="{x:Static r:Resources.TimeZonesSubtitle}">
+            <c:ExpanderSettingView.Icon>
+                <ui:SymbolIcon Symbol="GlobeClock20" />
+            </c:ExpanderSettingView.Icon>
+
+            <c:ExpanderSettingView.Header>
+                <ui:Button
+                    Margin="2,0"
+                    Appearance="Primary"
+                    Command="{Binding AddTimeZoneCommand}"
+                    Content="{x:Static r:Resources.AddTimeZone}">
+                    <ui:Button.Icon>
+                        <ui:SymbolIcon Symbol="Add20" />
+                    </ui:Button.Icon>
+                </ui:Button>
+            </c:ExpanderSettingView.Header>
+            <c:ExpanderSettingView.Content>
+                <Grid>
+                    <ui:ListView
+                        Margin="5"
+                        ItemTemplate="{StaticResource TimezoneItemTemplate}"
+                        ItemsSource="{Binding TimeZonesCollection, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+                        SelectedItem="{Binding SelectedTimeZone, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                        <ui:ListView.ContextMenu>
+                            <ContextMenu>
+                                <ui:MenuItem
+                                    Command="{Binding RemoveTimeZoneCommand}"
+                                    CommandParameter="{Binding SelectedTimeZone, Mode=OneWay}"
+                                    Header="{x:Static r:Resources.RemoveLabel}">
+                                    <ui:MenuItem.Icon>
+                                        <ui:SymbolIcon Symbol="Delete20" />
+                                    </ui:MenuItem.Icon>
+                                </ui:MenuItem>
+                            </ContextMenu>
+                        </ui:ListView.ContextMenu>
+                    </ui:ListView>
+                    <StackPanel
+                        Name="TimeZonesEmptyUI"
+                        MaxWidth="500"
+                        Margin="20"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        h:MarginSetter.Margin="0, 0, 0, 10"
+                        Visibility="{Binding IsTimeZonesEmpty, Mode=OneWay, Converter={StaticResource BoolToVisibilityInvert}}">
+                        <ui:SymbolIcon
+                            HorizontalAlignment="Center"
+                            FontSize="60"
+                            Foreground="{DynamicResource SystemAccentColorBrush}"
+                            Symbol="GlobeClock24" />
+                        <ui:TextBlock
+                            HorizontalAlignment="Stretch"
+                            FontSize="20"
+                            Text="{x:Static r:Resources.TimeZonesEmptyTitle}"
+                            TextAlignment="Center"
+                            TextTrimming="CharacterEllipsis" />
+                        <ui:TextBlock
+                            HorizontalAlignment="Stretch"
+                            Opacity="0.8"
+                            Text="{x:Static r:Resources.TimeZonesEmptySubtitle}"
+                            TextAlignment="Center"
+                            TextWrapping="Wrap" />
+                    </StackPanel>
+                </Grid>
+            </c:ExpanderSettingView.Content>
+        </c:ExpanderSettingView>
+    </c:WidgetSettingsView.Settings>
+
+    <c:WidgetSettingsView.Content>
+        <Grid Margin="32,0,32,13">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0" Margin="0,0,20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <RadioButton
+                    Grid.Row="0"
+                    HorizontalAlignment="Stretch"
+                    Content="{x:Static r:Resources.DigitalClock}"
+                    GroupName="ClockMode"
+                    IsChecked="{Binding WidgetMode, Converter={StaticResource EnumToBool}, ConverterParameter=DigitalClock, Mode=TwoWay}" />
+
+                <Border
+                    Grid.Row="1"
+                    Height="200"
+                    Margin="0,6,0,0"
+                    HorizontalAlignment="Stretch"
+                    Background="{DynamicResource CardBackground}"
+                    BorderBrush="{DynamicResource CardBorderBrush}"
+                    BorderThickness="1"
+                    CornerRadius="5">
+                    <StackPanel
+                        Margin="0,0,0,8"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                        <ui:TextBlock
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            d:Text="12:00 PM"
+                            FontFamily="{Binding SelectedFont, Mode=OneWay}"
+                            FontSize="40"
+                            FontWeight="SemiBold"
+                            Text="{Binding TimeLabel, Mode=OneWay}"
+                            TextAlignment="Center" />
+                        <ui:TextBlock
+                            Margin="0,5,0,0"
+                            HorizontalAlignment="Center"
+                            d:Text="Saturday, April 26"
+                            FontFamily="{Binding SelectedFont, Mode=OneWay}"
+                            FontSize="18"
+                            Opacity="0.8"
+                            Text="{Binding DateLabel, Mode=OneWay}"
+                            TextAlignment="Center" />
+                    </StackPanel>
+                </Border>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <RadioButton
+                    Grid.Row="0"
+                    HorizontalAlignment="Stretch"
+                    Content="{x:Static r:Resources.AnalogClock}"
+                    GroupName="ClockMode"
+                    IsChecked="{Binding WidgetMode, Converter={StaticResource EnumToBool}, ConverterParameter=AnalogClock, Mode=TwoWay}" />
+
+                <Border
+                    Grid.Row="1"
+                    Height="200"
+                    Margin="0,6,0,0"
+                    HorizontalAlignment="Stretch"
+                    Background="{DynamicResource CardBackground}"
+                    BorderBrush="{DynamicResource CardBorderBrush}"
+                    BorderThickness="1"
+                    CornerRadius="5">
+                    <c:AnalogClock
+                        Width="130"
+                        Height="130"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        DateTime="{Binding DateTime, Mode=OneWay}"
+                        FontFamily="{Binding SelectedFont, Mode=OneWay}"
+                        IsClockFaceEnabled="{Binding IsClockFaceEnabled, Mode=OneWay}" />
+                </Border>
+            </Grid>
+        </Grid>
+    </c:WidgetSettingsView.Content>
+
+</c:WidgetSettingsView>

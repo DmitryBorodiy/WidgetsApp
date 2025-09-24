@@ -1,0 +1,94 @@
+﻿<ui:FluentWindow
+    x:Class="BetterWidgets.Views.Dialogs.PermissionsDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:h="clr-namespace:BetterWidgets.Helpers"
+    xmlns:local="clr-namespace:BetterWidgets.Views.Dialogs"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:r="clr-namespace:BetterWidgets.Resources"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:vm="clr-namespace:BetterWidgets.ViewModel"
+    Name="Root"
+    Title="{x:Static r:Resources.Permissions}"
+    Width="480"
+    Height="520"
+    d:Background="{ui:ThemeResource ApplicationBackgroundBrush}"
+    d:Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}"
+    d:WindowStyle="None"
+    ExtendsContentIntoTitleBar="True"
+    ShowInTaskbar="False"
+    WindowBackdropType="Mica"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <ui:FluentWindow.DataContext>
+        <vm:PermissionsViewModel />
+    </ui:FluentWindow.DataContext>
+
+    <Grid x:Name="RootLayout">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <ui:TitleBar
+            Title="{Binding ElementName=Root, Path=Title, Mode=OneWay}"
+            Grid.Row="0"
+            Margin="-16,0,0,0"
+            HorizontalAlignment="Stretch"
+            CanMaximize="False"
+            ShowMaximize="False"
+            ShowMinimize="False" />
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <StackPanel
+                Grid.Row="1"
+                Margin="0,10"
+                HorizontalAlignment="Center"
+                h:MarginSetter.LastItemMargin="0"
+                h:MarginSetter.Margin="0, 0, 0, 10">
+                <Image
+                    Width="50"
+                    Height="50"
+                    HorizontalAlignment="Center"
+                    d:Source="pack://application:,,,/Assets/WeatherWidget/icon-48.png"
+                    Source="{Binding Widget.Icon, Mode=OneWay}" />
+                <StackPanel
+                    MaxWidth="380"
+                    HorizontalAlignment="Center"
+                    h:MarginSetter.LastItemMargin="0"
+                    h:MarginSetter.Margin="0, 0, 0, 9">
+                    <ui:TextBlock
+                        d:Text="Weather"
+                        FontSize="22"
+                        FontWeight="SemiBold"
+                        Text="{Binding Widget.Title, Mode=OneWay}"
+                        TextAlignment="Center"
+                        TextTrimming="CharacterEllipsis" />
+                    <ui:TextBlock
+                        HorizontalAlignment="Stretch"
+                        d:Text="Set permissions for the weather widget, these permissions will be used in the future when the widget requests sensitive data that is provided below."
+                        Opacity="0.8"
+                        Text="{Binding Subtitle, Mode=OneWay}"
+                        TextAlignment="Center"
+                        TextWrapping="Wrap" />
+                </StackPanel>
+            </StackPanel>
+
+            <ScrollViewer Grid.Row="2">
+                <ItemsControl
+                    Margin="50,15"
+                    ItemTemplate="{StaticResource PermissionItemTemplate}"
+                    ItemsPanel="{StaticResource PermissionsCollectionPanelTemplate}"
+                    ItemsSource="{Binding PermissionViews, Mode=OneWay}" />
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+
+</ui:FluentWindow>

@@ -1,0 +1,163 @@
+﻿<Page
+    x:Class="BetterWidgets.Views.WidgetDetailView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c="clr-namespace:BetterWidgets.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:h="clr-namespace:BetterWidgets.Helpers"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:r="clr-namespace:BetterWidgets.Resources"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    Title="WidgetDetailView"
+    d:Background="{ui:ThemeResource ApplicationBackgroundBrush}"
+    d:DesignHeight="600"
+    d:DesignWidth="800"
+    Style="{StaticResource DetailsViewPageStyle}"
+    mc:Ignorable="d">
+
+    <Grid x:Name="RootLayout">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel
+            Grid.Row="0"
+            Margin="35,45,35,10"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Center">
+            <ui:TextBlock
+                HorizontalAlignment="Stretch"
+                FontSize="24"
+                FontWeight="SemiBold"
+                Text="{Binding Widget.Title, Mode=OneWay}"
+                TextAlignment="Center" />
+            <ui:TextBlock
+                MaxWidth="500"
+                Margin="0,16,0,0"
+                HorizontalAlignment="Stretch"
+                Opacity="0.8"
+                Text="{Binding Widget.Subtitle, Mode=OneWay}"
+                TextAlignment="Center"
+                TextWrapping="Wrap" />
+            <ui:Button
+                Name="PrivacyFlyoutCommandUI"
+                Margin="0,22,0,0"
+                Padding="10,5"
+                HorizontalAlignment="Center"
+                Command="{Binding TogglePrivacyFlyoutCommand}"
+                CornerRadius="16"
+                Visibility="{Binding HasWidgetPermissions, Mode=OneWay, Converter={StaticResource BoolToVisibility}}">
+                <StackPanel Orientation="Horizontal">
+                    <ui:SymbolIcon Symbol="Shield20" />
+                    <TextBlock
+                        Margin="6,0,0,1"
+                        VerticalAlignment="Center"
+                        FontSize="12"
+                        Text="{x:Static r:Resources.PrivacyLabel}" />
+                </StackPanel>
+            </ui:Button>
+        </StackPanel>
+        <Viewbox
+            Name="ViewBoxUI"
+            Grid.Row="1"
+            MaxWidth="280"
+            MaxHeight="270"
+            Margin="30,20"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch">
+            <Border
+                Width="280"
+                Height="270"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                ClipToBounds="True"
+                CornerRadius="15">
+                <Border.Clip>
+                    <RectangleGeometry
+                        RadiusX="15"
+                        RadiusY="15"
+                        Rect="0,0,280,270" />
+                </Border.Clip>
+                <Grid Margin="1.2">
+                    <Rectangle
+                        Fill="{DynamicResource ApplicationBackgroundBrush}"
+                        RadiusX="15"
+                        RadiusY="15"
+                        Stroke="{DynamicResource SmokeFillColorDefaultBrush}"
+                        StrokeThickness="0.3" />
+                    <ContentControl Content="{Binding Widget.Content, Mode=OneWay}" Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+                    <ui:ProgressRing
+                        Width="32"
+                        Height="32"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        IsIndeterminate="True"
+                        Visibility="{Binding Widget.IsLoading, Mode=OneWay, Converter={StaticResource BoolToVisibility}}" />
+                </Grid>
+            </Border>
+        </Viewbox>
+        <StackPanel
+            Grid.Row="2"
+            Margin="0,20,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            h:MarginSetter.Margin="0, 0, 0, 13"
+            RenderTransformOrigin="0.5,0.5">
+            <StackPanel.RenderTransform>
+                <ScaleTransform ScaleX="1.1" ScaleY="1.1" />
+            </StackPanel.RenderTransform>
+            <ui:Button
+                Padding="24,7"
+                HorizontalAlignment="Center"
+                Command="{Binding Widget.ShareCommand}"
+                CommandParameter="{Binding Widget.ShareCommandParameter, Mode=OneWay}"
+                CornerRadius="17"
+                IsEnabled="{Binding Widget.CanShare, Mode=OneWay}"
+                Visibility="{Binding AllowSharing, Mode=OneWay, Converter={StaticResource BoolToVisibility}}">
+                <StackPanel Orientation="Horizontal">
+                    <ui:SymbolIcon
+                        VerticalAlignment="Center"
+                        FontSize="20"
+                        Symbol="Share20" />
+                    <TextBlock
+                        Margin="8,0,0,1"
+                        VerticalAlignment="Center"
+                        Text="{x:Static r:Resources.ShareLabel}" />
+                </StackPanel>
+            </ui:Button>
+            <c:CustomToggleButton
+                Padding="20,8"
+                HorizontalAlignment="Center"
+                Appearance="Primary"
+                Command="{Binding PinWidgetCommand}"
+                CommandParameter="{Binding Widget, Mode=OneWay}"
+                CornerRadius="18"
+                IsToggled="{Binding IsWidgetPinned, Mode=OneWay}"
+                Style="{StaticResource PinWidgetButtonStyle}" />
+        </StackPanel>
+        <Popup
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            d:IsOpen="False"
+            d:Margin="0"
+            d:Visibility="Collapsed"
+            IsOpen="{Binding IsPrivacyFlyoutOpen, Mode=TwoWay}"
+            Placement="Center"
+            PlacementTarget="{Binding ElementName=PrivacyFlyoutCommandUI}"
+            Style="{StaticResource DefaultPopupStyle}"
+            VerticalOffset="75">
+            <Border
+                Padding="9,7"
+                Background="{DynamicResource FlyoutBackground}"
+                BorderBrush="{DynamicResource FlyoutBorderBrush}"
+                CornerRadius="8">
+                <ui:ListView
+                    DataContext="{Binding PermissionsDataContext, Mode=OneWay}"
+                    ItemTemplate="{StaticResource PermissionItemTemplate}"
+                    ItemsSource="{Binding PermissionViews, Mode=OneWay}"
+                    SelectionChanged="ListView_SelectionChanged" />
+            </Border>
+        </Popup>
+    </Grid>
+</Page>

@@ -1,0 +1,127 @@
+﻿<c:WidgetSettingsView
+    x:Class="BetterWidgets.Views.WidgetSettings.StickyNotesWidgetSettings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c="clr-namespace:BetterWidgets.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:h="clr-namespace:BetterWidgets.Helpers"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:r="clr-namespace:BetterWidgets.Resources"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:vm="clr-namespace:BetterWidgets.ViewModel.WidgetsSettingsViews"
+    Title="{x:Static r:Resources.StickyNotesSettings}"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    BackCommand="{Binding BackCommand}"
+    mc:Ignorable="d">
+    <c:WidgetSettingsView.DataContext>
+        <vm:StickyNotesSettingsViewModel />
+    </c:WidgetSettingsView.DataContext>
+
+    <c:WidgetSettingsView.Settings>
+        <c:CardSettingView
+            Title="{x:Static r:Resources.EnableSoundEffects}"
+            Id="notes.sounds"
+            Subtitle="{x:Static r:Resources.EnableSoundEffectsSubtitle}">
+            <c:CardSettingView.Icon>
+                <ui:SymbolIcon Symbol="MusicNote120" />
+            </c:CardSettingView.Icon>
+            <c:CardSettingView.Header>
+                <ui:ToggleSwitch
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    IsChecked="{Binding IsSoundsEnabled, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            </c:CardSettingView.Header>
+        </c:CardSettingView>
+        <c:CardSettingView
+            Title="{x:Static r:Resources.DefaultFont}"
+            Id="notes.fontFamily"
+            Subtitle="{x:Static r:Resources.DefaultNotesFontSubtitle}">
+            <c:CardSettingView.Icon>
+                <ui:SymbolIcon Symbol="TextFont20" />
+            </c:CardSettingView.Icon>
+            <c:CardSettingView.Header>
+                <ComboBox
+                    Width="180"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    ItemsSource="{Binding SystemFonts, Mode=OneWay}"
+                    SelectedIndex="{Binding SelectedFontFamilyIndex, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            </c:CardSettingView.Header>
+        </c:CardSettingView>
+        <c:CardSettingView
+            Title="{x:Static r:Resources.DefaultFontSize}"
+            Id="notes.fontSize"
+            Subtitle="{x:Static r:Resources.DefaultFontSizeSubtitle}">
+            <c:CardSettingView.Icon>
+                <ui:SymbolIcon Symbol="TextFontSize20" />
+            </c:CardSettingView.Icon>
+            <c:CardSettingView.Header>
+                <ui:NumberBox
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Maximum="66"
+                    Minimum="6"
+                    Value="{Binding DefaultFontSize, Mode=TwoWay}" />
+            </c:CardSettingView.Header>
+        </c:CardSettingView>
+        <c:CardSettingView
+            Title="{x:Static r:Resources.AutoSave}"
+            Id="notes.autosave"
+            Subtitle="{x:Static r:Resources.AutoSaveSubtitle}">
+            <c:CardSettingView.Icon>
+                <ui:SymbolIcon Symbol="SaveEdit20" />
+            </c:CardSettingView.Icon>
+            <c:CardSettingView.Header>
+                <ui:ToggleSwitch
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    IsChecked="{Binding IsNoteAutosaveEnabled, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            </c:CardSettingView.Header>
+        </c:CardSettingView>
+        <c:ExpanderSettingView
+            Title="{x:Static r:Resources.UpdateInterval}"
+            Id="notes.update"
+            Subtitle="{x:Static r:Resources.UpdateNotesIntervalSubtitle}">
+            <c:ExpanderSettingView.Icon>
+                <ui:SymbolIcon Symbol="ArrowSyncCircle20" />
+            </c:ExpanderSettingView.Icon>
+            <c:ExpanderSettingView.Header>
+                <ui:ToggleSwitch
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    IsChecked="{Binding IsUpdateEnabled, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            </c:ExpanderSettingView.Header>
+            <c:ExpanderSettingView.Content>
+                <StackPanel Margin="6,0">
+                    <Grid HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <ui:TextBlock
+                            Grid.Column="0"
+                            VerticalAlignment="Center"
+                            Text="{x:Static r:Resources.UpdateInterval}"
+                            TextTrimming="CharacterEllipsis" />
+
+                        <StackPanel Grid.Column="1" Orientation="Horizontal">
+                            <ui:TextBlock
+                                Margin="0,0,6,0"
+                                VerticalAlignment="Center"
+                                Text="{x:Static r:Resources.Minutes}" />
+                            <ui:NumberBox
+                                VerticalAlignment="Center"
+                                IsEnabled="{Binding IsUpdateEnabled, Mode=OneWay}"
+                                Maximum="1500"
+                                Minimum="5"
+                                Value="{Binding UpdateInterval, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </c:ExpanderSettingView.Content>
+        </c:ExpanderSettingView>
+    </c:WidgetSettingsView.Settings>
+
+</c:WidgetSettingsView>

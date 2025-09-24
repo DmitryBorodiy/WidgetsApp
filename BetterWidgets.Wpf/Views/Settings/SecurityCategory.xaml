@@ -1,0 +1,106 @@
+﻿<c:SettingCategory
+    x:Class="BetterWidgets.Views.Settings.SecurityCategory"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c="clr-namespace:BetterWidgets.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:r="clr-namespace:BetterWidgets.Resources"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:vm="clr-namespace:BetterWidgets.ViewModel.SettingsViews"
+    x:Name="Root"
+    Title="{x:Static r:Resources.SecurityLabel}"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    LoadedCommand="{Binding LoadCommand}"
+    LoadedCommandParameter="{Binding ElementName=Root}"
+    Subtitle="{x:Static r:Resources.SecuritySubtitle}"
+    mc:Ignorable="d">
+    <c:SettingCategory.DataContext>
+        <vm:SecuritySettingsViewModel />
+    </c:SettingCategory.DataContext>
+    <c:SettingCategory.Icon>
+        <ui:SymbolIcon Symbol="Shield20" />
+    </c:SettingCategory.Icon>
+
+    <c:SettingCategory.Settings>
+        <c:CardSettingView
+            Title="{x:Static r:Resources.WindowsHello}"
+            Id="security.switch.windowsHello"
+            Subtitle="{x:Static r:Resources.WindowsHelloSubtitle}">
+            <c:CardSettingView.Icon>
+                <ui:SymbolIcon Symbol="Eye20" />
+            </c:CardSettingView.Icon>
+
+            <c:CardSettingView.Header>
+                <ui:ToggleSwitch Name="EnableWindowsHelloSwitch" IsChecked="{Binding IsWindowsHelloEnabled, Mode=TwoWay}" />
+            </c:CardSettingView.Header>
+        </c:CardSettingView>
+        <c:CardSettingView
+            Title="{x:Static r:Resources.WindowsHelloLockTime}"
+            Id="security.switch.windowsHello"
+            Subtitle="{x:Static r:Resources.WindowsHelloLockTimeSubtitle}">
+            <c:CardSettingView.Icon>
+                <ui:SymbolIcon Symbol="LockClosed20" />
+            </c:CardSettingView.Icon>
+
+            <c:CardSettingView.Header>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <ui:TextBlock
+                        Grid.Column="0"
+                        Margin="10,0"
+                        VerticalAlignment="Center"
+                        Text="{x:Static r:Resources.Minutes}" />
+                    <ui:NumberBox
+                        Grid.Column="1"
+                        IsEnabled="{Binding IsWindowsHelloEnabled, Mode=OneWay}"
+                        Maximum="90"
+                        Minimum="1"
+                        Value="{Binding LockInterval, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                </Grid>
+            </c:CardSettingView.Header>
+        </c:CardSettingView>
+        <c:CardSettingView
+            Title="{x:Static r:Resources.AllowShare}"
+            Id="security.allowSharing"
+            Subtitle="{x:Static r:Resources.AllowShareSubtitle}">
+            <c:CardSettingView.Icon>
+                <ui:SymbolIcon Symbol="Share20" />
+            </c:CardSettingView.Icon>
+            <c:CardSettingView.Header>
+                <ui:ToggleSwitch
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    IsChecked="{Binding AllowSharing, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            </c:CardSettingView.Header>
+            <c:CardSettingView.Content>
+                <ui:InfoBar
+                    Title="{x:Static r:Resources.FutureFeature}"
+                    IsClosable="False"
+                    IsOpen="True"
+                    Message="{x:Static r:Resources.FeatureUnavailable}"
+                    Severity="Warning" />
+            </c:CardSettingView.Content>
+        </c:CardSettingView>
+        <c:ExpanderSettingView
+            Title="{x:Static r:Resources.Permissions}"
+            Id="security.permissions"
+            IsExpanded="True"
+            Subtitle="{x:Static r:Resources.PermssionsSettingSubtitle}">
+            <c:ExpanderSettingView.Icon>
+                <ui:SymbolIcon Symbol="Shield20" />
+            </c:ExpanderSettingView.Icon>
+
+            <ui:ListView
+                ItemTemplate="{StaticResource WidgetCollectionButtonItemTemplate}"
+                ItemsSource="{Binding Permissions, Mode=OneWay}"
+                SelectedItem="{Binding WidgetPermission, Mode=TwoWay}" />
+        </c:ExpanderSettingView>
+    </c:SettingCategory.Settings>
+
+</c:SettingCategory>

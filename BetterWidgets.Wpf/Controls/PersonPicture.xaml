@@ -1,0 +1,32 @@
+﻿<UserControl
+    x:Class="BetterWidgets.Controls.PersonPicture"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    Name="Root"
+    d:DesignHeight="42"
+    d:DesignWidth="42"
+    Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}"
+    mc:Ignorable="d">
+
+    <Viewbox>
+        <Border
+            Width="28"
+            Height="28"
+            Background="{ui:ThemeResource ControlFillColorDefaultBrush}"
+            ClipToBounds="True"
+            CornerRadius="100">
+            <Grid>
+                <ui:SymbolIcon Symbol="Person20" />
+                <Ellipse>
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="{Binding Path=PersonImageSource, ElementName=Root, Mode=OneWay}" Stretch="UniformToFill" />
+                    </Ellipse.Fill>
+                </Ellipse>
+            </Grid>
+        </Border>
+    </Viewbox>
+
+</UserControl>

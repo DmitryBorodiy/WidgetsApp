@@ -1,0 +1,315 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:b="clr-namespace:BetterWidgets.Behaviours.Converters"
+    xmlns:c="clr-namespace:BetterWidgets.Controls"
+    xmlns:e="clr-namespace:Emoji.Wpf;assembly=Emoji.Wpf"
+    xmlns:globalization="clr-namespace:System.Globalization;assembly=netstandard"
+    xmlns:h="clr-namespace:BetterWidgets.Helpers"
+    xmlns:m="clr-namespace:BetterWidgets.Model"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:vm="clr-namespace:BetterWidgets.ViewModel.Components"
+    xmlns:vmc="clr-namespace:BetterWidgets.ViewModel.Components">
+
+    <b:BoolToVisibility x:Key="AppointmentAllDayVisibility" IsInvert="True" />
+
+    <DataTemplate x:Key="WidgetItemTemplate" DataType="{x:Type vm:WidgetViewItem}">
+        <Grid
+            Height="42"
+            Margin="10,0"
+            HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image
+                Grid.Column="0"
+                Width="25"
+                Height="25"
+                Source="{Binding IconSource, Mode=OneWay}"
+                Stretch="UniformToFill" />
+            <TextBlock
+                Grid.Column="1"
+                Margin="11,0,0,1"
+                VerticalAlignment="Center"
+                Text="{Binding Title, Mode=OneWay}"
+                TextTrimming="CharacterEllipsis" />
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="PermissionItemTemplate" DataType="{x:Type vm:PermissionViewItem}">
+        <c:CardSettingView Title="{Binding Title, Mode=OneWay}" Subtitle="{Binding Subtitle, Mode=OneWay}">
+            <c:CardSettingView.Icon>
+                <ui:SymbolIcon Symbol="{Binding Icon, Mode=OneWay}" />
+            </c:CardSettingView.Icon>
+
+            <c:CardSettingView.Header>
+                <ui:ToggleSwitch
+                    Grid.Column="2"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    IsChecked="{Binding IsEnabled, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            </c:CardSettingView.Header>
+        </c:CardSettingView>
+    </DataTemplate>
+
+    <DataTemplate x:Key="SettingCategoryListItemTemplate" DataType="{x:Type c:SettingCategory}">
+        <Grid Height="40" HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <ContentControl
+                Grid.Column="0"
+                Width="20"
+                Height="20"
+                Content="{Binding Icon, Mode=OneWay}"
+                RenderTransformOrigin="0.5,0.5">
+                <ContentControl.RenderTransform>
+                    <ScaleTransform ScaleX="1.2" ScaleY="1.2" />
+                </ContentControl.RenderTransform>
+            </ContentControl>
+            <TextBlock
+                Grid.Column="1"
+                Margin="10,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Text="{Binding Title, Mode=OneWay}" />
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="WidgetCollectionButtonItemTemplate" DataType="{x:Type vm:PermissionViewItem}">
+        <ui:Button
+            Margin="-5,-3"
+            HorizontalAlignment="Stretch"
+            HorizontalContentAlignment="Stretch"
+            VerticalContentAlignment="Stretch"
+            IsHitTestVisible="False">
+            <Grid Margin="2,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <Image
+                    Grid.Column="0"
+                    Width="22"
+                    Height="22"
+                    VerticalAlignment="Center"
+                    Source="{Binding Widget.Icon, Mode=OneWay}" />
+                <StackPanel
+                    Grid.Column="1"
+                    Margin="13,3,13,0"
+                    VerticalAlignment="Center"
+                    h:MarginSetter.LastItemMargin="0"
+                    h:MarginSetter.Margin="0, 0, 0, 2">
+                    <ui:TextBlock
+                        HorizontalAlignment="Stretch"
+                        Text="{Binding Widget.Title, Mode=OneWay}"
+                        TextTrimming="CharacterEllipsis" />
+                    <ui:TextBlock
+                        HorizontalAlignment="Stretch"
+                        FontSize="12"
+                        Opacity="0.8"
+                        Text="{Binding PermissionsLabel, Mode=OneWay}"
+                        TextWrapping="Wrap" />
+                </StackPanel>
+                <ui:SymbolIcon Grid.Column="2" Symbol="ChevronRight20" />
+            </Grid>
+        </ui:Button>
+    </DataTemplate>
+
+    <DataTemplate x:Key="TimezoneItemTemplate" DataType="m:TimeZoneModel">
+        <Grid Margin="8,3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ui:SymbolIcon
+                Grid.Column="0"
+                VerticalAlignment="Center"
+                FontSize="20"
+                Symbol="GlobeClock20" />
+            <ui:TextBlock
+                Grid.Column="1"
+                Margin="10,0,10,1"
+                VerticalAlignment="Center"
+                Text="{Binding TimeZone.DisplayName, Mode=OneWay}"
+                TextTrimming="CharacterEllipsis" />
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="AppointmentItemTemplate" DataType="vm:AppointmentViewModel">
+        <ui:Card
+            Margin="-5,-5,-5,-5"
+            Padding="8,8,8,7"
+            HorizontalAlignment="Stretch"
+            HorizontalContentAlignment="Stretch"
+            VerticalContentAlignment="Stretch">
+            <Grid MinHeight="32">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Rectangle
+                    Grid.Column="0"
+                    Width="4"
+                    VerticalAlignment="Stretch"
+                    Fill="{Binding StatusColor, Mode=OneWay}"
+                    Opacity="0.5"
+                    RadiusX="2"
+                    RadiusY="2" />
+
+                <StackPanel
+                    Grid.Column="1"
+                    Margin="11,0"
+                    VerticalAlignment="Center">
+                    <ui:TextBlock
+                        Margin="0,0,0,-5"
+                        FontSize="13"
+                        Text="{Binding StartTimeLabel, Mode=OneWay}" />
+                    <ui:TextBlock
+                        Margin="0,3,0,-3"
+                        FontSize="12"
+                        Opacity="0.8"
+                        Text="{Binding EndTimeLabel, Mode=OneWay}"
+                        Visibility="{Binding IsAllDay, Mode=OneWay, Converter={StaticResource AppointmentAllDayVisibility}}" />
+                </StackPanel>
+                <StackPanel
+                    Grid.Column="2"
+                    VerticalAlignment="Center"
+                    h:MarginSetter.LastItemMargin="0, 0, 0, -5"
+                    h:MarginSetter.Margin="0, 0, 0, -3">
+                    <ui:TextBlock
+                        HorizontalAlignment="Stretch"
+                        FontSize="14"
+                        FontWeight="SemiBold"
+                        Text="{Binding TitleLabel, Mode=OneWay}"
+                        TextTrimming="CharacterEllipsis" />
+                    <ui:TextBlock
+                        Margin="0,1,0,0"
+                        HorizontalAlignment="Stretch"
+                        FontSize="12"
+                        Text="{Binding Location, Mode=OneWay}"
+                        TextTrimming="CharacterEllipsis" />
+                </StackPanel>
+            </Grid>
+        </ui:Card>
+    </DataTemplate>
+
+    <DataTemplate x:Key="MonthItemTemplate" DataType="vmc:DateViewModel">
+        <Border Background="Transparent">
+            <ui:TextBlock
+                Margin="0,3,0,0"
+                Padding="0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontSize="12"
+                Text="{Binding ShortMonthName, Mode=OneWay}" />
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate x:Key="YearItemTemplate" DataType="vmc:DateViewModel">
+        <ui:TextBlock
+            Margin="8,5,13,5"
+            HorizontalAlignment="Stretch"
+            Text="{Binding DateTime.Year, Mode=OneWay}"
+            TextAlignment="Center" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="CalendarItemTemplate" DataType="m:Calendar">
+        <Grid Margin="8,5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <ui:SymbolIcon
+                Grid.Column="0"
+                VerticalAlignment="Center"
+                FontSize="20"
+                Symbol="CalendarMonth20" />
+            <ui:TextBlock
+                Grid.Column="1"
+                Margin="10,0,10,0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Center"
+                Text="{Binding Name}"
+                TextTrimming="CharacterEllipsis" />
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="CultureInfoItemTemplate" DataType="globalization:CultureInfo">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <ui:SymbolIcon
+                Grid.Column="0"
+                VerticalAlignment="Center"
+                FontSize="20"
+                Symbol="Globe20" />
+            <ui:TextBlock
+                Grid.Column="1"
+                Margin="10,0"
+                VerticalAlignment="Center"
+                Text="{Binding NativeName, Mode=OneWay}"
+                TextTrimming="CharacterEllipsis" />
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="TodoListItemTemplate" DataType="vmc:TodoListViewModel">
+        <Grid Margin="0,3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <e:TextBlock
+                Grid.Column="0"
+                VerticalAlignment="Center"
+                Text="{Binding Icon, Mode=OneWay}" />
+            <TextBlock
+                Grid.Column="1"
+                Margin="10,0,0,0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Center"
+                Text="{Binding Title, Mode=OneWay}"
+                TextTrimming="CharacterEllipsis" />
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="SearchItemTemplate" DataType="vmc:SearchView">
+        <Grid Margin="9,8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <ContentControl
+                Grid.Column="0"
+                Width="25"
+                Height="25"
+                VerticalAlignment="Center"
+                Content="{Binding Icon, Mode=OneWay}" />
+
+            <ui:TextBlock
+                Grid.Column="1"
+                Margin="10,0"
+                VerticalAlignment="Center"
+                Text="{Binding Title, Mode=OneWay}"
+                TextTrimming="CharacterEllipsis" />
+        </Grid>
+    </DataTemplate>
+
+    <ItemsPanelTemplate x:Key="PermissionsCollectionPanelTemplate">
+        <StackPanel h:MarginSetter.LastItemMargin="0" h:MarginSetter.Margin="0, 0, 0, 9" />
+    </ItemsPanelTemplate>
+
+</ResourceDictionary>

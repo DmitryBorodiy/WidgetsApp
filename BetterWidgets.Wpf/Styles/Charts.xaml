@@ -1,0 +1,24 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:charts="clr-namespace:LiveChartsCore.SkiaSharpView;assembly=LiveChartsCore.SkiaSharpView">
+
+    <x:Array x:Key="PerformanceWidgetsXAxis" Type="charts:Axis">
+        <charts:Axis
+            DrawTicksPath="False"
+            IsVisible="False"
+            SeparatorsPaint="{x:Null}"
+            ShowSeparatorLines="False" />
+    </x:Array>
+
+    <x:Array x:Key="PerformanceWidgetsYAxis" Type="charts:Axis">
+        <charts:Axis
+            DrawTicksPath="False"
+            IsVisible="False"
+            MaxLimit="80"
+            MinLimit="0"
+            SeparatorsPaint="{x:Null}"
+            ShowSeparatorLines="False" />
+    </x:Array>
+
+</ResourceDictionary>

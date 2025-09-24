@@ -1,0 +1,159 @@
+﻿<Page
+    x:Class="BetterWidgets.Views.Settings.SettingsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c="clr-namespace:BetterWidgets.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:h="clr-namespace:BetterWidgets.Helpers"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:r="clr-namespace:BetterWidgets.Resources"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:vm="clr-namespace:BetterWidgets.ViewModel.SettingsViews"
+    Name="Root"
+    Title="{x:Static r:Resources.SettingsLabel}"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    Style="{StaticResource SettingViewDefaultStyle}"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="SettingCategoryItemTempate">
+                <c:SettingCard
+                    HorizontalAlignment="Stretch"
+                    Command="{Binding DataContext.NavigateCommand, RelativeSource={RelativeSource AncestorType=Page}}"
+                    CommandParameter="{Binding DataContext, RelativeSource={RelativeSource Mode=Self}}"
+                    Description="{Binding Subtitle, Mode=OneWay}"
+                    Header="{Binding Title, Mode=OneWay}"
+                    Icon="{Binding Icon, Mode=OneWay}"
+                    ScrollViewer.CanContentScroll="False">
+                    <c:SettingCard.QueryIcon>
+                        <ui:SymbolIcon Symbol="ChevronRight20" />
+                    </c:SettingCard.QueryIcon>
+                </c:SettingCard>
+            </DataTemplate>
+            <DataTemplate x:Key="SettingWidgetItemTempate">
+                <c:SettingCard
+                    HorizontalAlignment="Stretch"
+                    Command="{Binding DataContext.NavigateWidgetCommand, RelativeSource={RelativeSource AncestorType=Page}}"
+                    CommandParameter="{Binding DataContext, RelativeSource={RelativeSource Mode=Self}}"
+                    Description="{Binding Subtitle, Mode=OneWay}"
+                    Header="{Binding Title, Mode=OneWay}"
+                    Icon="{Binding Icon, Mode=OneWay}"
+                    ScrollViewer.CanContentScroll="False">
+                    <c:SettingCard.QueryIcon>
+                        <ui:SymbolIcon Symbol="ChevronRight20" />
+                    </c:SettingCard.QueryIcon>
+                </c:SettingCard>
+            </DataTemplate>
+
+            <Style x:Key="RootScrollView" TargetType="ScrollViewer">
+                <Setter Property="VerticalScrollBarVisibility" Value="Hidden" />
+
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="VerticalScrollBarVisibility" Value="Visible" />
+                        <Setter Property="Padding" Value="0,0,-14,0" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Page.DataContext>
+        <vm:SettingsViewModel />
+    </Page.DataContext>
+
+    <ScrollViewer x:Name="RootLayout" Style="{StaticResource RootScrollView}">
+        <StackPanel Margin="42,32" HorizontalAlignment="Stretch">
+            <TextBlock Style="{StaticResource DefaultPageTitle}" Text="{Binding RelativeSource={RelativeSource AncestorType=Page}, Path=Title}" />
+            <Grid
+                Name="AccoutnBoxUI"
+                Margin="0,26,0,0"
+                HorizontalAlignment="Stretch"
+                Visibility="{Binding IsSignedIn, Mode=OneWay, Converter={StaticResource BoolToVisibility}}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <c:PersonPicture
+                    Grid.Column="0"
+                    Width="60"
+                    Height="60"
+                    VerticalAlignment="Center"
+                    PersonImageSource="{Binding Account.AvatarImageSource, Mode=OneWay}" />
+
+                <StackPanel
+                    Grid.Column="1"
+                    Margin="13,0"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Center"
+                    h:MarginSetter.LastItemMargin="0"
+                    h:MarginSetter.Margin="0, 0, 0, 3">
+                    <ui:TextBlock
+                        HorizontalAlignment="Stretch"
+                        FontSize="18"
+                        Text="{Binding Account.DisplayName, Mode=OneWay}"
+                        TextTrimming="CharacterEllipsis" />
+                    <ui:TextBlock
+                        HorizontalAlignment="Stretch"
+                        FontSize="15"
+                        Opacity="0.8"
+                        Text="{Binding Account.Email, Mode=OneWay}"
+                        TextTrimming="CharacterEllipsis" />
+                </StackPanel>
+
+                <StackPanel
+                    Grid.Column="2"
+                    VerticalAlignment="Center"
+                    h:MarginSetter.LastItemMargin="0"
+                    h:MarginSetter.Margin="0, 0, 9, 0"
+                    Orientation="Horizontal">
+                    <ui:Button
+                        VerticalAlignment="Center"
+                        Appearance="Primary"
+                        Command="{Binding LaunchUriCommand}"
+                        CommandParameter="https://account.microsoft.com/account"
+                        Content="{x:Static r:Resources.AccountSettings}">
+                        <ui:Button.Icon>
+                            <ui:SymbolIcon Symbol="Open20" />
+                        </ui:Button.Icon>
+                    </ui:Button>
+                    <ui:Button
+                        VerticalAlignment="Center"
+                        Command="{Binding SignOutCommand}"
+                        Content="{x:Static r:Resources.SignOutLabel}">
+                        <ui:Button.Icon>
+                            <ui:SymbolIcon Symbol="SignOut20" />
+                        </ui:Button.Icon>
+                    </ui:Button>
+                </StackPanel>
+            </Grid>
+            <StackPanel Margin="0,25,0,0">
+                <ListView
+                    Margin="-6,0"
+                    Background="{x:Null}"
+                    Focusable="False"
+                    ItemTemplate="{StaticResource SettingCategoryItemTempate}"
+                    ItemsSource="{Binding Categories, Mode=OneWay}"
+                    ScrollViewer.CanContentScroll="False"
+                    ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                    Style="{StaticResource DefaultItemsCollectionStyle}" />
+                <TextBlock
+                    Margin="0,15"
+                    FontWeight="SemiBold"
+                    Text="{x:Static r:Resources.WidgetsLabel}" />
+                <ListView
+                    x:Name="WidgetsSettingsCollectionUI"
+                    Margin="-6,0"
+                    Background="{x:Null}"
+                    Focusable="False"
+                    ItemTemplate="{StaticResource SettingWidgetItemTempate}"
+                    ItemsSource="{Binding Widgets, Mode=OneWay}"
+                    ScrollViewer.CanContentScroll="False"
+                    ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                    Style="{StaticResource DefaultItemsCollectionStyle}" />
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

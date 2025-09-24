@@ -1,0 +1,251 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:v="clr-namespace:BetterWidgets.ViewModel.Widgets.Components"
+    mc:Ignorable="d">
+
+    <Color x:Key="ClearDayWeatherBeamColor">#2795ec</Color>
+    <Color x:Key="ClearDayWeatherSkyColor">#0f5089</Color>
+
+    <Color x:Key="ClearNightWeatherBeamColor">#273353</Color>
+    <Color x:Key="ClearNightWeatherSkyColor">#04071b</Color>
+
+    <Color x:Key="CloudyDayWeatherBeamColor">#7c899a</Color>
+    <Color x:Key="CloudyDayWeatherSkyColor">#525b66</Color>
+
+    <Color x:Key="CloudyNightWeatherBeamColor">#3e444d</Color>
+    <Color x:Key="CloudyNightWeatherSkyColor">#3E444D</Color>
+
+    <SolidColorBrush x:Key="WeatherDayItemBackground" Color="#13FFFFFF" />
+
+    <Storyboard x:Key="WeatherBackgroundAnimation">
+        <DoubleAnimationUsingKeyFrames RepeatBehavior="Forever" Storyboard.TargetProperty="Background.(GradientBrush.GradientStops)[1].(GradientStop.Offset)">
+            <EasingDoubleKeyFrame KeyTime="00:00:06" Value="0.500">
+                <EasingDoubleKeyFrame.EasingFunction>
+                    <CubicEase EasingMode="EaseInOut" />
+                </EasingDoubleKeyFrame.EasingFunction>
+            </EasingDoubleKeyFrame>
+            <EasingDoubleKeyFrame KeyTime="00:00:12" Value="0.105">
+                <EasingDoubleKeyFrame.EasingFunction>
+                    <CubicEase EasingMode="EaseInOut" />
+                </EasingDoubleKeyFrame.EasingFunction>
+            </EasingDoubleKeyFrame>
+        </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Key="MouseEnterWeatherBackgroundAnimation">
+        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Background.(GradientBrush.GradientStops)[1].(GradientStop.Offset)">
+            <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0.105">
+                <EasingDoubleKeyFrame.EasingFunction>
+                    <CubicEase EasingMode="EaseInOut" />
+                </EasingDoubleKeyFrame.EasingFunction>
+            </EasingDoubleKeyFrame>
+            <EasingDoubleKeyFrame KeyTime="00:00:0.8" Value="0.555">
+                <EasingDoubleKeyFrame.EasingFunction>
+                    <CubicEase EasingMode="EaseInOut" />
+                </EasingDoubleKeyFrame.EasingFunction>
+            </EasingDoubleKeyFrame>
+        </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Key="MouseLeaveWeatherBackgroundAnimation">
+        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Background.(GradientBrush.GradientStops)[1].(GradientStop.Offset)">
+            <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0.555">
+                <EasingDoubleKeyFrame.EasingFunction>
+                    <CubicEase EasingMode="EaseInOut" />
+                </EasingDoubleKeyFrame.EasingFunction>
+            </EasingDoubleKeyFrame>
+            <EasingDoubleKeyFrame KeyTime="00:00:0.8" Value="0.105">
+                <EasingDoubleKeyFrame.EasingFunction>
+                    <CubicEase EasingMode="EaseInOut" />
+                </EasingDoubleKeyFrame.EasingFunction>
+            </EasingDoubleKeyFrame>
+        </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+
+    <RadialGradientBrush x:Key="ClearDayWeatherGradientBrush" GradientOrigin="1.93,-0.514" RadiusX="-0.512" RadiusY="1.328">
+        <RadialGradientBrush.RelativeTransform>
+            <TransformGroup>
+                <ScaleTransform CenterX="0.5" CenterY="0.5" />
+                <SkewTransform CenterX="0.5" CenterY="0.5" />
+                <RotateTransform Angle="-20" CenterX="0.5" CenterY="0.5" />
+                <TranslateTransform />
+            </TransformGroup>
+        </RadialGradientBrush.RelativeTransform>
+        <GradientStop Offset="1" Color="{StaticResource ClearDayWeatherSkyColor}" />
+        <GradientStop Offset="0.163" Color="{StaticResource ClearDayWeatherBeamColor}" />
+    </RadialGradientBrush>
+
+    <RadialGradientBrush x:Key="ClearNightWeatherGradientBrush" GradientOrigin="1.93,-0.514" RadiusX="-0.512" RadiusY="1.328">
+        <RadialGradientBrush.RelativeTransform>
+            <TransformGroup>
+                <ScaleTransform CenterX="0.5" CenterY="0.5" />
+                <SkewTransform CenterX="0.5" CenterY="0.5" />
+                <RotateTransform Angle="-20" CenterX="0.5" CenterY="0.5" />
+                <TranslateTransform />
+            </TransformGroup>
+        </RadialGradientBrush.RelativeTransform>
+        <GradientStop Offset="1" Color="{StaticResource ClearNightWeatherSkyColor}" />
+        <GradientStop Offset="0.163" Color="{StaticResource ClearNightWeatherBeamColor}" />
+    </RadialGradientBrush>
+
+    <RadialGradientBrush x:Key="CloudyDayWeatherGradientBrush" GradientOrigin="1.93,-0.514" RadiusX="-0.512" RadiusY="1.328">
+        <RadialGradientBrush.RelativeTransform>
+            <TransformGroup>
+                <ScaleTransform CenterX="0.5" CenterY="0.5" />
+                <SkewTransform CenterX="0.5" CenterY="0.5" />
+                <RotateTransform Angle="-20" CenterX="0.5" CenterY="0.5" />
+                <TranslateTransform />
+            </TransformGroup>
+        </RadialGradientBrush.RelativeTransform>
+        <GradientStop Offset="1" Color="{StaticResource CloudyDayWeatherSkyColor}" />
+        <GradientStop Offset="0.163" Color="{StaticResource CloudyDayWeatherBeamColor}" />
+    </RadialGradientBrush>
+
+    <RadialGradientBrush x:Key="CloudyNightWeatherGradientBrush" GradientOrigin="1.93,-0.514" RadiusX="-0.512" RadiusY="1.328">
+        <RadialGradientBrush.RelativeTransform>
+            <TransformGroup>
+                <ScaleTransform CenterX="0.5" CenterY="0.5" />
+                <SkewTransform CenterX="0.5" CenterY="0.5" />
+                <RotateTransform Angle="-20" CenterX="0.5" CenterY="0.5" />
+                <TranslateTransform />
+            </TransformGroup>
+        </RadialGradientBrush.RelativeTransform>
+        <GradientStop Offset="1" Color="{StaticResource CloudyNightWeatherSkyColor}" />
+        <GradientStop Offset="0.163" Color="{StaticResource CloudyDayWeatherBeamColor}" />
+    </RadialGradientBrush>
+
+    <Style x:Key="WeatherWidgetStyle" TargetType="Border">
+        <Style.Resources>
+            <ResourceDictionary>
+                <Style TargetType="ui:TextBlock">
+                    <Setter Property="Foreground" Value="White" />
+                </Style>
+            </ResourceDictionary>
+        </Style.Resources>
+
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="Loaded">
+                <BeginStoryboard Storyboard="{StaticResource WeatherBackgroundAnimation}" />
+            </EventTrigger>
+            <EventTrigger RoutedEvent="MouseEnter">
+                <BeginStoryboard Storyboard="{StaticResource MouseEnterWeatherBackgroundAnimation}" />
+            </EventTrigger>
+            <EventTrigger RoutedEvent="MouseLeave">
+                <BeginStoryboard Storyboard="{StaticResource MouseLeaveWeatherBackgroundAnimation}" />
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style
+        x:Key="ClearDayWeatherBackgound"
+        BasedOn="{StaticResource WeatherWidgetStyle}"
+        TargetType="Border">
+        <Setter Property="Background" Value="{StaticResource ClearDayWeatherGradientBrush}" />
+    </Style>
+
+    <Style
+        x:Key="ClearNightWeatherBackgound"
+        BasedOn="{StaticResource WeatherWidgetStyle}"
+        TargetType="Border">
+        <Setter Property="Background" Value="{StaticResource ClearNightWeatherGradientBrush}" />
+    </Style>
+
+    <Style
+        x:Key="CloudyDayWeatherBackgound"
+        BasedOn="{StaticResource WeatherWidgetStyle}"
+        TargetType="Border">
+        <Setter Property="Background" Value="{StaticResource CloudyDayWeatherGradientBrush}" />
+    </Style>
+
+    <Style
+        x:Key="CloudyNightWeatherBackgound"
+        BasedOn="{StaticResource WeatherWidgetStyle}"
+        TargetType="Border">
+        <Setter Property="Background" Value="{StaticResource CloudyNightWeatherGradientBrush}" />
+    </Style>
+
+    <DataTemplate x:Key="WeatherDayItemTemplate" DataType="v:WeatherDayView">
+        <ui:Button
+            Margin="-3"
+            Padding="6,3"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            VerticalContentAlignment="Center"
+            Background="{StaticResource WeatherDayItemBackground}"
+            Foreground="{Binding Foreground, Mode=OneWay}"
+            IsHitTestVisible="False">
+            <Viewbox MaxHeight="92" VerticalAlignment="Center">
+                <Grid Width="38">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <ui:TextBlock
+                        Grid.Row="0"
+                        HorizontalAlignment="Center"
+                        d:Text="6 PM"
+                        FontSize="12"
+                        Opacity="0.8"
+                        Text="{Binding Time, Mode=OneWay}"
+                        TextAlignment="Center"
+                        TextTrimming="CharacterEllipsis" />
+
+                    <Image
+                        Grid.Row="1"
+                        Width="25"
+                        Height="25"
+                        Margin="0,3"
+                        d:Source="/Assets/WeatherWidget/UnitAssets/01d.png"
+                        Source="{Binding IconSource, Mode=OneWay}" />
+                    <Grid
+                        Grid.Row="2"
+                        Margin="3,0,0,0"
+                        HorizontalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <ui:TextBlock
+                            Grid.Column="0"
+                            HorizontalAlignment="Center"
+                            d:Text="20"
+                            FontSize="13"
+                            Text="{Binding Temperature, Mode=OneWay}"
+                            TextAlignment="Center"
+                            TextTrimming="CharacterEllipsis" />
+                        <Ellipse
+                            Grid.Column="1"
+                            Width="5"
+                            Height="5"
+                            Margin="2,4,0,0"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top"
+                            Stroke="{Binding Foreground, Mode=OneWay}"
+                            StrokeThickness="1.1" />
+                    </Grid>
+                    <ui:TextBlock
+                        Grid.Row="3"
+                        Margin="0,0,0,-2"
+                        HorizontalAlignment="Center"
+                        d:Text="5 Wed"
+                        FontSize="12"
+                        FontWeight="SemiBold"
+                        Opacity="0.9"
+                        Text="{Binding Date, Mode=OneWay}"
+                        TextAlignment="Center" />
+                </Grid>
+            </Viewbox>
+        </ui:Button>
+    </DataTemplate>
+
+    <ItemsPanelTemplate x:Key="WeatherForecastItemsPanel">
+        <StackPanel Margin="20,0" Orientation="Horizontal" />
+    </ItemsPanelTemplate>
+
+</ResourceDictionary>

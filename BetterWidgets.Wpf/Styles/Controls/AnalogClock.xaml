@@ -1,0 +1,134 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c="clr-namespace:BetterWidgets.Controls"
+    xmlns:converter="clr-namespace:BetterWidgets.Behaviours.Converters">
+
+    <converter:BoolToVisibility x:Key="AnalogClockBoolToVisibility" />
+
+    <Style x:Key="DefaultAnalogClockStyle" TargetType="c:AnalogClock">
+        <Setter Property="BorderThickness" Value="0.9" />
+        <Setter Property="BorderBrush" Value="{DynamicResource CardBorderBrush}" />
+        <Setter Property="Background" Value="{DynamicResource CardBackground}" />
+        <Setter Property="Foreground" Value="{DynamicResource TextFillColorPrimaryBrush}" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="c:AnalogClock">
+                    <Viewbox>
+                        <Border
+                            Width="122"
+                            Height="122"
+                            CornerRadius="100">
+                            <Grid>
+                                <Ellipse
+                                    Fill="{TemplateBinding Background}"
+                                    Opacity="{TemplateBinding BackgroundOpacity}"
+                                    Stroke="{TemplateBinding BorderBrush}"
+                                    StrokeThickness="{TemplateBinding BorderThickness}" />
+
+                                <Rectangle
+                                    x:Name="HourHand"
+                                    Width="2"
+                                    Height="28"
+                                    Margin="0,-2,0,0"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Fill="{TemplateBinding Foreground}"
+                                    RadiusX="1"
+                                    RadiusY="1"
+                                    RenderTransformOrigin="0.5,1">
+                                    <Rectangle.RenderTransform>
+                                        <TransformGroup>
+                                            <RotateTransform x:Name="HourHandRotate" Angle="{Binding HourAngle, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+                                            <TranslateTransform Y="-12.5" />
+                                        </TransformGroup>
+                                    </Rectangle.RenderTransform>
+                                </Rectangle>
+
+                                <Rectangle
+                                    x:Name="MinuteHand"
+                                    Width="2"
+                                    Height="37"
+                                    Margin="0,-2,0,0"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Fill="{TemplateBinding Foreground}"
+                                    Opacity="0.8"
+                                    RadiusX="1"
+                                    RadiusY="1"
+                                    RenderTransformOrigin="0.5,1">
+                                    <Rectangle.RenderTransform>
+                                        <TransformGroup>
+                                            <RotateTransform x:Name="MinuteHandRotate" Angle="{Binding MinuteAngle, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+                                            <TranslateTransform Y="-17.5" />
+                                        </TransformGroup>
+                                    </Rectangle.RenderTransform>
+                                </Rectangle>
+
+                                <Rectangle
+                                    Width="1.2"
+                                    Height="42"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Fill="{DynamicResource AccentButtonBackground}"
+                                    RadiusX="1"
+                                    RadiusY="1"
+                                    RenderTransformOrigin="0.5,1"
+                                    Visibility="{TemplateBinding IsSecondsArrowEnabled,
+                                                                 Converter={StaticResource AnalogClockBoolToVisibility}}">
+                                    <Rectangle.RenderTransform>
+                                        <TransformGroup>
+                                            <RotateTransform Angle="{Binding SecondAngle, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+                                            <TranslateTransform Y="-21" />
+                                        </TransformGroup>
+                                    </Rectangle.RenderTransform>
+                                </Rectangle>
+
+                                <Ellipse
+                                    Width="7.5"
+                                    Height="7.5"
+                                    Margin="1.1,1,0,0"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Fill="{TemplateBinding Foreground}" />
+
+                                <ItemsControl
+                                    Margin="4.5,1,0,5"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Foreground="{TemplateBinding Foreground}"
+                                    ItemsSource="{Binding Hours, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                    Visibility="{TemplateBinding IsClockFaceEnabled,
+                                                                 Converter={StaticResource AnalogClockBoolToVisibility}}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <Canvas Width="120" Height="120" />
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock
+                                                FontSize="10"
+                                                FontWeight="SemiBold"
+                                                Text="{Binding Number}" />
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                    <ItemsControl.ItemContainerStyle>
+                                        <Style TargetType="ContentPresenter">
+                                            <Setter Property="Canvas.Left" Value="{Binding X}" />
+                                            <Setter Property="Canvas.Top" Value="{Binding Y}" />
+                                        </Style>
+                                    </ItemsControl.ItemContainerStyle>
+                                </ItemsControl>
+                            </Grid>
+                        </Border>
+                    </Viewbox>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style BasedOn="{StaticResource DefaultAnalogClockStyle}" TargetType="c:AnalogClock" />
+
+</ResourceDictionary>

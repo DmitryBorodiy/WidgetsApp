@@ -1,0 +1,1310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="it-IT" original="BETTERWIDGETS.WPF/RESOURCES/RESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="1.0.0.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="BETTERWIDGETS.WPF/RESOURCES/RESOURCES.RESX" datatype="resx">
+        <trans-unit id="AppName" translate="yes" xml:space="preserve">
+          <source>Better Widgets</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Widget migliori</target>
+        </trans-unit>
+        <trans-unit id="WidgetsLabel" translate="yes" xml:space="preserve">
+          <source>Widgets</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Widget</target>
+        </trans-unit>
+        <trans-unit id="SearchWidgets" translate="yes" xml:space="preserve">
+          <source>Search widgets...</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Widget di ricerca...</target>
+        </trans-unit>
+        <trans-unit id="SettingsLabel" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Impostazioni</target>
+        </trans-unit>
+        <trans-unit id="ProposeLabel" translate="yes" xml:space="preserve">
+          <source>Propose feature</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Proponi funzionalità</target>
+        </trans-unit>
+        <trans-unit id="PinOnDesktop" translate="yes" xml:space="preserve">
+          <source>Pin on desktop</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aggiungi sul desktop</target>
+        </trans-unit>
+        <trans-unit id="PrivacyLabel" translate="yes" xml:space="preserve">
+          <source>Privacy</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Privacy</target>
+        </trans-unit>
+        <trans-unit id="ShareLabel" translate="yes" xml:space="preserve">
+          <source>Share</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Condividi</target>
+        </trans-unit>
+        <trans-unit id="AboutLabel" translate="yes" xml:space="preserve">
+          <source>About</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Circa</target>
+        </trans-unit>
+        <trans-unit id="AboutSubtitle" translate="yes" xml:space="preserve">
+          <source>About the current version of the application and verification of updates.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Informazioni sulla versione corrente dell'applicazione e sulla verifica degli aggiornamenti.</target>
+        </trans-unit>
+        <trans-unit id="Clipboard" translate="yes" xml:space="preserve">
+          <source>Clipboard</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Appunti</target>
+        </trans-unit>
+        <trans-unit id="Location" translate="yes" xml:space="preserve">
+          <source>Location</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ubicazione</target>
+        </trans-unit>
+        <trans-unit id="AllowLabel" translate="yes" xml:space="preserve">
+          <source>Allow</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Permettere</target>
+        </trans-unit>
+        <trans-unit id="DenyLabel" translate="yes" xml:space="preserve">
+          <source>Deny</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Negare</target>
+        </trans-unit>
+        <trans-unit id="RequestAccessDialogTitle" translate="yes" xml:space="preserve">
+          <source>Permission access</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Accesso alle autorizzazioni</target>
+        </trans-unit>
+        <trans-unit id="RequestAccessSubtitle" translate="yes" xml:space="preserve">
+          <source>Are you sure you want to provide access to {0}?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sei sicuro di voler fornire l'accesso a {0}?</target>
+        </trans-unit>
+        <trans-unit id="RequestAccessTitle" translate="yes" xml:space="preserve">
+          <source>Allow access to {0}</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Consenti l'accesso ai {0}</target>
+        </trans-unit>
+        <trans-unit id="AppBuildLabel" translate="yes" xml:space="preserve">
+          <source>App build</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Creazione dell'app</target>
+        </trans-unit>
+        <trans-unit id="AppChanelLabel" translate="yes" xml:space="preserve">
+          <source>App chanel</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">App chanel</target>
+        </trans-unit>
+        <trans-unit id="AppDeveloperLabel" translate="yes" xml:space="preserve">
+          <source>Developer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sviluppatore</target>
+        </trans-unit>
+        <trans-unit id="AppVersionLabel" translate="yes" xml:space="preserve">
+          <source>App version</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Versione dell'app</target>
+        </trans-unit>
+        <trans-unit id="WeatherWidgetSettingsTitle" translate="yes" xml:space="preserve">
+          <source>Weather settings</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Impostazioni meteo</target>
+        </trans-unit>
+        <trans-unit id="WeatherWidgetSubtitle" translate="yes" xml:space="preserve">
+          <source>The weather widget provides up-to-date information on temperature, humidity, wind and forecast for the coming days.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Il widget meteo fornisce informazioni aggiornate su temperatura, umidità, vento e previsioni per i prossimi giorni.</target>
+        </trans-unit>
+        <trans-unit id="WeatherWidgetTitle" translate="yes" xml:space="preserve">
+          <source>Weather</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tempo</target>
+        </trans-unit>
+        <trans-unit id="UnpinFromDesktop" translate="yes" xml:space="preserve">
+          <source>Unpin from desktop</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sblocca dal desktop</target>
+        </trans-unit>
+        <trans-unit id="AccountInfo" translate="yes" xml:space="preserve">
+          <source>Personal account information</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Informazioni sull'account personale</target>
+        </trans-unit>
+        <trans-unit id="Close" translate="yes" xml:space="preserve">
+          <source>Close</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chiudere</target>
+        </trans-unit>
+        <trans-unit id="Refresh" translate="yes" xml:space="preserve">
+          <source>Refresh</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aggiornare</target>
+        </trans-unit>
+        <trans-unit id="SignOutLabel" translate="yes" xml:space="preserve">
+          <source>Sign out</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Disconnettersi</target>
+        </trans-unit>
+        <trans-unit id="SignInLabel" translate="yes" xml:space="preserve">
+          <source>Sign in</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Accedi</target>
+        </trans-unit>
+        <trans-unit id="DefaultLocation" translate="yes" xml:space="preserve">
+          <source>Default location</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Posizione predefinita</target>
+        </trans-unit>
+        <trans-unit id="DefaultWeatherLocation" translate="yes" xml:space="preserve">
+          <source>Default weather location</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Posizione meteo predefinita</target>
+        </trans-unit>
+        <trans-unit id="DetectLocation" translate="yes" xml:space="preserve">
+          <source>Detect location</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Rileva posizione</target>
+        </trans-unit>
+        <trans-unit id="LiveBackgroundSettingSubtitle" translate="yes" xml:space="preserve">
+          <source>Enable animated weather backgrounds to make the widget feel more alive and immersive.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Abilita gli sfondi meteo animati per rendere il widget più vivo e coinvolgente.</target>
+        </trans-unit>
+        <trans-unit id="LiveBackgroundSettingTitle" translate="yes" xml:space="preserve">
+          <source>Enable live background</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Abilita lo sfondo live</target>
+        </trans-unit>
+        <trans-unit id="WeatherLocationSetting" translate="yes" xml:space="preserve">
+          <source>Weather location</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Posizione meteorologica</target>
+        </trans-unit>
+        <trans-unit id="WeatherLocationSettingSubtitle" translate="yes" xml:space="preserve">
+          <source>Set your preferred location to get accurate local weather updates in the widget.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Imposta la tua posizione preferita per ricevere aggiornamenti meteo locali accurati nel widget.</target>
+        </trans-unit>
+        <trans-unit id="CelsiusUnits" translate="yes" xml:space="preserve">
+          <source>Celsius</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Celsius</target>
+        </trans-unit>
+        <trans-unit id="FahrenheitUnits" translate="yes" xml:space="preserve">
+          <source>Fahrenheits</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Fahrenheits</target>
+        </trans-unit>
+        <trans-unit id="GeolocationPermissionDialogSubtitle" translate="yes" xml:space="preserve">
+          <source>To use this feature, you need to grant access to geolocation in Windows settings.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Per utilizzare questa funzione, è necessario concedere l'accesso alla geolocalizzazione nelle impostazioni di Windows.</target>
+        </trans-unit>
+        <trans-unit id="GeolocationPermissionDialogTitle" translate="yes" xml:space="preserve">
+          <source>Access to geolocation</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Accesso alla geolocalizzazione</target>
+        </trans-unit>
+        <trans-unit id="LocationBoxPlaceholder" translate="yes" xml:space="preserve">
+          <source>Enter location</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Inserisci la posizione</target>
+        </trans-unit>
+        <trans-unit id="Minutes" translate="yes" xml:space="preserve">
+          <source>Min</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Min</target>
+        </trans-unit>
+        <trans-unit id="OpenSettingsLabel" translate="yes" xml:space="preserve">
+          <source>Open settings</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Apri le impostazioni</target>
+        </trans-unit>
+        <trans-unit id="UpdateInterval" translate="yes" xml:space="preserve">
+          <source>Update interval</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Intervallo di aggiornamento</target>
+        </trans-unit>
+        <trans-unit id="UpdateIntervalSubtitle" translate="yes" xml:space="preserve">
+          <source>Set how often the widget updates to show the latest weather information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Imposta la frequenza di aggiornamento del widget per mostrare le informazioni meteo più recenti.</target>
+        </trans-unit>
+        <trans-unit id="WeatherTempUnits" translate="yes" xml:space="preserve">
+          <source>Weather units</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Unità meteorologiche</target>
+        </trans-unit>
+        <trans-unit id="WeatherTempUnitsSubtitle" translate="yes" xml:space="preserve">
+          <source>Choose between Celsius and Fahrenheit to display the temperature in your preferred units.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Scegli tra Celsius e Fahrenheit per visualizzare la temperatura nelle tue unità preferite.</target>
+        </trans-unit>
+        <trans-unit id="MeterSec" translate="yes" xml:space="preserve">
+          <source>m/sec</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">m/sec</target>
+        </trans-unit>
+        <trans-unit id="MilesHour" translate="yes" xml:space="preserve">
+          <source>ml/hour</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ml/ora</target>
+        </trans-unit>
+        <trans-unit id="AutorunSettingSubitle" translate="yes" xml:space="preserve">
+          <source>Enables automatic application launch upon login.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Abilita l'avvio automatico dell'applicazione al momento dell'accesso.</target>
+        </trans-unit>
+        <trans-unit id="AutorunSettingTitle" translate="yes" xml:space="preserve">
+          <source>Enable autorun</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Abilita l'esecuzione automatica</target>
+        </trans-unit>
+        <trans-unit id="GeneralSettings" translate="yes" xml:space="preserve">
+          <source>General settings</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Impostazioni generali</target>
+        </trans-unit>
+        <trans-unit id="GeneralSettingsSubtitle" translate="yes" xml:space="preserve">
+          <source>The main application settings allow you to manage general parameters, autostart and additional functions for ease of use.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Le principali impostazioni dell'applicazione consentono di gestire i parametri generali, l'avvio automatico e funzioni aggiuntive per una maggiore facilità d'uso.</target>
+        </trans-unit>
+        <trans-unit id="ClipboardPermissionSubtitle" translate="yes" xml:space="preserve">
+          <source>Allows the widget to read or write data from your clipboard.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Consente al widget di leggere o scrivere dati dagli appunti.</target>
+        </trans-unit>
+        <trans-unit id="LocationPermissionSubtitle" translate="yes" xml:space="preserve">
+          <source>Allows the widget to access your device’s location.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Consente al widget di accedere alla posizione del dispositivo.</target>
+        </trans-unit>
+        <trans-unit id="Permissions" translate="yes" xml:space="preserve">
+          <source>Permissions</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Autorizzazioni</target>
+        </trans-unit>
+        <trans-unit id="PermissionsSubtitle" translate="yes" xml:space="preserve">
+          <source>Widget '{0}' is requesting the following permissions. These will be used when it accesses sensitive data or features.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Il widget '{0}' richiede le seguenti autorizzazioni. Questi verranno utilizzati quando accede a dati o funzionalità sensibili.</target>
+        </trans-unit>
+        <trans-unit id="SecurityLabel" translate="yes" xml:space="preserve">
+          <source>Security</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sicurezza</target>
+        </trans-unit>
+        <trans-unit id="SecuritySubtitle" translate="yes" xml:space="preserve">
+          <source>Widget security settings, permission management, and login settings.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Impostazioni di sicurezza del widget, gestione delle autorizzazioni e impostazioni di accesso.</target>
+        </trans-unit>
+        <trans-unit id="WindowsHello" translate="yes" xml:space="preserve">
+          <source>Windows Hello</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Windows Hello</target>
+        </trans-unit>
+        <trans-unit id="WindowsHelloLockTime" translate="yes" xml:space="preserve">
+          <source>Identity verification lock time</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tempo di blocco della verifica dell'identità</target>
+        </trans-unit>
+        <trans-unit id="WindowsHelloLockTimeSubtitle" translate="yes" xml:space="preserve">
+          <source>This time range specifies when the Windows Hello confirmation dialog will be requested again the next time you verify your identity.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Questo intervallo di tempo specifica quando la finestra di dialogo di conferma di Windows Hello verrà richiesta di nuovo la prossima volta che si verifica l'identità.</target>
+        </trans-unit>
+        <trans-unit id="WindowsHelloSubtitle" translate="yes" xml:space="preserve">
+          <source>Turn on or off Windows Hello to verify your identity when widgets ask for permission.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Attiva o disattiva Windows Hello per verificare la tua identità quando i widget richiedono l'autorizzazione.</target>
+        </trans-unit>
+        <trans-unit id="AccentColorSettingSubtitle" translate="yes" xml:space="preserve">
+          <source>Customize the main shell and widgets accent color.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Personalizza la shell principale e il colore dell'accento dei widget.</target>
+        </trans-unit>
+        <trans-unit id="AccentColorSettingTitle" translate="yes" xml:space="preserve">
+          <source>Accent color</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Colore d'accento</target>
+        </trans-unit>
+        <trans-unit id="AppearanceSettingsSubtitle" translate="yes" xml:space="preserve">
+          <source>Customize the appearance of the application and widgets.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Personalizza l'aspetto dell'applicazione e dei widget.</target>
+        </trans-unit>
+        <trans-unit id="AppearanceSettingsTitle" translate="yes" xml:space="preserve">
+          <source>Appearance</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Apparenza</target>
+        </trans-unit>
+        <trans-unit id="DarkThemeSubtitle" translate="yes" xml:space="preserve">
+          <source>Enable or disable dark theme for app shell and widgets.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Abilita o disabilita il tema scuro per la shell dell'app e i widget.</target>
+        </trans-unit>
+        <trans-unit id="DarkThemeTitle" translate="yes" xml:space="preserve">
+          <source>Dark theme</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tema scuro</target>
+        </trans-unit>
+        <trans-unit id="PermssionsSettingSubtitle" translate="yes" xml:space="preserve">
+          <source>Manage access to app features and data. Choose which permissions you want to grant to ensure a comfortable and secure experience.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Gestisci l'accesso alle funzionalità e ai dati dell'app. Scegli le autorizzazioni che desideri concedere per garantire un'esperienza confortevole e sicura.</target>
+        </trans-unit>
+        <trans-unit id="WidgetTransparency" translate="yes" xml:space="preserve">
+          <source>Widget transparency</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Trasparenza del widget</target>
+        </trans-unit>
+        <trans-unit id="WidgetTransparencySubtitle" translate="yes" xml:space="preserve">
+          <source>Control the widget's opacity: reduce the value to make it less noticeable and less distracting from the main content.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Controlla l'opacità del widget: riduci il valore per renderlo meno evidente e meno distraente dal contenuto principale.</target>
+        </trans-unit>
+        <trans-unit id="Appointments" translate="yes" xml:space="preserve">
+          <source>Appointments</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Appuntamenti</target>
+        </trans-unit>
+        <trans-unit id="AppointmentsPermissionSubtitle" translate="yes" xml:space="preserve">
+          <source>Provides access to calendar events.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Fornisce l'accesso agli eventi del calendario.</target>
+        </trans-unit>
+        <trans-unit id="ClockSettings" translate="yes" xml:space="preserve">
+          <source>Clock settings</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Impostazioni dell'orologio</target>
+        </trans-unit>
+        <trans-unit id="ClockWidgetSubtitle" translate="yes" xml:space="preserve">
+          <source>A lightweight and responsive time widget that accurately displays the current time and date, with customizable formats and minimal resource usage.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Un widget di tempo leggero e reattivo che visualizza con precisione l'ora e la data correnti, con formati personalizzabili e un utilizzo minimo delle risorse.</target>
+        </trans-unit>
+        <trans-unit id="ClockWidgetTitle" translate="yes" xml:space="preserve">
+          <source>Clock</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Orologio</target>
+        </trans-unit>
+        <trans-unit id="DateFormatSubtitle" translate="yes" xml:space="preserve">
+          <source>Enable the date display and configure the date format.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Abilitare la visualizzazione della data e configurare il formato della data.</target>
+        </trans-unit>
+        <trans-unit id="CalendarDateFormatSubtitle" translate="yes" xml:space="preserve">
+          <source>Customize the date format displayed in some calendar usage scenarios.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Personalizzare il formato della data visualizzato in alcuni scenari di utilizzo del calendario.</target>
+        </trans-unit>
+        <trans-unit id="DateFormatTitle" translate="yes" xml:space="preserve">
+          <source>Date format</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Formato data</target>
+        </trans-unit>
+        <trans-unit id="DateDisplay" translate="yes" xml:space="preserve">
+          <source>Date display</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Visualizzazione della data</target>
+        </trans-unit>
+        <trans-unit id="NoNetworkSubtitle" translate="yes" xml:space="preserve">
+          <source>There is no internet access available, check your network connection and try again.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Non c'è accesso a Internet disponibile, controlla la connessione di rete e riprova.</target>
+        </trans-unit>
+        <trans-unit id="NoNetworkTitle" translate="yes" xml:space="preserve">
+          <source>No network connection</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nessuna connessione di rete</target>
+        </trans-unit>
+        <trans-unit id="OpenCalendar" translate="yes" xml:space="preserve">
+          <source>Open calendar</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Apri il calendario</target>
+        </trans-unit>
+        <trans-unit id="OpenClockAlarms" translate="yes" xml:space="preserve">
+          <source>Open Alarms &amp; clock</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Apri Sveglie e orologio</target>
+        </trans-unit>
+        <trans-unit id="TimeFormatSubtitle" translate="yes" xml:space="preserve">
+          <source>Setup time display format</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Imposta il formato di visualizzazione dell'ora</target>
+        </trans-unit>
+        <trans-unit id="TimeFormatTitle" translate="yes" xml:space="preserve">
+          <source>Time format</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Formato dell'ora</target>
+        </trans-unit>
+        <trans-unit id="CloseLabel" translate="yes" xml:space="preserve">
+          <source>Close</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chiudere</target>
+        </trans-unit>
+        <trans-unit id="PinLabel" translate="yes" xml:space="preserve">
+          <source>Pin</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Spilla</target>
+        </trans-unit>
+        <trans-unit id="AnalogClock" translate="yes" xml:space="preserve">
+          <source>Analog clock</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Orologio analogico</target>
+        </trans-unit>
+        <trans-unit id="DigitalClock" translate="yes" xml:space="preserve">
+          <source>Digital clock</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Orologio digitale</target>
+        </trans-unit>
+        <trans-unit id="EmptyInputMessage" translate="yes" xml:space="preserve">
+          <source>Field cannot be empty.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Il campo non può essere vuoto.</target>
+        </trans-unit>
+        <trans-unit id="InvalidDateMessage" translate="yes" xml:space="preserve">
+          <source>Incorect date format.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Formato di data non corretto.</target>
+        </trans-unit>
+        <trans-unit id="InvalidTimeMessage" translate="yes" xml:space="preserve">
+          <source>Incorect time format.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Formato dell'ora non corretto.</target>
+        </trans-unit>
+        <trans-unit id="DisableBackgroundSetting" translate="yes" xml:space="preserve">
+          <source>Disable background</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Disabilita lo sfondo</target>
+        </trans-unit>
+        <trans-unit id="DisableBackgroundSettingSubtitle" translate="yes" xml:space="preserve">
+          <source>Disables the widget's background decoration, making it transparent and allowing interface elements to be displayed without an additional background.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Disabilita la decorazione dello sfondo del widget, rendendolo trasparente e consentendo la visualizzazione degli elementi dell'interfaccia senza uno sfondo aggiuntivo.</target>
+        </trans-unit>
+        <trans-unit id="ShowAppointmentsSetting" translate="yes" xml:space="preserve">
+          <source>Show appointmens</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mostra appuntamenti</target>
+        </trans-unit>
+        <trans-unit id="ShowAppointmentsSettingSubtitle" translate="yes" xml:space="preserve">
+          <source>Enable calendar events display on the clock widget.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Abilita la visualizzazione degli eventi del calendario sul widget dell'orologio.</target>
+        </trans-unit>
+        <trans-unit id="EnableShadowEffect" translate="yes" xml:space="preserve">
+          <source>Enable shadow</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Abilita ombra</target>
+        </trans-unit>
+        <trans-unit id="EnableShadowEffectSubtitle" translate="yes" xml:space="preserve">
+          <source>Adds a subtle shadow behind the text on the digital clock widget, enhancing readability and visual depth.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aggiunge un'ombra sottile dietro il testo sul widget dell'orologio digitale, migliorando la leggibilità e la profondità visiva.</target>
+        </trans-unit>
+        <trans-unit id="AddTimeZone" translate="yes" xml:space="preserve">
+          <source>Add time zone</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aggiungi fuso orario</target>
+        </trans-unit>
+        <trans-unit id="CancelLabel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Annulla</target>
+        </trans-unit>
+        <trans-unit id="SelectLabel" translate="yes" xml:space="preserve">
+          <source>Select</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Selezionare</target>
+        </trans-unit>
+        <trans-unit id="TimeZoneLabel" translate="yes" xml:space="preserve">
+          <source>Time zone</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Fuso orario</target>
+        </trans-unit>
+        <trans-unit id="TimeZonesSubtitle" translate="yes" xml:space="preserve">
+          <source>Select the time zone where the time will be added under the additional clock.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Seleziona il fuso orario in cui verrà aggiunta l'ora sotto l'orologio aggiuntivo.</target>
+        </trans-unit>
+        <trans-unit id="TimeZonesTitle" translate="yes" xml:space="preserve">
+          <source>Time zones</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Fusi orari</target>
+        </trans-unit>
+        <trans-unit id="ChoosePictureLabel" translate="yes" xml:space="preserve">
+          <source>Choose picture</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">selezionare</target>
+        </trans-unit>
+        <trans-unit id="CustomClockFace" translate="yes" xml:space="preserve">
+          <source>Custom clock face</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Quadrante orologio personalizzato</target>
+        </trans-unit>
+        <trans-unit id="RemoveLabel" translate="yes" xml:space="preserve">
+          <source>Remove</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Togliere</target>
+        </trans-unit>
+        <trans-unit id="ShowClockFace" translate="yes" xml:space="preserve">
+          <source>Show clock face</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mostra quadrante orologio</target>
+        </trans-unit>
+        <trans-unit id="ShowClockFaceSubtitle" translate="yes" xml:space="preserve">
+          <source>Display a clock face with hour markers on a clock background.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Visualizza un quadrante orologio con indici delle ore su uno sfondo dell'orologio.</target>
+        </trans-unit>
+        <trans-unit id="TimeZonesEmptySubtitle" translate="yes" xml:space="preserve">
+          <source>Time zones for the clock widget will be displayed here. By adding a time zone you can easily switch between them in the widget.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Qui verranno visualizzati i fusi orari per il widget dell'orologio. Aggiungendo un fuso orario, puoi passare facilmente da uno all'altro nel widget.</target>
+        </trans-unit>
+        <trans-unit id="TimeZonesEmptyTitle" translate="yes" xml:space="preserve">
+          <source>Custom Time Zones</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Fusi orari personalizzati</target>
+        </trans-unit>
+        <trans-unit id="CannotGetWeatherSubtitle" translate="yes" xml:space="preserve">
+          <source>An error occurred while retrieving weather.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Si è verificato un errore durante il recupero del meteo.</target>
+        </trans-unit>
+        <trans-unit id="CannotGetWeatherTitle" translate="yes" xml:space="preserve">
+          <source>Can't get weather</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Non riesco a fare il meteo</target>
+        </trans-unit>
+        <trans-unit id="CalendarWidgetSettings" translate="yes" xml:space="preserve">
+          <source>Calendar settings</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Impostazioni del calendario</target>
+        </trans-unit>
+        <trans-unit id="CalendarWidgetSubtitle" translate="yes" xml:space="preserve">
+          <source>Displays the current date, upcoming events, and reminders, helping you quickly keep track of important tasks and appointments.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Visualizza la data corrente, gli eventi imminenti e i promemoria, aiutandoti a tenere rapidamente traccia delle attività e degli appuntamenti importanti.</target>
+        </trans-unit>
+        <trans-unit id="CalendarWidgetTitle" translate="yes" xml:space="preserve">
+          <source>Calendar</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Calendario</target>
+        </trans-unit>
+        <trans-unit id="CreateEvent" translate="yes" xml:space="preserve">
+          <source>Create event</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Crea evento</target>
+        </trans-unit>
+        <trans-unit id="AppointmentSampleEndTime" translate="yes" xml:space="preserve">
+          <source>2h</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">2h</target>
+        </trans-unit>
+        <trans-unit id="AppointmentSampleStartTime" translate="yes" xml:space="preserve">
+          <source>19 Aug - 12:00 PM</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">19 agosto - 12:00</target>
+        </trans-unit>
+        <trans-unit id="AppointmentSampleTitle" translate="yes" xml:space="preserve">
+          <source>Your meeting</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Il tuo meeting</target>
+        </trans-unit>
+        <trans-unit id="AllDay" translate="yes" xml:space="preserve">
+          <source>All day</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tutto il giorno</target>
+        </trans-unit>
+        <trans-unit id="AppointmentsPermissionRequestSubtitle" translate="yes" xml:space="preserve">
+          <source>Grant permission to view and manage calendar events.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Concedi l'autorizzazione per visualizzare e gestire gli eventi del calendario.</target>
+        </trans-unit>
+        <trans-unit id="DeleteAppointmentSubtitle" translate="yes" xml:space="preserve">
+          <source>Are you sure you want to delete this calendar event?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sei sicuro di voler eliminare questo evento del calendario?</target>
+        </trans-unit>
+        <trans-unit id="DeleteAppointmentTitle" translate="yes" xml:space="preserve">
+          <source>Delete event</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Elimina evento</target>
+        </trans-unit>
+        <trans-unit id="DeleteLabel" translate="yes" xml:space="preserve">
+          <source>Delete</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Cancellare</target>
+        </trans-unit>
+        <trans-unit id="NetworkNeededTitle" translate="yes" xml:space="preserve">
+          <source>You need internet for this</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hai bisogno di Internet per questo</target>
+        </trans-unit>
+        <trans-unit id="No" translate="yes" xml:space="preserve">
+          <source>No</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">No</target>
+        </trans-unit>
+        <trans-unit id="Yes" translate="yes" xml:space="preserve">
+          <source>Yes</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sì</target>
+        </trans-unit>
+        <trans-unit id="TodayLabel" translate="yes" xml:space="preserve">
+          <source>Today</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Oggi</target>
+        </trans-unit>
+        <trans-unit id="Create" translate="yes" xml:space="preserve">
+          <source>Create</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Creare</target>
+        </trans-unit>
+        <trans-unit id="MSAccount" translate="yes" xml:space="preserve">
+          <source>Microsoft account</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Account Microsoft</target>
+        </trans-unit>
+        <trans-unit id="SignInMessage" translate="yes" xml:space="preserve">
+          <source>To get the most out of this widget, we recommend signing in to your Microsoft account.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Per ottenere il massimo da questo widget, ti consigliamo di accedere al tuo account Microsoft.</target>
+        </trans-unit>
+        <trans-unit id="CalendarTimeFormatSubtitle" translate="yes" xml:space="preserve">
+          <source>Customize the time format displayed in some calendar usage scenarios.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Personalizzare il formato dell'ora visualizzato in alcuni scenari di utilizzo del calendario.</target>
+        </trans-unit>
+        <trans-unit id="Friday" translate="yes" xml:space="preserve">
+          <source>Friday</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Venerdì</target>
+        </trans-unit>
+        <trans-unit id="Monday" translate="yes" xml:space="preserve">
+          <source>Monday</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Lunedì</target>
+        </trans-unit>
+        <trans-unit id="Saturday" translate="yes" xml:space="preserve">
+          <source>Saturday</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sabato</target>
+        </trans-unit>
+        <trans-unit id="StartWeekFrom" translate="yes" xml:space="preserve">
+          <source>Start week from</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Inizia la settimana da</target>
+        </trans-unit>
+        <trans-unit id="StartWeekFromSubtitle" translate="yes" xml:space="preserve">
+          <source>Select which day to start the week on.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Seleziona il giorno in cui iniziare la settimana.</target>
+        </trans-unit>
+        <trans-unit id="Sunday" translate="yes" xml:space="preserve">
+          <source>Sunday</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Domenica</target>
+        </trans-unit>
+        <trans-unit id="Thursday" translate="yes" xml:space="preserve">
+          <source>Thursday</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Giovedì</target>
+        </trans-unit>
+        <trans-unit id="Tuesday" translate="yes" xml:space="preserve">
+          <source>Tuesday</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Martedì</target>
+        </trans-unit>
+        <trans-unit id="Wednesday" translate="yes" xml:space="preserve">
+          <source>Wednesday</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mercoledì</target>
+        </trans-unit>
+        <trans-unit id="DefaultCalendar" translate="yes" xml:space="preserve">
+          <source>Default calendar</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Calendario predefinito</target>
+        </trans-unit>
+        <trans-unit id="StatusColors" translate="yes" xml:space="preserve">
+          <source>Status colors</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Colori di stato</target>
+        </trans-unit>
+        <trans-unit id="StatusColorsSubtitle" translate="yes" xml:space="preserve">
+          <source>Select status colors for calendar events.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Seleziona i colori di stato per gli eventi del calendario.</target>
+        </trans-unit>
+        <trans-unit id="Busy" translate="yes" xml:space="preserve">
+          <source>Busy</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Occupato</target>
+        </trans-unit>
+        <trans-unit id="Free" translate="yes" xml:space="preserve">
+          <source>Free</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Gratuito</target>
+        </trans-unit>
+        <trans-unit id="Oof" translate="yes" xml:space="preserve">
+          <source>Out of office</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Fuori sede</target>
+        </trans-unit>
+        <trans-unit id="SelectColor" translate="yes" xml:space="preserve">
+          <source>Select color</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Seleziona il colore</target>
+        </trans-unit>
+        <trans-unit id="Tentative" translate="yes" xml:space="preserve">
+          <source>Tentative</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Provvisorio</target>
+        </trans-unit>
+        <trans-unit id="WorkingElsewhere" translate="yes" xml:space="preserve">
+          <source>Working elsewhere</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Lavorare altrove</target>
+        </trans-unit>
+        <trans-unit id="SelectCalendar" translate="yes" xml:space="preserve">
+          <source>Select calendar</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Seleziona il calendario</target>
+        </trans-unit>
+        <trans-unit id="AccentColor" translate="yes" xml:space="preserve">
+          <source>Accent color</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Colore d'accento</target>
+        </trans-unit>
+        <trans-unit id="Accounts" translate="yes" xml:space="preserve">
+          <source>Accounts</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Account</target>
+        </trans-unit>
+        <trans-unit id="AccountSettings" translate="yes" xml:space="preserve">
+          <source>Account settings</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Impostazioni dell'account</target>
+        </trans-unit>
+        <trans-unit id="AccountsSubtitle" translate="yes" xml:space="preserve">
+          <source>Set up accounts to use widgets. Logging into an account allows you to activate additional or basic features of some widgets.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Configura gli account per l'utilizzo dei widget. L'accesso a un account consente di attivare funzionalità aggiuntive o di base di alcuni widget.</target>
+        </trans-unit>
+        <trans-unit id="EnterEventName" translate="yes" xml:space="preserve">
+          <source>Enter event name</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Inserisci il nome dell'evento</target>
+        </trans-unit>
+        <trans-unit id="RequiresRestart" translate="yes" xml:space="preserve">
+          <source>Requires restart</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Richiede il riavvio</target>
+        </trans-unit>
+        <trans-unit id="RequiresRestartSubtitle" translate="yes" xml:space="preserve">
+          <source>To apply this setting, you must restart the application.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Per applicare questa impostazione, è necessario riavviare l'applicazione.</target>
+        </trans-unit>
+        <trans-unit id="SubjectFieldEmpty" translate="yes" xml:space="preserve">
+          <source>Subject field cannot be empty.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Il campo dell'oggetto non può essere vuoto.</target>
+        </trans-unit>
+        <trans-unit id="Edit" translate="yes" xml:space="preserve">
+          <source>Edit</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Redigere</target>
+        </trans-unit>
+        <trans-unit id="Save" translate="yes" xml:space="preserve">
+          <source>Save</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Salvare</target>
+        </trans-unit>
+        <trans-unit id="LanguageSetting" translate="yes" xml:space="preserve">
+          <source>Widget language</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Lingua del widget</target>
+        </trans-unit>
+        <trans-unit id="LanguageSettingSubtitle" translate="yes" xml:space="preserve">
+          <source>Select the default language for widgets and shell.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Seleziona la lingua predefinita per i widget e la shell.</target>
+        </trans-unit>
+        <trans-unit id="Restart" translate="yes" xml:space="preserve">
+          <source>Restart</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Riavviare</target>
+        </trans-unit>
+        <trans-unit id="View" translate="yes" xml:space="preserve">
+          <source>View</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vista</target>
+        </trans-unit>
+        <trans-unit id="FindPlace" translate="yes" xml:space="preserve">
+          <source>Find place</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Trova posto</target>
+        </trans-unit>
+        <trans-unit id="PlaceSearchPlaceholder" translate="yes" xml:space="preserve">
+          <source>Search places</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Cerca luoghi</target>
+        </trans-unit>
+        <trans-unit id="Search" translate="yes" xml:space="preserve">
+          <source>Search</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ricerca</target>
+        </trans-unit>
+        <trans-unit id="PlaceNameCannotBeEmpty" translate="yes" xml:space="preserve">
+          <source>The place name cannot be empty.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Il nome del luogo non può essere vuoto.</target>
+        </trans-unit>
+        <trans-unit id="PlaceNameValidationError" translate="yes" xml:space="preserve">
+          <source>City name contains invalid characters.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Il nome della città contiene caratteri non validi.</target>
+        </trans-unit>
+        <trans-unit id="TodoWidgetSubtitle" translate="yes" xml:space="preserve">
+          <source>This widget displays tasks from your Microsoft To do task lists and lets you quickly create and edit tasks.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Questo widget visualizza le attività dagli elenchi di attività Microsoft To Do e consente di creare e modificare rapidamente le attività.</target>
+        </trans-unit>
+        <trans-unit id="TodoWidgetTitle" translate="yes" xml:space="preserve">
+          <source>To do</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Da fare</target>
+        </trans-unit>
+        <trans-unit id="Tasks" translate="yes" xml:space="preserve">
+          <source>Tasks</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Attività</target>
+        </trans-unit>
+        <trans-unit id="TasksPermissionSubtitle" translate="yes" xml:space="preserve">
+          <source>Allows widgets to access and manage task lists.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Consente ai widget di accedere e gestire gli elenchi di attività.</target>
+        </trans-unit>
+        <trans-unit id="AddTask" translate="yes" xml:space="preserve">
+          <source>Add task</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aggiungi attività</target>
+        </trans-unit>
+        <trans-unit id="NoTasksSubtitle" translate="yes" xml:space="preserve">
+          <source>Sit back and relax or add a new task using the button above.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Siediti e rilassati o aggiungi una nuova attività utilizzando il pulsante in alto.</target>
+        </trans-unit>
+        <trans-unit id="NoTasksTitle" translate="yes" xml:space="preserve">
+          <source>You are free</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sei libero</target>
+        </trans-unit>
+        <trans-unit id="SelectList" translate="yes" xml:space="preserve">
+          <source>Select list</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Seleziona l'elenco</target>
+        </trans-unit>
+        <trans-unit id="ToDoSettings" translate="yes" xml:space="preserve">
+          <source>To do settings</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Per eseguire le impostazioni</target>
+        </trans-unit>
+        <trans-unit id="TomorrowLabel" translate="yes" xml:space="preserve">
+          <source>Tomorrow</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Domani</target>
+        </trans-unit>
+        <trans-unit id="YesterdayLabel" translate="yes" xml:space="preserve">
+          <source>Yesterday</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ieri</target>
+        </trans-unit>
+        <trans-unit id="DefaultTodoList" translate="yes" xml:space="preserve">
+          <source>Default to do list</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Elenco predefinito delle cose da fare</target>
+        </trans-unit>
+        <trans-unit id="DefaultTodoListSubtitle" translate="yes" xml:space="preserve">
+          <source>Select which task list will be displayed by default.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Selezionare l'elenco delle attività da visualizzare per impostazione predefinita.</target>
+        </trans-unit>
+        <trans-unit id="ShowCompletedTasks" translate="yes" xml:space="preserve">
+          <source>Show completed tasks</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mostra le attività completate</target>
+        </trans-unit>
+        <trans-unit id="ShowCompletedTasksSubtitle" translate="yes" xml:space="preserve">
+          <source>Enable display of completed tasks in lists.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Abilita la visualizzazione delle attività completate negli elenchi.</target>
+        </trans-unit>
+        <trans-unit id="DeleteTaskSubtitle" translate="yes" xml:space="preserve">
+          <source>Are you sure you want to delete this task?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sei sicuro di voler eliminare questa attività?</target>
+        </trans-unit>
+        <trans-unit id="DeleteTaskTitle" translate="yes" xml:space="preserve">
+          <source>Delete task</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Elimina attività</target>
+        </trans-unit>
+        <trans-unit id="ReminderLabel" translate="yes" xml:space="preserve">
+          <source>Reminder</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Promemoria</target>
+        </trans-unit>
+        <trans-unit id="DueDateLabel" translate="yes" xml:space="preserve">
+          <source>Due date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Data di scadenza</target>
+        </trans-unit>
+        <trans-unit id="CreateSubTask" translate="yes" xml:space="preserve">
+          <source>Add checklist task</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aggiungere un'attività dell'elenco di controllo</target>
+        </trans-unit>
+        <trans-unit id="EnterTaskName" translate="yes" xml:space="preserve">
+          <source>What you want to do?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Cosa vuoi fare?</target>
+        </trans-unit>
+        <trans-unit id="Rename" translate="yes" xml:space="preserve">
+          <source>Rename</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ribattezzare</target>
+        </trans-unit>
+        <trans-unit id="CannotDeleteTaskError" translate="yes" xml:space="preserve">
+          <source>Can't delete this task right now, please try again later.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Non è possibile eliminare questa attività in questo momento, riprova più tardi.</target>
+        </trans-unit>
+        <trans-unit id="Checklist" translate="yes" xml:space="preserve">
+          <source>Checklist</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Lista di controllo</target>
+        </trans-unit>
+        <trans-unit id="CannotSetReminderDate" translate="yes" xml:space="preserve">
+          <source>We can't set reminder date right now, please try again later.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Non possiamo impostare la data del promemoria in questo momento, riprova più tardi.</target>
+        </trans-unit>
+        <trans-unit id="CannotChangeTaskTitle" translate="yes" xml:space="preserve">
+          <source>We can't update task title right now, please try again later.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Non possiamo aggiornare il titolo dell'attività in questo momento, riprova più tardi.</target>
+        </trans-unit>
+        <trans-unit id="SetDueDate" translate="yes" xml:space="preserve">
+          <source>Set due date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Imposta la data di scadenza</target>
+        </trans-unit>
+        <trans-unit id="SetReminder" translate="yes" xml:space="preserve">
+          <source>Set reminder</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Imposta promemoria</target>
+        </trans-unit>
+        <trans-unit id="ViewInMSTodo" translate="yes" xml:space="preserve">
+          <source>View in To do</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Visualizza in Da fare</target>
+        </trans-unit>
+        <trans-unit id="ChooseListIcon" translate="yes" xml:space="preserve">
+          <source>Choose list icon</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Scegli l'icona dell'elenco</target>
+        </trans-unit>
+        <trans-unit id="PickIcon" translate="yes" xml:space="preserve">
+          <source>Pick icon</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Icona di selezione</target>
+        </trans-unit>
+        <trans-unit id="SearchEmoji" translate="yes" xml:space="preserve">
+          <source>Search emoji...</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Cerca emoji...</target>
+        </trans-unit>
+        <trans-unit id="RemoveIcon" translate="yes" xml:space="preserve">
+          <source>Remove icon</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Icona Rimuovi</target>
+        </trans-unit>
+        <trans-unit id="Notes" translate="yes" xml:space="preserve">
+          <source>Notes</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Note</target>
+        </trans-unit>
+        <trans-unit id="NotesPermissionSubtitle" translate="yes" xml:space="preserve">
+          <source>Allows widgets to access and manage text notes.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Consente ai widget di accedere e gestire le note di testo.</target>
+        </trans-unit>
+        <trans-unit id="NotesSubtitle" translate="yes" xml:space="preserve">
+          <source>This widget allows you to pin notes to your desktop, supports markup and code highlighting.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Questo widget ti consente di aggiungere note sul desktop, supporta il markup e l'evidenziazione del codice.</target>
+        </trans-unit>
+        <trans-unit id="Beep" translate="yes" xml:space="preserve">
+          <source>Beep</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bip</target>
+        </trans-unit>
+        <trans-unit id="CheckTaskSound" translate="yes" xml:space="preserve">
+          <source>Task check sound</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Suono di controllo delle attività</target>
+        </trans-unit>
+        <trans-unit id="CheckTaskSoundSubtitle" translate="yes" xml:space="preserve">
+          <source>Select the sound that will be played when the task is completed.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Seleziona il suono che verrà riprodotto al termine dell'attività.</target>
+        </trans-unit>
+        <trans-unit id="EnableCheckTaskSound" translate="yes" xml:space="preserve">
+          <source>Enable task check sound</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Abilita il suono del controllo delle attività</target>
+        </trans-unit>
+        <trans-unit id="EnableCheckTaskSoundSubtitle" translate="yes" xml:space="preserve">
+          <source>Play sound when task is completed.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Riproduci il suono quando l'attività è completata.</target>
+        </trans-unit>
+        <trans-unit id="Asterisk" translate="yes" xml:space="preserve">
+          <source>Asterisk</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Asterisco</target>
+        </trans-unit>
+        <trans-unit id="Exclamation" translate="yes" xml:space="preserve">
+          <source>Exclamation</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Esclamazione</target>
+        </trans-unit>
+        <trans-unit id="Hand" translate="yes" xml:space="preserve">
+          <source>Hand</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mano</target>
+        </trans-unit>
+        <trans-unit id="Question" translate="yes" xml:space="preserve">
+          <source>Question</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Domanda</target>
+        </trans-unit>
+        <trans-unit id="MaxTasksNumber" translate="yes" xml:space="preserve">
+          <source>Maximum number of tasks to display</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Numero massimo di attività da visualizzare</target>
+        </trans-unit>
+        <trans-unit id="MaxTasksNumberSubtitle" translate="yes" xml:space="preserve">
+          <source>Select the maximum number of tasks to display in the list.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Selezionare il numero massimo di attività da visualizzare nell'elenco.</target>
+        </trans-unit>
+        <trans-unit id="SortBy" translate="yes" xml:space="preserve">
+          <source>Sort by</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ordina per</target>
+        </trans-unit>
+        <trans-unit id="SortByDate" translate="yes" xml:space="preserve">
+          <source>By date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Per data</target>
+        </trans-unit>
+        <trans-unit id="SortByImportance" translate="yes" xml:space="preserve">
+          <source>By importance</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Per importanza</target>
+        </trans-unit>
+        <trans-unit id="SortByName" translate="yes" xml:space="preserve">
+          <source>By name</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Per nome</target>
+        </trans-unit>
+        <trans-unit id="TaskSorting" translate="yes" xml:space="preserve">
+          <source>Task sorting</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ordinamento delle attività</target>
+        </trans-unit>
+        <trans-unit id="TaskSortingSubtitle" translate="yes" xml:space="preserve">
+          <source>Set up task sorting</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Configurare l'ordinamento delle attività</target>
+        </trans-unit>
+        <trans-unit id="StickyNotesSettings" translate="yes" xml:space="preserve">
+          <source>Sticky notes settings</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Impostazioni delle note adesive</target>
+        </trans-unit>
+        <trans-unit id="AllNotes" translate="yes" xml:space="preserve">
+          <source>All notes list</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Elenco di tutte le note</target>
+        </trans-unit>
+        <trans-unit id="NewNote" translate="yes" xml:space="preserve">
+          <source>New note</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nuova nota</target>
+        </trans-unit>
+        <trans-unit id="NotePlaceholder" translate="yes" xml:space="preserve">
+          <source>One word is followed by another. Just start typing...</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Una parola è seguita da un'altra. Basta iniziare a digitare...</target>
+        </trans-unit>
+        <trans-unit id="NoPermission" translate="yes" xml:space="preserve">
+          <source>No permission</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nessuna autorizzazione</target>
+        </trans-unit>
+        <trans-unit id="NoPermissionSubtitle" translate="yes" xml:space="preserve">
+          <source>Access to the feature «{0}» requires permission, you can grant permission now or do it later in settings.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">L'accesso alla funzione «{0}» richiede l'autorizzazione, puoi concedere l'autorizzazione ora o farlo in un secondo momento nelle impostazioni.</target>
+        </trans-unit>
+        <trans-unit id="Unpin" translate="yes" xml:space="preserve">
+          <source>Unpin</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Rimuovere</target>
+        </trans-unit>
+        <trans-unit id="Copy" translate="yes" xml:space="preserve">
+          <source>Copy</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Copiare</target>
+        </trans-unit>
+        <trans-unit id="Cut" translate="yes" xml:space="preserve">
+          <source>Cut</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tagliare</target>
+        </trans-unit>
+        <trans-unit id="Paste" translate="yes" xml:space="preserve">
+          <source>Paste</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Incollare</target>
+        </trans-unit>
+        <trans-unit id="DeleteNote" translate="yes" xml:space="preserve">
+          <source>Delete note</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Elimina nota</target>
+        </trans-unit>
+        <trans-unit id="DeleteNoteSubtitle" translate="yes" xml:space="preserve">
+          <source>Do you really want delete this note?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vuoi davvero eliminare questa nota?</target>
+        </trans-unit>
+        <trans-unit id="Bold" translate="yes" xml:space="preserve">
+          <source>Bold</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Audace</target>
+        </trans-unit>
+        <trans-unit id="Italic" translate="yes" xml:space="preserve">
+          <source>Italic</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Corsivo</target>
+        </trans-unit>
+        <trans-unit id="Underline" translate="yes" xml:space="preserve">
+          <source>Underline</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sottolineare</target>
+        </trans-unit>
+        <trans-unit id="EnterNoteName" translate="yes" xml:space="preserve">
+          <source>Enter note title...</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Inserisci il titolo della nota...</target>
+        </trans-unit>
+        <trans-unit id="Redo" translate="yes" xml:space="preserve">
+          <source>Redo</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Rifare</target>
+        </trans-unit>
+        <trans-unit id="Undo" translate="yes" xml:space="preserve">
+          <source>Undo</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Disfare</target>
+        </trans-unit>
+        <trans-unit id="PickColor" translate="yes" xml:space="preserve">
+          <source>Pick color</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Scegli il colore</target>
+        </trans-unit>
+        <trans-unit id="Bullets" translate="yes" xml:space="preserve">
+          <source>Toggle bullets</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Attiva/disattiva i punti elenco</target>
+        </trans-unit>
+        <trans-unit id="Numbering" translate="yes" xml:space="preserve">
+          <source>Toggle nmbering</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Attiva/disattiva nmbering</target>
+        </trans-unit>
+        <trans-unit id="DecreaseFontSize" translate="yes" xml:space="preserve">
+          <source>Decrease font size</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Riduci la dimensione del carattere</target>
+        </trans-unit>
+        <trans-unit id="IncreaseFontSize" translate="yes" xml:space="preserve">
+          <source>Increase font size</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aumenta la dimensione del carattere</target>
+        </trans-unit>
+        <trans-unit id="SelectFont" translate="yes" xml:space="preserve">
+          <source>Select font</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Seleziona il carattere</target>
+        </trans-unit>
+        <trans-unit id="CannotSaveChanges" translate="yes" xml:space="preserve">
+          <source>Cannot save changes</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Impossibile salvare le modifiche</target>
+        </trans-unit>
+        <trans-unit id="CannotSaveChangesSubtitle" translate="yes" xml:space="preserve">
+          <source>There was an error saving changes, please try again later.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Si è verificato un errore durante il salvataggio delle modifiche, riprova più tardi.</target>
+        </trans-unit>
+        <trans-unit id="EnableSoundEffects" translate="yes" xml:space="preserve">
+          <source>Enable sound effects</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Abilita gli effetti sonori</target>
+        </trans-unit>
+        <trans-unit id="EnableSoundEffectsSubtitle" translate="yes" xml:space="preserve">
+          <source>Enable sound effects when interacting with notes.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Abilita gli effetti sonori quando interagisci con le note.</target>
+        </trans-unit>
+        <trans-unit id="DefaultFont" translate="yes" xml:space="preserve">
+          <source>Font by default</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Carattere per impostazione predefinita</target>
+        </trans-unit>
+        <trans-unit id="DefaultNotesFontSubtitle" translate="yes" xml:space="preserve">
+          <source>Select the default notes font</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Seleziona il carattere predefinito delle note</target>
+        </trans-unit>
+        <trans-unit id="DefaultFontSize" translate="yes" xml:space="preserve">
+          <source>Font size by default</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dimensione del carattere per impostazione predefinita</target>
+        </trans-unit>
+        <trans-unit id="DefaultFontSizeSubtitle" translate="yes" xml:space="preserve">
+          <source>Select the default font size for notes.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Seleziona la dimensione del carattere predefinita per le note.</target>
+        </trans-unit>
+        <trans-unit id="UpdateNotesIntervalSubtitle" translate="yes" xml:space="preserve">
+          <source>Set how often the widget updates to show the latest sticky notes from Microsoft account.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Imposta la frequenza con cui il widget si aggiorna per mostrare le note adesive più recenti dall'account Microsoft.</target>
+        </trans-unit>
+        <trans-unit id="UpdateTasksIntervalSubtitle" translate="yes" xml:space="preserve">
+          <source>Set how often the widget updates to show the latest tasks from Microsoft To Do.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Imposta la frequenza di aggiornamento del widget per mostrare le attività più recenti di Microsoft To Do.</target>
+        </trans-unit>
+        <trans-unit id="NotesPermissionNeeded" translate="yes" xml:space="preserve">
+          <source>Access to notes</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Accesso alle note</target>
+        </trans-unit>
+        <trans-unit id="NotesPermissionNeededMessage" translate="yes" xml:space="preserve">
+          <source>To view, create or edit notes, please allow access.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Per visualizzare, creare o modificare le note, consenti l'accesso.</target>
+        </trans-unit>
+        <trans-unit id="SettingNeeded" translate="yes" xml:space="preserve">
+          <source>Setup required</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Configurazione richiesta</target>
+        </trans-unit>
+        <trans-unit id="SettingNeededSubtitle" translate="yes" xml:space="preserve">
+          <source>To display data on this widget, go to the settings.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Per visualizzare i dati su questo widget, vai alle impostazioni.</target>
+        </trans-unit>
+        <trans-unit id="SetupWeatherGeolocationMessage" translate="yes" xml:space="preserve">
+          <source>To allow the widget to display the weather in your location, we recommend that you allow access to your location.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Per consentire al widget di visualizzare il meteo nella tua posizione, ti consigliamo di consentire l'accesso alla tua posizione.</target>
+        </trans-unit>
+        <trans-unit id="SetupWeatherLocationMessage" translate="yes" xml:space="preserve">
+          <source>To enable the widget to display the weather in your location, please specify the name of the city or place.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Per abilitare il widget a visualizzare il meteo nella tua posizione, specifica il nome della città o del luogo.</target>
+        </trans-unit>
+        <trans-unit id="NothingHere" translate="yes" xml:space="preserve">
+          <source>Nothing here</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Niente qui</target>
+        </trans-unit>
+        <trans-unit id="TasksEmptyMessage" translate="yes" xml:space="preserve">
+          <source>There are no tasks in the current list.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nell'elenco corrente non sono presenti attività.</target>
+        </trans-unit>
+        <trans-unit id="NotesEmptyMessage" translate="yes" xml:space="preserve">
+          <source>There are no any sticky notes, but you can create one right now!</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Non ci sono post-it, ma puoi crearne uno subito!</target>
+        </trans-unit>
+        <trans-unit id="LeaveFeedback" translate="yes" xml:space="preserve">
+          <source>Leave feedback</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Lascia un feedback</target>
+        </trans-unit>
+        <trans-unit id="ChooseLocation" translate="yes" xml:space="preserve">
+          <source>Choose location</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Scegli la location</target>
+        </trans-unit>
+        <trans-unit id="ChooseLocationSubtitle" translate="yes" xml:space="preserve">
+          <source>To show us the weather, please specify your region or enable geolocation in settings.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Per mostrarci il meteo, specifica la tua regione o abilita la geolocalizzazione nelle impostazioni.</target>
+        </trans-unit>
+        <trans-unit id="MicrosoftAccount" translate="yes" xml:space="preserve">
+          <source>Microsoft Account</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Microsoft Account</target>
+        </trans-unit>
+        <trans-unit id="MicrosoftAccountSubtitle" translate="yes" xml:space="preserve">
+          <source>Allows some widgets to interact with Microsoft 365 services.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Consente ad alcuni widget di interagire con i servizi di Microsoft 365.</target>
+        </trans-unit>
+        <trans-unit id="AddWidget" translate="yes" xml:space="preserve">
+          <source>Add widget</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aggiungi widget</target>
+        </trans-unit>
+        <trans-unit id="HideWidgets" translate="yes" xml:space="preserve">
+          <source>Hide widgets</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nascondi widget</target>
+        </trans-unit>
+        <trans-unit id="EnableTrayIcon" translate="yes" xml:space="preserve">
+          <source>Enable tray icon</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Abilita icona nella barra delle applicazioni</target>
+        </trans-unit>
+        <trans-unit id="EnableTrayIconSubtitle" translate="yes" xml:space="preserve">
+          <source>Enable the system tray icon for quick access and control of widgets.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Abilita l'icona della barra delle applicazioni per un rapido accesso e controllo dei widget.</target>
+        </trans-unit>
+        <trans-unit id="FeatureUnavailable" translate="yes" xml:space="preserve">
+          <source>This feature is currently not available in this version of the app.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Questa funzione non è attualmente disponibile in questa versione dell'app.</target>
+        </trans-unit>
+        <trans-unit id="AllowShare" translate="yes" xml:space="preserve">
+          <source>Allow sharing</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Consenti condivisione</target>
+        </trans-unit>
+        <trans-unit id="AllowShareSubtitle" translate="yes" xml:space="preserve">
+          <source>Allow widgets to share content.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Consenti ai widget di condividere contenuti.</target>
+        </trans-unit>
+        <trans-unit id="FutureFeature" translate="yes" xml:space="preserve">
+          <source>Future feature</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Funzionalità futura</target>
+        </trans-unit>
+        <trans-unit id="ShareImage" translate="yes" xml:space="preserve">
+          <source>Share image</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Condividi immagine</target>
+        </trans-unit>
+        <trans-unit id="CantShare" translate="yes" xml:space="preserve">
+          <source>Can't share</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Impossibile condividere</target>
+        </trans-unit>
+        <trans-unit id="CantShareSubtitle" translate="yes" xml:space="preserve">
+          <source>The widget can't share content right now. {0}</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Al momento il widget non può condividere contenuti. {0}</target>
+        </trans-unit>
+        <trans-unit id="AutoSave" translate="yes" xml:space="preserve">
+          <source>Auto save</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Salvataggio automatico</target>
+        </trans-unit>
+        <trans-unit id="AutoSaveSubtitle" translate="yes" xml:space="preserve">
+          <source>Turn on auto-save notes to save time.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Attiva il salvataggio automatico delle note per risparmiare tempo.</target>
+        </trans-unit>
+        <trans-unit id="TaskDesciptionPlaceholder" translate="yes" xml:space="preserve">
+          <source>Add task description here...</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aggiungi qui la descrizione dell'attività...</target>
+        </trans-unit>
+        <trans-unit id="TaskDescription" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Descrizione</target>
+        </trans-unit>
+        <trans-unit id="TaskEnableTextWrapping" translate="yes" xml:space="preserve">
+          <source>Enable text wrapping</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Abilita la disposizione del testo</target>
+        </trans-unit>
+        <trans-unit id="TaskEnableTextWrappingSubtitle" translate="yes" xml:space="preserve">
+          <source>Enable text wrapping for task titles.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Abilita la disposizione del testo per i titoli delle attività.</target>
+        </trans-unit>
+        <trans-unit id="OpenShellOnStart" translate="yes" xml:space="preserve">
+          <source>Launch a shell when the app starts</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Avvia una shell all'avvio dell'app</target>
+        </trans-unit>
+        <trans-unit id="OpenShellOnStartSubtitle" translate="yes" xml:space="preserve">
+          <source>Automatically open the main application window on system startup.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Apre automaticamente la finestra principale dell'applicazione all'avvio del sistema.</target>
+        </trans-unit>
+        <trans-unit id="ClockFontFamilySubtitle" translate="yes" xml:space="preserve">
+          <source>Select the digital clock display font.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Selezionare il carattere di visualizzazione dell'orologio digitale.</target>
+        </trans-unit>
+        <trans-unit id="CustomFont" translate="yes" xml:space="preserve">
+          <source>Custom font</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Carattere personalizzato</target>
+        </trans-unit>
+        <trans-unit id="MoveTo" translate="yes" xml:space="preserve">
+          <source>Move to</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sposta in</target>
+        </trans-unit>
+        <trans-unit id="SelectTask" translate="yes" xml:space="preserve">
+          <source>Select task</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Seleziona attività</target>
+        </trans-unit>
+        <trans-unit id="SelectTaskMessage" translate="yes" xml:space="preserve">
+          <source>To complete the action, select the task.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Per completare l'azione, selezionare l'attività.</target>
+        </trans-unit>
+        <trans-unit id="CannotMoveTask" translate="yes" xml:space="preserve">
+          <source>Can't move task</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Impossibile spostare l'attività</target>
+        </trans-unit>
+        <trans-unit id="CpuWidget" translate="yes" xml:space="preserve">
+          <source>CPU Monitor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Monitoraggio CPU</target>
+        </trans-unit>
+        <trans-unit id="CpuWidgetSubtitle" translate="yes" xml:space="preserve">
+          <source>Keep an eye on your CPU with real-time updates about its performance and usage.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tieni d'occhio la tua CPU con aggiornamenti in tempo reale sulle sue prestazioni e sul suo utilizzo.</target>
+        </trans-unit>
+        <trans-unit id="SystemInformation" translate="yes" xml:space="preserve">
+          <source>System information &amp; monitoring</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Informazioni e monitoraggio del sistema</target>
+        </trans-unit>
+        <trans-unit id="SystemInformationPermissionSubtitle" translate="yes" xml:space="preserve">
+          <source>Allows you to get current information about the hardware and the system.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Consente di ottenere informazioni aggiornate sull'hardware e sul sistema.</target>
+        </trans-unit>
+        <trans-unit id="CannotGetCpuData" translate="yes" xml:space="preserve">
+          <source>Can't get CPU data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Impossibile ottenere i dati della CPU</target>
+        </trans-unit>
+        <trans-unit id="PermissionNeeded" translate="yes" xml:space="preserve">
+          <source>Permission needed</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Autorizzazione necessaria</target>
+        </trans-unit>
+        <trans-unit id="SystemInformationAccessNeeded" translate="yes" xml:space="preserve">
+          <source>This widget requires permission to request information about the system, provide this permit to display data.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Questo widget richiede l'autorizzazione per richiedere informazioni sul sistema, fornire questa autorizzazione per visualizzare i dati.</target>
+        </trans-unit>
+        <trans-unit id="NoCpuData" translate="yes" xml:space="preserve">
+          <source>It is currently impossible to get CPU information, WMI does not contain any data.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Al momento non è possibile ottenere informazioni sulla CPU, WMI non contiene dati.</target>
+        </trans-unit>
+        <trans-unit id="NoData" translate="yes" xml:space="preserve">
+          <source>No information</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nessuna informazione</target>
+        </trans-unit>
+        <trans-unit id="GrandAccess" translate="yes" xml:space="preserve">
+          <source>Grand access</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Accesso in grande stile</target>
+        </trans-unit>
+        <trans-unit id="WidgetNeedsPermission" translate="yes" xml:space="preserve">
+          <source>To get the data widget needs permission.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Per ottenere il widget dei dati è necessaria l'autorizzazione.</target>
+        </trans-unit>
+        <trans-unit id="CpuWidgetSettings" translate="yes" xml:space="preserve">
+          <source>Cpu widget settings</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Impostazioni widget CPU</target>
+        </trans-unit>
+        <trans-unit id="EnableChartAnimation" translate="yes" xml:space="preserve">
+          <source>Enable chart animation</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Abilita l'animazione del grafico</target>
+        </trans-unit>
+        <trans-unit id="EnableCPUChartAnimationSubtitle" translate="yes" xml:space="preserve">
+          <source>Turn on the CPU utilization chart animation.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Attiva l'animazione del grafico di utilizzo della CPU.</target>
+        </trans-unit>
+        <trans-unit id="ChartOpacity" translate="yes" xml:space="preserve">
+          <source>Chart opacity</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Opacità del grafico</target>
+        </trans-unit>
+        <trans-unit id="ChartOpacitySubtitle" translate="yes" xml:space="preserve">
+          <source>Configure the degree of transparency of the chart.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Configura il grado di trasparenza del grafico.</target>
+        </trans-unit>
+        <trans-unit id="Miliseconds" translate="yes" xml:space="preserve">
+          <source>Ms</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ms</target>
+        </trans-unit>
+        <trans-unit id="GpuWidget" translate="yes" xml:space="preserve">
+          <source>GPU Monitor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Monitoraggio GPU</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">GPU Monitor</note>
+        </trans-unit>
+        <trans-unit id="GpuWidgetSubtitle" translate="yes" xml:space="preserve">
+          <source>The GPU Widget provides real-time monitoring of your graphics card usage. It displays the current GPU load percentage, helping you track performance.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Il widget GPU fornisce il monitoraggio in tempo reale dell'utilizzo della scheda grafica. Visualizza la percentuale di carico corrente della GPU, aiutandoti a monitorare le prestazioni.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">The GPU Widget provides real-time monitoring of your graphics card usage. It displays the current GPU load percentage, helping you track performance.</note>
+        </trans-unit>
+        <trans-unit id="Failed" translate="yes" xml:space="preserve">
+          <source>Failed</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Fallito</target>
+        </trans-unit>
+        <trans-unit id="GpuWidgetSettings" translate="yes" xml:space="preserve">
+          <source>Gpu widget settings</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Impostazioni widget Gpu</target>
+        </trans-unit>
+        <trans-unit id="EnableGPUChartAnimationSubtitle" translate="yes" xml:space="preserve">
+          <source>Turn on the GPU utilization chart animation.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Attiva l'animazione del grafico di utilizzo della GPU.</target>
+        </trans-unit>
+        <trans-unit id="ShowAllList" translate="yes" xml:space="preserve">
+          <source>Show all widgets</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mostra tutti i widget</target>
+        </trans-unit>
+        <trans-unit id="ShowInTray" translate="yes" xml:space="preserve">
+          <source>Show in tray menu</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mostra nel menu della barra delle applicazioni</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,197 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c="clr-namespace:BetterWidgets.Controls"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:vm="clr-namespace:BetterWidgets.ViewModel.Components">
+
+    <Style
+        x:Key="DefaultDatePickerItemStyle"
+        BasedOn="{StaticResource DefaultToggleButtonStyle}"
+        TargetType="ToggleButton">
+        <Setter Property="Border.CornerRadius" Value="30" />
+        <Setter Property="Padding" Value="5" />
+        <Setter Property="FontSize" Value="11" />
+    </Style>
+
+    <DataTemplate x:Key="DayItemTemplate" DataType="vm:DateViewModel">
+        <Border
+            Background="Transparent"
+            ToolTipService.BetweenShowDelay="0"
+            ToolTipService.ShowDuration="30000"
+            ToolTipService.ToolTip="{Binding DateTime.DayOfWeek, Mode=OneWay}">
+            <ui:TextBlock
+                Margin="0"
+                Padding="0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Text="{Binding DateTime.Day, Mode=OneWay}" />
+        </Border>
+    </DataTemplate>
+
+    <Style x:Key="DefaultDayPickerStyle" TargetType="c:DayPicker">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="c:DayPicker">
+                    <Grid
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        Background="{TemplateBinding Background}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <ui:Button
+                            x:Name="PART_UpPrevButton"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Margin="0,2"
+                            Padding="5,6,5,5"
+                            HorizontalAlignment="Center"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            CornerRadius="13"
+                            Visibility="{TemplateBinding VerticalFlipButtonsVisibility}">
+                            <ui:Button.Icon>
+                                <ui:SymbolIcon FontSize="13" Symbol="ChevronUp16" />
+                            </ui:Button.Icon>
+                        </ui:Button>
+                        <ui:Button
+                            x:Name="PART_PrevButton"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Margin="2,0"
+                            Padding="5,6,5,5"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            CornerRadius="13"
+                            Visibility="{TemplateBinding HorizontalFlipButtonsVisibility}">
+                            <ui:Button.Icon>
+                                <ui:SymbolIcon FontSize="13" Symbol="ChevronLeft16" />
+                            </ui:Button.Icon>
+                        </ui:Button>
+                        <ScrollViewer
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Height="{TemplateBinding Height}">
+                            <ScrollViewer.Style>
+                                <Style TargetType="ScrollViewer">
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="False">
+                                            <Setter Property="VerticalScrollBarVisibility" Value="Hidden" />
+                                        </Trigger>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="VerticalScrollBarVisibility" Value="Visible" />
+                                            <Setter Property="Margin" Value="0,0,-14,0" />
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </ScrollViewer.Style>
+                            <ListBox
+                                x:Name="PART_DaysCollection"
+                                Margin="-5,0,-10,0"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Top"
+                                ItemTemplate="{StaticResource DayItemTemplate}"
+                                ItemsSource="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=DaysItemsSource, Mode=OneWay}"
+                                ScrollViewer.CanContentScroll="False"
+                                ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                                SelectedItem="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=SelectedDateView, Mode=TwoWay}">
+                                <ListBox.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <WrapPanel HorizontalAlignment="Center" Orientation="{Binding Path=Orientation, RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" />
+                                    </ItemsPanelTemplate>
+                                </ListBox.ItemsPanel>
+                                <ListBox.ItemContainerStyle>
+                                    <Style TargetType="ListBoxItem">
+                                        <Setter Property="Background" Value="Transparent" />
+                                        <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                        <Setter Property="VerticalContentAlignment" Value="Center" />
+                                        <Setter Property="Padding" Value="0" />
+                                        <Setter Property="Margin" Value="4" />
+
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="ListBoxItem">
+                                                    <Grid
+                                                        Width="30"
+                                                        Height="30"
+                                                        Background="Transparent">
+                                                        <Ellipse x:Name="Base" Fill="Transparent" />
+                                                        <Ellipse
+                                                            x:Name="Highlight"
+                                                            Fill="{DynamicResource ButtonBackground}"
+                                                            Visibility="Collapsed" />
+
+                                                        <ContentPresenter
+                                                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                                            Content="{TemplateBinding Content}"
+                                                            ContentTemplate="{TemplateBinding ContentTemplate}"
+                                                            ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}" />
+                                                    </Grid>
+
+                                                    <ControlTemplate.Triggers>
+                                                        <Trigger Property="IsSelected" Value="True">
+                                                            <Setter Property="Foreground" Value="{DynamicResource AccentButtonForeground}" />
+                                                            <Setter TargetName="Base" Property="Fill" Value="{DynamicResource AccentButtonBackground}" />
+                                                        </Trigger>
+                                                        <Trigger Property="IsMouseOver" Value="True">
+                                                            <Setter TargetName="Highlight" Property="Visibility" Value="Visible" />
+                                                        </Trigger>
+                                                    </ControlTemplate.Triggers>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </ListBox.ItemContainerStyle>
+                            </ListBox>
+                        </ScrollViewer>
+                        <ui:Button
+                            x:Name="PART_NextButton"
+                            Grid.Row="1"
+                            Grid.Column="2"
+                            Margin="2,0"
+                            Padding="5"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            CornerRadius="13"
+                            Visibility="{TemplateBinding HorizontalFlipButtonsVisibility}">
+                            <ui:Button.Icon>
+                                <ui:SymbolIcon FontSize="14" Symbol="ChevronRight16" />
+                            </ui:Button.Icon>
+                        </ui:Button>
+                        <ui:Button
+                            x:Name="PART_DownNextButton"
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Margin="0,2"
+                            Padding="5,6,5,5"
+                            HorizontalAlignment="Center"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            CornerRadius="13"
+                            Visibility="{TemplateBinding VerticalFlipButtonsVisibility}">
+                            <ui:Button.Icon>
+                                <ui:SymbolIcon FontSize="13" Symbol="ChevronDown16" />
+                            </ui:Button.Icon>
+                        </ui:Button>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style BasedOn="{StaticResource DefaultDayPickerStyle}" TargetType="c:DayPicker" />
+
+</ResourceDictionary>

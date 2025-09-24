@@ -1,0 +1,514 @@
+﻿<c:Widget
+    x:Class="BetterWidgets.Widgets.TodoWidget"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c="clr-namespace:BetterWidgets.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:e="clr-namespace:Emoji.Wpf;assembly=Emoji.Wpf"
+    xmlns:h="clr-namespace:BetterWidgets.Helpers"
+    xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:r="clr-namespace:BetterWidgets.Resources"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:vm="clr-namespace:BetterWidgets.ViewModel.Widgets"
+    x:Name="Root"
+    Width="250"
+    Height="250"
+    MinWidth="110"
+    MinHeight="110"
+    d:DesignHeight="250"
+    d:DesignWidth="250"
+    AppearedCommand="{Binding AppearedCommand}"
+    AppearedCommandParameter="{Binding ElementName=Root}"
+    CanShare="{Binding IsTaskSelected, Mode=OneWay}"
+    ContextMenu="{Binding ElementName=UITaskItems, Path=ContextMenu}"
+    IsHideTitleBar="{Binding IsHideTitleBar, Mode=OneWay}"
+    IsLoading="{Binding IsLoading, Mode=OneWay}"
+    IsTitleBarEnabled="True"
+    PinnedCommand="{Binding PinnedCommand}"
+    ShareCommand="{Binding ShareCommand}"
+    ShareCommandParameter="{Binding ElementName=Root}"
+    SizeChangedCommand="{Binding SizeChangedCommand}"
+    StateChangedCommand="{Binding ExecutionStateChangedCommand}"
+    Style="{StaticResource DefaultWidgetStyle}"
+    Topmost="{Binding ElementName=UITitleBar, Path=IsPinned, Mode=OneWay}"
+    UnpinCommand="{Binding UnpinedCommand}"
+    mc:Ignorable="d">
+    <c:Widget.DataContext>
+        <vm:TodoViewModel />
+    </c:Widget.DataContext>
+    <c:Widget.TitleBar>
+        <c:WidgetTitleBar
+            x:Name="UITitleBar"
+            Title="{x:Static r:Resources.TodoWidgetTitle}"
+            Icon="pack://application:,,,/Assets/Todo/icon-48.png">
+            <c:WidgetTitleBar.Content>
+                <StackPanel
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
+                    <ui:Button
+                        Margin="0,0,1,0"
+                        Padding="8"
+                        Command="{Binding RequestCreateTaskCommand}"
+                        IsEnabled="{Binding IsSignedIn, Mode=OneWay}"
+                        Style="{StaticResource FlatButton}"
+                        ToolTipService.ToolTip="{x:Static r:Resources.AddTask}">
+                        <ui:Button.Icon>
+                            <ui:SymbolIcon Symbol="Add20" />
+                        </ui:Button.Icon>
+                    </ui:Button>
+                </StackPanel>
+            </c:WidgetTitleBar.Content>
+        </c:WidgetTitleBar>
+    </c:Widget.TitleBar>
+    <c:Widget.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/Widgets/TodoWidgetResources.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <Style x:Key="DefaultRootLayoutStyle" TargetType="Grid">
+                <d:Setter Property="Margin" Value="15" />
+            </Style>
+
+            <Style x:Key="DefaultCountBoxStyle" TargetType="ui:TextBlock">
+                <Setter Property="Margin" Value="0,-16,10,-7" />
+                <Setter Property="FontSize" Value="38" />
+                <Setter Property="FontWeight" Value="Light" />
+                <Setter Property="Grid.Column" Value="0" />
+            </Style>
+
+            <Style x:Key="DefaultListNameLabelStyle" TargetType="ui:TextBlock">
+                <Setter Property="Grid.Column" Value="1" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="Margin" Value="0,-5,0,1" />
+                <Setter Property="FontWeight" Value="SemiBold" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="Foreground" Value="{DynamicResource AccentButtonBackground}" />
+                <d:Setter Property="Foreground" Value="#3e6dac" />
+            </Style>
+
+            <Style x:Key="DefaultListIconStyle" TargetType="e:TextBlock">
+                <Setter Property="Grid.Column" Value="2" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="Margin" Value="0,-8,-2,0" />
+            </Style>
+
+            <Style
+                x:Key="DefaultTasksCollectionStyle"
+                BasedOn="{StaticResource {x:Type ui:ListView}}"
+                TargetType="ui:ListView">
+                <Setter Property="Margin" Value="-3,6,-3,0" />
+                <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled" />
+                <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Hidden" />
+
+                <Setter Property="ItemsPanel" Value="{StaticResource TodoTasksItemsPanel}" />
+
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Visible" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style x:Key="DefaultEmptyStyle" TargetType="StackPanel">
+                <Setter Property="Grid.Row" Value="1" />
+                <Setter Property="Grid.Column" Value="1" />
+                <Setter Property="Grid.ColumnSpan" Value="3" />
+                <Setter Property="Margin" Value="5,-25,5,0" />
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="h:MarginSetter.Margin" Value="0, 0, 0, 6" />
+                <Setter Property="h:MarginSetter.LastItemMargin" Value="0" />
+            </Style>
+        </ResourceDictionary>
+    </c:Widget.Resources>
+
+    <Grid
+        x:Name="RootLayout"
+        Margin="{Binding RootMargin, Mode=OneWay}"
+        d:Margin="15">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.Resources>
+            <ResourceDictionary>
+                <Style
+                    x:Key="Default"
+                    BasedOn="{StaticResource DefaultRootLayoutStyle}"
+                    TargetType="Grid" />
+                <Style
+                    x:Key="Medium"
+                    BasedOn="{StaticResource DefaultRootLayoutStyle}"
+                    TargetType="Grid" />
+
+                <Style
+                    x:Key="Small"
+                    BasedOn="{StaticResource DefaultRootLayoutStyle}"
+                    TargetType="Grid">
+                    <Setter Property="Margin" Value="0" />
+                </Style>
+            </ResourceDictionary>
+        </Grid.Resources>
+
+        <ui:TextBlock
+            d:Text="9"
+            Style="{StaticResource DefaultCountBoxStyle}"
+            Text="{Binding TodoTasks.Count, Mode=OneWay}"
+            Visibility="{Binding IsEmpty, Mode=OneWay, Converter={StaticResource BoolToVisibilityInvert}}">
+            <ui:TextBlock.Resources>
+                <ResourceDictionary>
+                    <Style
+                        x:Key="Default"
+                        BasedOn="{StaticResource DefaultCountBoxStyle}"
+                        TargetType="ui:TextBlock" />
+
+                    <Style
+                        x:Key="Medium"
+                        BasedOn="{StaticResource DefaultCountBoxStyle}"
+                        TargetType="ui:TextBlock" />
+                    <Style
+                        x:Key="Small"
+                        BasedOn="{StaticResource DefaultCountBoxStyle}"
+                        TargetType="ui:TextBlock">
+                        <Setter Property="Grid.ColumnSpan" Value="3" />
+                        <Setter Property="Grid.RowSpan" Value="2" />
+
+                        <Setter Property="Margin" Value="0,45,0,0" />
+                        <Setter Property="FontSize" Value="52" />
+
+                        <Setter Property="VerticalAlignment" Value="Center" />
+                        <Setter Property="HorizontalAlignment" Value="Center" />
+                    </Style>
+                </ResourceDictionary>
+            </ui:TextBlock.Resources>
+        </ui:TextBlock>
+
+        <ui:TextBlock
+            d:Text="My day"
+            Style="{StaticResource DefaultListNameLabelStyle}"
+            Text="{Binding TodoList.Title, Mode=OneWay}"
+            Visibility="{Binding IsEmpty, Mode=OneWay, Converter={StaticResource BoolToVisibilityInvert}}">
+            <ui:TextBlock.Resources>
+                <ResourceDictionary>
+                    <Style
+                        x:Key="Default"
+                        BasedOn="{StaticResource DefaultListNameLabelStyle}"
+                        TargetType="ui:TextBlock" />
+
+                    <Style
+                        x:Key="Medium"
+                        BasedOn="{StaticResource DefaultListNameLabelStyle}"
+                        TargetType="ui:TextBlock" />
+                    <Style
+                        x:Key="Small"
+                        BasedOn="{StaticResource DefaultListNameLabelStyle}"
+                        TargetType="ui:TextBlock">
+                        <Setter Property="Grid.ColumnSpan" Value="3" />
+                        <Setter Property="Grid.RowSpan" Value="2" />
+
+                        <Setter Property="Margin" Value="0,0,0,34" />
+
+                        <Setter Property="VerticalAlignment" Value="Center" />
+                        <Setter Property="HorizontalAlignment" Value="Center" />
+                    </Style>
+                </ResourceDictionary>
+            </ui:TextBlock.Resources>
+        </ui:TextBlock>
+
+        <e:TextBlock
+            d:Text="👌"
+            Style="{StaticResource DefaultListIconStyle}"
+            Text="{Binding TodoList.Icon, Mode=OneWay}"
+            Visibility="{Binding IsEmpty, Mode=OneWay, Converter={StaticResource BoolToVisibilityInvert}}">
+            <e:TextBlock.Resources>
+                <ResourceDictionary>
+                    <Style
+                        x:Key="Default"
+                        BasedOn="{StaticResource DefaultListIconStyle}"
+                        TargetType="e:TextBlock" />
+
+                    <Style
+                        x:Key="Medium"
+                        BasedOn="{StaticResource DefaultListIconStyle}"
+                        TargetType="e:TextBlock" />
+                    <Style
+                        x:Key="Small"
+                        BasedOn="{StaticResource DefaultListIconStyle}"
+                        TargetType="e:TextBlock">
+                        <Setter Property="Grid.Column" Value="1" />
+                        <Setter Property="Grid.ColumnSpan" Value="3" />
+                        <Setter Property="Grid.RowSpan" Value="2" />
+                        <Setter Property="Margin" Value="0,0,0,85" />
+                        <Setter Property="FontSize" Value="20" />
+                        <Setter Property="VerticalAlignment" Value="Center" />
+                        <Setter Property="HorizontalAlignment" Value="Center" />
+                    </Style>
+                </ResourceDictionary>
+            </e:TextBlock.Resources>
+        </e:TextBlock>
+
+        <ui:ListView
+            Name="UITaskItems"
+            Grid.Row="1"
+            Grid.RowSpan="2"
+            Grid.ColumnSpan="3"
+            ItemTemplate="{StaticResource TodoTaskItemTemplate}"
+            ItemsSource="{Binding TodoTasks, Mode=OneWay}"
+            SelectedItem="{Binding SelectedTodoTask, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            Style="{StaticResource DefaultTasksCollectionStyle}">
+            <ui:ListView.Resources>
+                <ResourceDictionary>
+                    <Style
+                        x:Key="Default"
+                        BasedOn="{StaticResource DefaultTasksCollectionStyle}"
+                        TargetType="ui:ListView" />
+
+                    <Style
+                        x:Key="Medium"
+                        BasedOn="{StaticResource DefaultTasksCollectionStyle}"
+                        TargetType="ui:ListView" />
+
+                    <Style
+                        x:Key="Small"
+                        BasedOn="{StaticResource DefaultTasksCollectionStyle}"
+                        TargetType="ui:ListView">
+                        <Setter Property="Visibility" Value="Collapsed" />
+                    </Style>
+                </ResourceDictionary>
+            </ui:ListView.Resources>
+            <ui:ListView.ContextMenu>
+                <ContextMenu>
+                    <ui:MenuItem Command="{Binding RefreshCommand}" Header="{x:Static r:Resources.Refresh}">
+                        <ui:MenuItem.Icon>
+                            <ui:SymbolIcon Symbol="ArrowClockwise20" />
+                        </ui:MenuItem.Icon>
+                    </ui:MenuItem>
+                    <Separator />
+                    <MenuItem
+                        Command="{Binding ViewTodoTaskCommand}"
+                        Header="{x:Static r:Resources.Edit}"
+                        IsEnabled="{Binding IsSignedIn, Mode=OneWay}">
+                        <MenuItem.Icon>
+                            <ui:SymbolIcon Symbol="Edit20" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem
+                        Command="{Binding RequestDeleteSelectedTodoTaskCommand}"
+                        Header="{x:Static r:Resources.DeleteLabel}"
+                        IsEnabled="{Binding IsSignedIn, Mode=OneWay}">
+                        <MenuItem.Icon>
+                            <ui:SymbolIcon Symbol="Delete20" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator />
+                    <ui:MenuItem
+                        Command="{Binding RequestCreateTaskCommand}"
+                        Header="{x:Static r:Resources.AddTask}"
+                        IsEnabled="{Binding IsSignedIn, Mode=OneWay}">
+                        <ui:MenuItem.Icon>
+                            <ui:SymbolIcon Symbol="Add20" />
+                        </ui:MenuItem.Icon>
+                    </ui:MenuItem>
+                    <ui:MenuItem
+                        Command="{Binding RequestMoveTaskCommand}"
+                        CommandParameter="{Binding SelectedTodoTask, Mode=OneWay}"
+                        Header="{x:Static r:Resources.MoveTo}"
+                        IsEnabled="{Binding IsSignedIn, Mode=OneWay}">
+                        <ui:MenuItem.Icon>
+                            <ui:SymbolIcon Symbol="ArrowMove20" />
+                        </ui:MenuItem.Icon>
+                    </ui:MenuItem>
+                    <ui:MenuItem
+                        Command="{Binding RequestSelectListDialogCommand}"
+                        Header="{x:Static r:Resources.SelectList}"
+                        IsEnabled="{Binding IsSignedIn, Mode=OneWay}">
+                        <ui:MenuItem.Icon>
+                            <ui:SymbolIcon Symbol="TaskListLtr20" />
+                        </ui:MenuItem.Icon>
+                    </ui:MenuItem>
+                    <ui:MenuItem
+                        Command="{Binding ChooseListIconCommand}"
+                        Header="{x:Static r:Resources.ChooseListIcon}"
+                        IsEnabled="{Binding IsSignedIn, Mode=OneWay}">
+                        <ui:MenuItem.Icon>
+                            <ui:SymbolIcon Symbol="Emoji20" />
+                        </ui:MenuItem.Icon>
+                    </ui:MenuItem>
+                    <ui:MenuItem
+                        Command="{Binding ClearIconCommand}"
+                        Header="{x:Static r:Resources.RemoveIcon}"
+                        IsEnabled="{Binding IsSignedIn, Mode=OneWay}"
+                        Visibility="{Binding HasListIcon, Mode=OneWay, Converter={StaticResource BoolToVisibility}}">
+                        <ui:MenuItem.Icon>
+                            <ui:SymbolIcon Symbol="Dismiss20" />
+                        </ui:MenuItem.Icon>
+                    </ui:MenuItem>
+                    <ui:MenuItem Header="{x:Static r:Resources.SortBy}" IsEnabled="{Binding IsSignedIn, Mode=OneWay}">
+                        <ui:MenuItem.Icon>
+                            <ui:SymbolIcon Symbol="ArrowSort20" />
+                        </ui:MenuItem.Icon>
+
+                        <ui:MenuItem
+                            Command="{Binding SortTasksCommand}"
+                            CommandParameter="{Binding Converter={StaticResource StringToInt}, ConverterParameter=0}"
+                            Header="{x:Static r:Resources.SortByName}">
+                            <ui:MenuItem.Icon>
+                                <ui:SymbolIcon Symbol="Rename20" />
+                            </ui:MenuItem.Icon>
+                        </ui:MenuItem>
+                        <ui:MenuItem
+                            Command="{Binding SortTasksCommand}"
+                            CommandParameter="{Binding Converter={StaticResource StringToInt}, ConverterParameter=1}"
+                            Header="{x:Static r:Resources.SortByDate}">
+                            <ui:MenuItem.Icon>
+                                <ui:SymbolIcon Symbol="CalendarMonth20" />
+                            </ui:MenuItem.Icon>
+                        </ui:MenuItem>
+                        <ui:MenuItem
+                            Command="{Binding SortTasksCommand}"
+                            CommandParameter="{Binding Converter={StaticResource StringToInt}, ConverterParameter=2}"
+                            Header="{x:Static r:Resources.SortByImportance}">
+                            <ui:MenuItem.Icon>
+                                <ui:SymbolIcon Symbol="Star20" />
+                            </ui:MenuItem.Icon>
+                        </ui:MenuItem>
+                    </ui:MenuItem>
+                    <ui:MenuItem
+                        Command="{Binding ShareCommand}"
+                        Header="{x:Static r:Resources.ShareLabel}"
+                        Visibility="{Binding IsTaskSelected, Mode=OneWay, Converter={StaticResource BoolToVisibility}}">
+                        <ui:MenuItem.Icon>
+                            <ui:SymbolIcon Symbol="Share20" />
+                        </ui:MenuItem.Icon>
+                    </ui:MenuItem>
+                    <Separator />
+                    <ui:MenuItem Command="{Binding LaunchSettingsCommand}" Header="{x:Static r:Resources.SettingsLabel}">
+                        <ui:MenuItem.Icon>
+                            <ui:SymbolIcon Symbol="Settings20" />
+                        </ui:MenuItem.Icon>
+                    </ui:MenuItem>
+                </ContextMenu>
+            </ui:ListView.ContextMenu>
+
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="KeyDown">
+                    <i:InvokeCommandAction Command="{Binding KeyDownTasksCollectionCommand}" PassEventArgsToCommand="True" />
+                </i:EventTrigger>
+                <i:EventTrigger EventName="MouseDoubleClick">
+                    <i:InvokeCommandAction Command="{Binding ViewTodoTaskCommand}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </ui:ListView>
+
+        <StackPanel Style="{StaticResource DefaultEmptyStyle}" Visibility="Collapsed">
+            <StackPanel.Resources>
+                <ResourceDictionary>
+                    <Style
+                        x:Key="Default"
+                        BasedOn="{StaticResource DefaultEmptyStyle}"
+                        TargetType="StackPanel" />
+
+                    <Style
+                        x:Key="Medium"
+                        BasedOn="{StaticResource DefaultEmptyStyle}"
+                        TargetType="StackPanel" />
+
+                    <Style
+                        x:Key="Small"
+                        BasedOn="{StaticResource DefaultEmptyStyle}"
+                        TargetType="StackPanel">
+                        <Setter Property="Margin" Value="0" />
+                    </Style>
+                </ResourceDictionary>
+            </StackPanel.Resources>
+
+            <Viewbox
+                MaxWidth="30"
+                MaxHeight="30"
+                HorizontalAlignment="Center">
+                <ui:SymbolIcon
+                    d:Foreground="#3e6dac"
+                    Filled="True"
+                    FontSize="35"
+                    Foreground="{DynamicResource SystemAccentColorBrush}"
+                    Symbol="CheckboxChecked20" />
+            </Viewbox>
+
+            <ui:TextBlock
+                Margin="0,5,0,6"
+                HorizontalAlignment="Stretch"
+                FontSize="15"
+                Text="{x:Static r:Resources.NoTasksTitle}"
+                TextAlignment="Center"
+                TextTrimming="CharacterEllipsis" />
+            <ui:TextBlock
+                HorizontalAlignment="Stretch"
+                FontSize="13"
+                Opacity="0.8"
+                Text="{x:Static r:Resources.NoTasksSubtitle}"
+                TextAlignment="Center"
+                TextWrapping="Wrap" />
+        </StackPanel>
+
+        <StackPanel
+            Grid.RowSpan="3"
+            Grid.ColumnSpan="3"
+            MaxWidth="180"
+            Margin="0,0,0,30"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            d:Visibility="Collapsed"
+            h:MarginSetter.LastItemMargin="0"
+            h:MarginSetter.Margin="0, 0, 0, 6"
+            Visibility="{Binding IsSignedIn, Mode=OneWay, Converter={StaticResource BoolToVisibilityInvert}}">
+            <ui:TextBlock
+                FontWeight="SemiBold"
+                Text="{x:Static r:Resources.SignInLabel}"
+                TextAlignment="Center"
+                TextTrimming="CharacterEllipsis" />
+            <ui:TextBlock
+                FontSize="12"
+                Opacity="0.8"
+                Text="{x:Static r:Resources.SignInMessage}"
+                TextAlignment="Center"
+                TextWrapping="Wrap" />
+        </StackPanel>
+
+        <StackPanel
+            x:Name="UIEmpty"
+            Grid.RowSpan="2"
+            Grid.ColumnSpan="2"
+            Margin="15,0,15,15"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            h:MarginSetter.LastItemMargin="0"
+            h:MarginSetter.Margin="0, 0, 0, 5"
+            Visibility="{Binding IsEmpty, Mode=OneWay, Converter={StaticResource BoolToVisibility}}">
+            <ui:TextBlock
+                HorizontalAlignment="Center"
+                Text="{x:Static r:Resources.NothingHere}"
+                TextAlignment="Center" />
+            <ui:TextBlock
+                HorizontalAlignment="Stretch"
+                Opacity="0.8"
+                Text="{x:Static r:Resources.TasksEmptyMessage}"
+                TextAlignment="Center"
+                TextWrapping="Wrap" />
+            <ui:HyperlinkButton
+                HorizontalAlignment="Center"
+                Command="{Binding RequestSelectListDialogCommand}"
+                CommandParameter="{Binding ElementName=Root}"
+                Content="{x:Static r:Resources.SelectList}" />
+        </StackPanel>
+    </Grid>
+
+</c:Widget>

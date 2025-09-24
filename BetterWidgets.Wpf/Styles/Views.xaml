@@ -1,0 +1,311 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:b="clr-namespace:BetterWidgets.Behaviours.Converters"
+    xmlns:c="clr-namespace:BetterWidgets.Controls"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml">
+
+    <b:BoolToVisibility x:Key="VisibilityConverter" />
+    <b:BoolToVisibility x:Key="VisibilityConverterInvert" IsInvert="True" />
+
+    <Style x:Key="DefaultWidgetStyle" TargetType="c:Widget">
+        <Setter Property="WindowChrome.WindowChrome">
+            <Setter.Value>
+                <WindowChrome CaptionHeight="0" ResizeBorderThickness="6" />
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="IsBlurEnabled" Value="True" />
+        <Setter Property="CornerMode" Value="Round" />
+        <Setter Property="WindowStyle" Value="None" />
+        <Setter Property="AllowsTransparency" Value="True" />
+        <Setter Property="Foreground" Value="{DynamicResource TextFillColorPrimaryBrush}" />
+        <Setter Property="Background" Value="{DynamicResource ApplicationBackgroundBrush}" />
+        <Setter Property="WidgetDialogBackground" Value="{DynamicResource ContentDialogBackground}" />
+        <Setter Property="MinWidth" Value="0" />
+        <Setter Property="MinHeight" Value="0" />
+        <Setter Property="MaxHeight" Value="320" />
+        <Setter Property="MaxWidth" Value="320" />
+        <Setter Property="ShowInTaskbar" Value="False" />
+        <Setter Property="IsTitleBarEnabled" Value="False" />
+        <Setter Property="IsPinned" Value="False" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="c:Widget">
+                    <Grid ContextMenu="{TemplateBinding ContextMenu}" DataContext="{TemplateBinding DataContext}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Rectangle
+                            Grid.RowSpan="2"
+                            Fill="{TemplateBinding Background}"
+                            Opacity="{TemplateBinding BackdropOpacity}" />
+
+                        <ContentPresenter
+                            Grid.RowSpan="2"
+                            Margin="0,2,0,0"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Top"
+                            Panel.ZIndex="1"
+                            Content="{TemplateBinding TitleBar}"
+                            Visibility="{TemplateBinding IsTitleBarEnabled,
+                                                         Converter={StaticResource VisibilityConverter}}" />
+                        <ContentPresenter
+                            Grid.RowSpan="2"
+                            Content="{TemplateBinding Content}"
+                            Visibility="{TemplateBinding IsLoading,
+                                                         Converter={StaticResource VisibilityConverterInvert}}" />
+
+                        <ui:InfoBar
+                            x:Name="UINotifyMessage"
+                            Title="{TemplateBinding MessageBarTitle}"
+                            Grid.Row="1"
+                            Margin="-5,2"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Bottom"
+                            IsClosable="False"
+                            IsOpen="{TemplateBinding IsMessageBarOpened}"
+                            Message="{TemplateBinding MessageBarText}"
+                            RenderTransformOrigin="0.5,0.5"
+                            Severity="{TemplateBinding MessageBarSeverity}"
+                            Visibility="{TemplateBinding IsMessageBarOpened,
+                                                         Converter={StaticResource VisibilityConverter}}">
+                            <ui:InfoBar.RenderTransform>
+                                <ScaleTransform ScaleX="0.9" ScaleY="0.9" />
+                            </ui:InfoBar.RenderTransform>
+                        </ui:InfoBar>
+
+                        <ui:Button
+                            x:Name="UINotifyMessageCloseCommand"
+                            Grid.Row="1"
+                            Width="32"
+                            Height="32"
+                            Margin="0,8,11,0"
+                            Padding="0"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Visibility="{TemplateBinding IsMessageBarOpened,
+                                                         Converter={StaticResource VisibilityConverter}}">
+                            <ui:Button.Icon>
+                                <ui:SymbolIcon Symbol="Dismiss20" />
+                            </ui:Button.Icon>
+                        </ui:Button>
+
+                        <Popup
+                            x:Name="UIDialogPopup"
+                            AllowsTransparency="True"
+                            IsOpen="{TemplateBinding IsWidgetDialogOpen}"
+                            Placement="Center"
+                            PopupAnimation="Fade"
+                            StaysOpen="{TemplateBinding WidgetContentDialogStaysOpen}">
+                            <Border
+                                x:Name="UIWidgetDialog"
+                                MinWidth="210"
+                                MinHeight="210"
+                                Padding="15,13"
+                                Background="{TemplateBinding WidgetDialogBackground}"
+                                BorderBrush="{DynamicResource CardBorderBrush}"
+                                BorderThickness="2"
+                                CornerRadius="9"
+                                RenderTransformOrigin="0.5,0.5"
+                                TextBlock.Foreground="{TemplateBinding WidgetDialogForeground}"
+                                Visibility="{TemplateBinding IsWidgetDialogOpen,
+                                                             Converter={StaticResource VisibilityConverter}}">
+                                <Border.Style>
+                                    <Style TargetType="Border">
+                                        <Setter Property="RenderTransform">
+                                            <Setter.Value>
+                                                <ScaleTransform ScaleX="1" ScaleY="1" />
+                                            </Setter.Value>
+                                        </Setter>
+
+                                        <Style.Triggers>
+                                            <Trigger Property="Visibility" Value="Visible">
+                                                <Trigger.EnterActions>
+                                                    <BeginStoryboard>
+                                                        <Storyboard>
+                                                            <DoubleAnimationUsingKeyFrames FillBehavior="HoldEnd" Storyboard.TargetProperty="Opacity">
+                                                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1" />
+                                                                <EasingDoubleKeyFrame KeyTime="0:0:0" Value="0" />
+                                                            </DoubleAnimationUsingKeyFrames>
+                                                            <DoubleAnimation
+                                                                FillBehavior="HoldEnd"
+                                                                Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                                                From="0.6"
+                                                                To="1"
+                                                                Duration="0:0:0.2">
+                                                                <DoubleAnimation.EasingFunction>
+                                                                    <CubicEase EasingMode="EaseOut" />
+                                                                </DoubleAnimation.EasingFunction>
+                                                            </DoubleAnimation>
+                                                            <DoubleAnimation
+                                                                FillBehavior="HoldEnd"
+                                                                Storyboard.TargetProperty="RenderTransform.ScaleY"
+                                                                From="0.6"
+                                                                To="1"
+                                                                Duration="0:0:0.2">
+                                                                <DoubleAnimation.EasingFunction>
+                                                                    <CubicEase EasingMode="EaseOut" />
+                                                                </DoubleAnimation.EasingFunction>
+                                                            </DoubleAnimation>
+                                                        </Storyboard>
+                                                    </BeginStoryboard>
+                                                </Trigger.EnterActions>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Border.Style>
+
+                                <Grid Margin="-5,0,-5,-2">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <Grid
+                                        x:Name="UIWidgetDialogTitleLayout"
+                                        Grid.Row="0"
+                                        Grid.ColumnSpan="2"
+                                        Margin="3,-2,3,5"
+                                        Visibility="{TemplateBinding WidgetDialogTitleVisibility}">
+                                        <ui:TextBlock
+                                            x:Name="UIWidgetDialogTitle"
+                                            Grid.Row="0"
+                                            HorizontalAlignment="Stretch"
+                                            VerticalAlignment="Center"
+                                            FontWeight="SemiBold"
+                                            Foreground="{TemplateBinding WidgetDialogForeground}"
+                                            Text="{TemplateBinding WidgetTitle}"
+                                            TextTrimming="CharacterEllipsis"
+                                            TextWrapping="NoWrap" />
+                                    </Grid>
+
+                                    <ContentPresenter
+                                        x:Name="UIWidgetDialogContentPresenter"
+                                        Grid.Row="1"
+                                        Content="{TemplateBinding WidgetDialogContent}" />
+
+                                    <Grid x:Name="UIWidgetDialogCommandsLayout" Grid.Row="2">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <ui:Button
+                                            x:Name="UIPrimaryWidgetDialogButton"
+                                            Grid.Column="0"
+                                            Margin="0,0,3.5,0"
+                                            HorizontalAlignment="Stretch"
+                                            VerticalAlignment="Stretch"
+                                            Appearance="{TemplateBinding WidgetPrimaryButtonAppearance}"
+                                            Command="{TemplateBinding WidgetPrimaryButtonCommand}"
+                                            CommandParameter="{TemplateBinding WidgetPrimaryButtonParameter}"
+                                            Content="{TemplateBinding WidgetPrimaryButtonContent}"
+                                            IsEnabled="{TemplateBinding IsDialogPrimaryButtonEnabled}"
+                                            Tag="Primary"
+                                            Visibility="{TemplateBinding WidgetPrimaryButtonVisibility}" />
+                                        <ui:Button
+                                            x:Name="UISecondaryWidgetDialogButton"
+                                            Grid.Column="1"
+                                            Margin="3.5,0,0,0"
+                                            HorizontalAlignment="Stretch"
+                                            VerticalAlignment="Stretch"
+                                            Appearance="{TemplateBinding WidgetSecondaryButtonAppearance}"
+                                            Command="{TemplateBinding WidgetSecondaryButtonCommand}"
+                                            CommandParameter="{TemplateBinding WidgetSecondaryButtonParameter}"
+                                            Content="{TemplateBinding WidgetSecondaryButtonContent}"
+                                            Tag="Secondary"
+                                            Visibility="{TemplateBinding WidgetSecondaryButtonVisibility}" />
+                                    </Grid>
+                                </Grid>
+                            </Border>
+                        </Popup>
+
+                        <ui:ProgressRing
+                            Grid.RowSpan="2"
+                            Width="40"
+                            Height="40"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            IsIndeterminate="{TemplateBinding IsLoading}"
+                            Visibility="{TemplateBinding IsLoading,
+                                                         Converter={StaticResource VisibilityConverter}}" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style BasedOn="{StaticResource DefaultWidgetStyle}" TargetType="c:Widget" />
+
+    <Style x:Key="DefaultPageStyle" TargetType="Page">
+        <Setter Property="Foreground" Value="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+    </Style>
+
+    <Style
+        x:Key="DetailsViewPageStyle"
+        BasedOn="{StaticResource DefaultPageStyle}"
+        TargetType="Page">
+        <Setter Property="RenderTransformOrigin" Value="0.5,0.5" />
+        <Setter Property="RenderTransform">
+            <Setter.Value>
+                <TransformGroup>
+                    <ScaleTransform />
+                </TransformGroup>
+            </Setter.Value>
+        </Setter>
+
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="Loaded">
+                <BeginStoryboard Storyboard="{StaticResource DrillInTransitionStoryboard}" />
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style
+        x:Key="NavigationalPageStyle"
+        BasedOn="{StaticResource DefaultPageStyle}"
+        TargetType="Page">
+        <Setter Property="RenderTransformOrigin" Value="0.5,0.5" />
+        <Setter Property="RenderTransform">
+            <Setter.Value>
+                <TransformGroup>
+                    <TranslateTransform />
+                </TransformGroup>
+            </Setter.Value>
+        </Setter>
+
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="Loaded">
+                <BeginStoryboard Storyboard="{StaticResource DefaultPageTransitionStoryboard}" />
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style
+        x:Key="SettingViewDefaultStyle"
+        BasedOn="{StaticResource DefaultPageStyle}"
+        TargetType="Page">
+        <Setter Property="RenderTransformOrigin" Value="0.5,0.5" />
+        <Setter Property="RenderTransform">
+            <Setter.Value>
+                <TransformGroup>
+                    <TranslateTransform />
+                </TransformGroup>
+            </Setter.Value>
+        </Setter>
+
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="Loaded">
+                <BeginStoryboard Storyboard="{StaticResource DefaultPageTransitionStoryboard}" />
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>

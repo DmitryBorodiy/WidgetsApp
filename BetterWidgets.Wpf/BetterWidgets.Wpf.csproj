@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <Platforms>x64;x86;arm64</Platforms>
+    <AssemblyName>BetterWidgets</AssemblyName>
+    <RootNamespace>BetterWidgets</RootNamespace>
+    <RuntimeIdentifiers>win-x64;win-x86;win-arm64</RuntimeIdentifiers>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <UseWindowsForms>False</UseWindowsForms>
+    <InterceptorsPreviewNamespaces>$(InterceptorsPreviewNamespaces);Microsoft.Extensions.Configuration.Binder.SourceGeneration</InterceptorsPreviewNamespaces>
+  </PropertyGroup>
+  <PropertyGroup Label="MultilingualAppToolkit">
+    <MultilingualAppToolkitVersion>4.0</MultilingualAppToolkitVersion>
+    <MultilingualFallbackLanguage>en-US</MultilingualFallbackLanguage>
+    <TranslationReport Condition="'$(Configuration)' == 'Release'">true</TranslationReport>
+    <SuppressPseudoWarning Condition="'$(Configuration)' == 'Debug'">true</SuppressPseudoWarning>
+    <MATProjectType>AnonResx</MATProjectType>
+    <ApplicationIcon>Logo.ico</ApplicationIcon>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(RuntimeIdentifier)' == 'win-arm64'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets" Label="MultilingualAppToolkit" Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\v$(MultilingualAppToolkitVersion)\Microsoft.Multilingual.ResxResources.targets')" />
+  <Target Name="MATPrerequisite" BeforeTargets="PrepareForBuild" Condition="!Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets')" Label="MultilingualAppToolkit">
+    <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
+  </Target>
+  <ItemGroup>
+    <None Remove="Assets\BlankWidget\icon-48.png" />
+    <None Remove="Assets\CalendarWidget\icon-48.png" />
+    <None Remove="Assets\ClockWidget\icon-48.png" />
+    <None Remove="Assets\CpuWidget\icon-48.png" />
+    <None Remove="Assets\Fonts\FluentSystemIcons-Filled.ttf" />
+    <None Remove="Assets\Fonts\FluentSystemIcons-Regular.ttf" />
+    <None Remove="Assets\GpuWidget\gpu-ic-dark.png" />
+    <None Remove="Assets\GpuWidget\gpu-ic-light.png" />
+    <None Remove="Assets\GpuWidget\icon-48.png" />
+    <None Remove="Assets\icons8-account-96.png" />
+    <None Remove="Assets\microsoft-ic.png" />
+    <None Remove="Assets\Notes\icon-48.png" />
+    <None Remove="Assets\Notes\Sounds\note.wav" />
+    <None Remove="Assets\Todo\icon-48.png" />
+    <None Remove="Assets\Todo\Sounds\taskcheck.mp3" />
+    <None Remove="Assets\WeatherWidget\icon-48.png" />
+    <None Remove="Assets\WeatherWidget\UnitAssets\01d.png" />
+    <None Remove="Assets\WeatherWidget\UnitAssets\01n.png" />
+    <None Remove="Assets\WeatherWidget\UnitAssets\02d.png" />
+    <None Remove="Assets\WeatherWidget\UnitAssets\02n.png" />
+    <None Remove="Assets\WeatherWidget\UnitAssets\03d.png" />
+    <None Remove="Assets\WeatherWidget\UnitAssets\03n.png" />
+    <None Remove="Assets\WeatherWidget\UnitAssets\04d.png" />
+    <None Remove="Assets\WeatherWidget\UnitAssets\04n.png" />
+    <None Remove="Assets\WeatherWidget\UnitAssets\09d.png" />
+    <None Remove="Assets\WeatherWidget\UnitAssets\09n.png" />
+    <None Remove="Assets\WeatherWidget\UnitAssets\10d.png" />
+    <None Remove="Assets\WeatherWidget\UnitAssets\10n.png" />
+    <None Remove="Assets\WeatherWidget\UnitAssets\11d.png" />
+    <None Remove="Assets\WeatherWidget\UnitAssets\11n.png" />
+    <None Remove="Assets\WeatherWidget\UnitAssets\13d.png" />
+    <None Remove="Assets\WeatherWidget\UnitAssets\13n.png" />
+    <None Remove="Assets\WeatherWidget\UnitAssets\50d.png" />
+    <None Remove="Assets\WeatherWidget\UnitAssets\50n.png" />
+    <None Remove="MultilingualResources\BetterWidgets.Wpf.de-DE.xlf" />
+    <None Remove="MultilingualResources\BetterWidgets.Wpf.es-ES.xlf" />
+    <None Remove="MultilingualResources\BetterWidgets.Wpf.fr-FR.xlf" />
+    <None Remove="MultilingualResources\BetterWidgets.Wpf.it-IT.xlf" />
+    <None Remove="MultilingualResources\BetterWidgets.Wpf.pl-PL.xlf" />
+    <None Remove="MultilingualResources\BetterWidgets.Wpf.ru.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\CpuWidget\icon-48.png" />
+    <Resource Include="Assets\Fonts\FluentSystemIcons-Filled.ttf" />
+    <Resource Include="Assets\Fonts\FluentSystemIcons-Regular.ttf" />
+    <Resource Include="Assets\GpuWidget\gpu-ic-dark.png" />
+    <Resource Include="Assets\GpuWidget\gpu-ic-light.png" />
+    <Resource Include="Assets\GpuWidget\icon-48.png" />
+    <Resource Include="Logo.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="..\BetterWidgets.Msix\Images\StoreLogo.png" Link="Assets\StoreLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\BlankWidget\icon-48.png" />
+    <Resource Include="Assets\CalendarWidget\icon-48.png" />
+    <Resource Include="Assets\ClockWidget\icon-48.png" />
+    <Resource Include="Assets\icons8-account-96.png" />
+    <Resource Include="Assets\microsoft-ic.png" />
+    <Resource Include="Assets\Notes\icon-48.png" />
+    <Resource Include="Assets\Notes\Sounds\note.wav" />
+    <Resource Include="Assets\Todo\icon-48.png" />
+    <Resource Include="Assets\Todo\Sounds\taskcheck.mp3" />
+    <Resource Include="Assets\WeatherWidget\icon-48.png" />
+    <Resource Include="Assets\WeatherWidget\UnitAssets\01d.png" />
+    <Resource Include="Assets\WeatherWidget\UnitAssets\01n.png" />
+    <Resource Include="Assets\WeatherWidget\UnitAssets\02d.png" />
+    <Resource Include="Assets\WeatherWidget\UnitAssets\02n.png" />
+    <Resource Include="Assets\WeatherWidget\UnitAssets\03d.png" />
+    <Resource Include="Assets\WeatherWidget\UnitAssets\03n.png" />
+    <Resource Include="Assets\WeatherWidget\UnitAssets\04d.png" />
+    <Resource Include="Assets\WeatherWidget\UnitAssets\04n.png" />
+    <Resource Include="Assets\WeatherWidget\UnitAssets\09d.png" />
+    <Resource Include="Assets\WeatherWidget\UnitAssets\09n.png" />
+    <Resource Include="Assets\WeatherWidget\UnitAssets\10d.png" />
+    <Resource Include="Assets\WeatherWidget\UnitAssets\10n.png" />
+    <Resource Include="Assets\WeatherWidget\UnitAssets\11d.png" />
+    <Resource Include="Assets\WeatherWidget\UnitAssets\11n.png" />
+    <Resource Include="Assets\WeatherWidget\UnitAssets\13d.png" />
+    <Resource Include="Assets\WeatherWidget\UnitAssets\13n.png" />
+    <Resource Include="Assets\WeatherWidget\UnitAssets\50d.png" />
+    <Resource Include="Assets\WeatherWidget\UnitAssets\50n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+    <PackageReference Include="Emoji.Wpf" Version="0.3.4" />
+    <PackageReference Include="Ical.Net" Version="5.0.0" />
+    <PackageReference Include="LibreHardwareMonitorLib" Version="0.9.4" />
+    <PackageReference Include="LiveChartsCore.SkiaSharpView.WPF" Version="2.0.0-rc5.4" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.6" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="9.0.6" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.6" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.6" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="9.0.6" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.6" />
+    <PackageReference Include="Microsoft.Extensions.Logging.ApplicationInsights" Version="2.23.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="9.0.6" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.6" />
+    <PackageReference Include="Microsoft.Graph" Version="5.82.0" />
+    <PackageReference Include="Microsoft.Identity.Client" Version="4.73.0" />
+    <PackageReference Include="Microsoft.Identity.Client.Extensions.Msal" Version="4.73.0" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="PixiEditor.ColorPicker" Version="3.4.2" />
+    <PackageReference Include="System.Management" Version="9.0.7" />
+    <PackageReference Include="WPF-UI" Version="4.0.3" />
+    <PackageReference Include="WPF-UI.Tray" Version="4.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <XliffResource Include="MultilingualResources\BetterWidgets.Wpf.de-DE.xlf" />
+    <XliffResource Include="MultilingualResources\BetterWidgets.Wpf.es-ES.xlf" />
+    <XliffResource Include="MultilingualResources\BetterWidgets.Wpf.fr-FR.xlf" />
+    <XliffResource Include="MultilingualResources\BetterWidgets.Wpf.it-IT.xlf" />
+    <XliffResource Include="MultilingualResources\BetterWidgets.Wpf.pl-PL.xlf" />
+    <XliffResource Include="MultilingualResources\BetterWidgets.Wpf.ru.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Enums\PersonViewMode.cs">
+      <Generator>MSBuild:Compile</Generator>
+    </Compile>
+    <Compile Update="Resources\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Widgets\WeatherWidget.cs">
+      <Generator>MSBuild:Compile</Generator>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Styles\Validators.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Styles\Views.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,97 @@
+﻿<Page
+    x:Class="BetterWidgets.Views.Dialogs.EditAppointmentView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c="clr-namespace:BetterWidgets.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:r="clr-namespace:BetterWidgets.Resources"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:vm="clr-namespace:BetterWidgets.ViewModel.Dialogs"
+    d:Background="{DynamicResource ApplicationBackgroundBrush}"
+    d:DesignHeight="220"
+    d:DesignWidth="220"
+    mc:Ignorable="d">
+    <d:Page.DataContext>
+        <vm:EditAppointmentViewModel />
+    </d:Page.DataContext>
+
+    <ScrollViewer x:Name="RootLayout" HorizontalScrollBarVisibility="Disabled">
+        <StackPanel Margin="3">
+            <ui:TextBox
+                HorizontalAlignment="Stretch"
+                PlaceholderText="{x:Static r:Resources.EnterEventName}"
+                RenderTransformOrigin="0.5,0.5"
+                Text="{Binding Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                <ui:TextBox.RenderTransform>
+                    <ScaleTransform ScaleX="1" ScaleY="1" />
+                </ui:TextBox.RenderTransform>
+            </ui:TextBox>
+            <Grid Margin="0,5,0,0" HorizontalAlignment="Stretch">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Grid Name="UIStarDatePicker" Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <DatePicker
+                        Grid.Column="0"
+                        Margin="0,0,5,0"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        SelectedDate="{Binding SelectedStartDate, Mode=TwoWay}"
+                        SelectedDateFormat="Short" />
+
+                    <c:TimePicker
+                        Grid.Column="1"
+                        IsEnabled="{Binding IsNotAllDay, Mode=OneWay}"
+                        SelectedTime="{Binding SelectedStartTime, Mode=TwoWay}" />
+                </Grid>
+                <Grid
+                    Name="UIEndDatePicker"
+                    Grid.Row="1"
+                    Margin="0,6,0,0"
+                    HorizontalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <DatePicker
+                        Grid.Column="0"
+                        Margin="0,0,5,0"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        SelectedDate="{Binding SelectedEndDate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                        SelectedDateFormat="Short" />
+                    <c:TimePicker
+                        Grid.Column="1"
+                        IsEnabled="{Binding IsNotAllDay, Mode=OneWay}"
+                        SelectedTime="{Binding SelectedEndTime, Mode=TwoWay}" />
+                </Grid>
+            </Grid>
+            <Grid Margin="0,10" HorizontalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <ui:TextBlock
+                    Grid.Column="0"
+                    VerticalAlignment="Center"
+                    Text="{x:Static r:Resources.AllDay}"
+                    TextTrimming="CharacterEllipsis" />
+
+                <ui:ToggleSwitch
+                    Grid.Column="1"
+                    VerticalAlignment="Center"
+                    IsChecked="{Binding IsAllDay, Mode=TwoWay}" />
+            </Grid>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

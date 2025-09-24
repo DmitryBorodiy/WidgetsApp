@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\dimab\source\Workspaces\Power Widgets - customize your at-a-glance info\BetterWidgets.Wpf\Properties\PublishProfiles\FolderProfile2.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Controls\MarqueeTextBlock.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Dialogs\ColorPickerDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Dialogs\EditAppointmentView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Dialogs\PermissionsDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Dialogs\PickCalendarView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Dialogs\SearchDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Dialogs\TimeZonePicker.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\MainWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Settings\AboutCategory.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Settings\AppearanceCategory.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Settings\GeneralCategory.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Settings\SecurityCategory.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\WidgetDetailView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\WidgetSettings\BlankWidgetSettings.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\WidgetSettings\ClockWidgetSettings.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\WidgetSettings\StickyNotesWidgetSettings.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\WidgetSettings\ToDoWidgetSettings.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\WidgetSettings\WeatherWidgetSettings.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Widgets\BlankWidget.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Widgets\ClockWidget.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Widgets\TodoWidget.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Widgets\WeatherWidget.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Styles\Colors.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\Controls\AnalogClock.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\Controls\CalendarStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\Controls\WidgetTitleBar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\DataTemplates.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\Storyboards.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\Templates.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\Values.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\Widgets\WeatherWidget.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Dialogs\ColorPickerDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Dialogs\EditAppointmentView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Dialogs\PermissionsDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Dialogs\PickCalendarView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Dialogs\TimeZonePicker.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Settings\AboutCategory.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Settings\AppearanceCategory.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Settings\GeneralCategory.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Settings\SecurityCategory.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\WidgetDetailView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\WidgetSettings\BlankWidgetSettings.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\WidgetSettings\ClockWidgetSettings.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\WidgetSettings\WeatherWidgetSettings.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Widgets\BlankWidget.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Widgets\ClockWidget.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Widgets\WeatherWidget.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

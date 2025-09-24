@@ -1,0 +1,319 @@
+﻿<c:WidgetSettingsView
+    x:Class="BetterWidgets.Views.WidgetSettings.CalendarWidgetSettings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c="clr-namespace:BetterWidgets.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:h="clr-namespace:BetterWidgets.Helpers"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pixi="clr-namespace:ColorPicker;assembly=ColorPicker"
+    xmlns:r="clr-namespace:BetterWidgets.Resources"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:v="clr-namespace:BetterWidgets.Behaviours.Validators"
+    xmlns:vm="clr-namespace:BetterWidgets.ViewModel.WidgetsSettingsViews"
+    Title="{x:Static r:Resources.CalendarWidgetSettings}"
+    BackCommand="{Binding GoBackCommand}"
+    LoadedCommand="{Binding LoadedCommand}"
+    Messages="{Binding Errors, Mode=OneWay}"
+    mc:Ignorable="d">
+
+    <c:WidgetSettingsView.DataContext>
+        <vm:CalendarWidgetSettingsViewModel />
+    </c:WidgetSettingsView.DataContext>
+    <c:WidgetSettingsView.Settings>
+        <c:CardSettingView Title="{x:Static r:Resources.TimeFormatTitle}" Subtitle="{x:Static r:Resources.CalendarTimeFormatSubtitle}">
+            <c:CardSettingView.Icon>
+                <ui:SymbolIcon Symbol="Clock20" />
+            </c:CardSettingView.Icon>
+            <c:CardSettingView.Header>
+                <ui:TextBox
+                    Width="180"
+                    VerticalAlignment="Center"
+                    PlaceholderText="{x:Static r:Resources.TimeFormatTitle}"
+                    Style="{StaticResource ValidationTextBoxStyle}">
+                    <ui:TextBox.Text>
+                        <Binding
+                            Mode="TwoWay"
+                            Path="TimeFormat"
+                            UpdateSourceTrigger="PropertyChanged">
+                            <Binding.ValidationRules>
+                                <v:NotEmptyValidator />
+                                <v:TimeFormatValidator />
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </ui:TextBox.Text>
+                </ui:TextBox>
+            </c:CardSettingView.Header>
+        </c:CardSettingView>
+        <c:CardSettingView Title="{x:Static r:Resources.DateFormatTitle}" Subtitle="{x:Static r:Resources.CalendarDateFormatSubtitle}">
+            <c:CardSettingView.Icon>
+                <ui:SymbolIcon Symbol="CalendarEdit20" />
+            </c:CardSettingView.Icon>
+            <c:CardSettingView.Header>
+                <ui:TextBox
+                    Width="180"
+                    VerticalAlignment="Center"
+                    PlaceholderText="{x:Static r:Resources.DateFormatTitle}"
+                    Style="{StaticResource ValidationTextBoxStyle}">
+                    <ui:TextBox.Text>
+                        <Binding
+                            Mode="TwoWay"
+                            Path="DateFormat"
+                            UpdateSourceTrigger="PropertyChanged">
+                            <Binding.ValidationRules>
+                                <v:NotEmptyValidator />
+                                <v:DateFormatValidator />
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </ui:TextBox.Text>
+                </ui:TextBox>
+            </c:CardSettingView.Header>
+        </c:CardSettingView>
+        <c:CardSettingView Title="{x:Static r:Resources.StartWeekFrom}" Subtitle="{x:Static r:Resources.StartWeekFromSubtitle}">
+            <c:CardSettingView.Icon>
+                <ui:SymbolIcon Symbol="CalendarWeekStart20" />
+            </c:CardSettingView.Icon>
+            <c:CardSettingView.Header>
+                <ComboBox
+                    Width="160"
+                    VerticalAlignment="Center"
+                    SelectedIndex="{Binding DayOfWeekSetting, Mode=TwoWay}">
+                    <ComboBoxItem Content="{x:Static r:Resources.Sunday}" />
+                    <ComboBoxItem Content="{x:Static r:Resources.Monday}" />
+                    <ComboBoxItem Content="{x:Static r:Resources.Tuesday}" />
+                    <ComboBoxItem Content="{x:Static r:Resources.Wednesday}" />
+                    <ComboBoxItem Content="{x:Static r:Resources.Thursday}" />
+                    <ComboBoxItem Content="{x:Static r:Resources.Friday}" />
+                    <ComboBoxItem Content="{x:Static r:Resources.Saturday}" />
+                </ComboBox>
+            </c:CardSettingView.Header>
+        </c:CardSettingView>
+        <c:ExpanderSettingView Title="{x:Static r:Resources.StatusColors}" Subtitle="{x:Static r:Resources.StatusColorsSubtitle}">
+            <c:ExpanderSettingView.Icon>
+                <ui:SymbolIcon Symbol="Color20" />
+            </c:ExpanderSettingView.Icon>
+
+            <c:ExpanderSettingView.Content>
+                <StackPanel h:MarginSetter.LastItemMargin="5, 0" h:MarginSetter.Margin="5, 0, 5, 15">
+                    <Grid HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <ui:TextBlock
+                            Grid.Column="0"
+                            VerticalAlignment="Center"
+                            Text="{x:Static r:Resources.Free}"
+                            TextTrimming="CharacterEllipsis" />
+
+                        <ui:Button
+                            Grid.Column="1"
+                            VerticalAlignment="Center"
+                            Command="{Binding SelectColorCommand}"
+                            CommandParameter="FreeColor"
+                            Style="{StaticResource FlatButton}">
+                            <Rectangle
+                                MinWidth="30"
+                                MinHeight="20"
+                                RadiusX="5"
+                                RadiusY="5">
+                                <Rectangle.Fill>
+                                    <SolidColorBrush Color="{Binding FreeColor, Mode=OneWay}" />
+                                </Rectangle.Fill>
+                            </Rectangle>
+                        </ui:Button>
+                    </Grid>
+                    <Grid HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <ui:TextBlock
+                            Grid.Column="0"
+                            VerticalAlignment="Center"
+                            Text="{x:Static r:Resources.Tentative}"
+                            TextTrimming="CharacterEllipsis" />
+
+                        <ui:Button
+                            Grid.Column="1"
+                            VerticalAlignment="Center"
+                            Command="{Binding SelectColorCommand}"
+                            CommandParameter="TentativeColor"
+                            Style="{StaticResource FlatButton}">
+                            <Rectangle
+                                MinWidth="30"
+                                MinHeight="20"
+                                RadiusX="5"
+                                RadiusY="5">
+                                <Rectangle.Fill>
+                                    <SolidColorBrush Color="{Binding TentativeColor, Mode=OneWay}" />
+                                </Rectangle.Fill>
+                            </Rectangle>
+                        </ui:Button>
+                    </Grid>
+                    <Grid HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <ui:TextBlock
+                            Grid.Column="0"
+                            VerticalAlignment="Center"
+                            Text="{x:Static r:Resources.Busy}"
+                            TextTrimming="CharacterEllipsis" />
+
+                        <ui:Button
+                            Grid.Column="1"
+                            VerticalAlignment="Center"
+                            Command="{Binding SelectColorCommand}"
+                            CommandParameter="BusyColor"
+                            Style="{StaticResource FlatButton}">
+                            <Rectangle
+                                MinWidth="30"
+                                MinHeight="20"
+                                RadiusX="5"
+                                RadiusY="5">
+                                <Rectangle.Fill>
+                                    <SolidColorBrush Color="{Binding BusyColor, Mode=OneWay}" />
+                                </Rectangle.Fill>
+                            </Rectangle>
+                        </ui:Button>
+                    </Grid>
+                    <Grid HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <ui:TextBlock
+                            Grid.Column="0"
+                            VerticalAlignment="Center"
+                            Text="{x:Static r:Resources.Oof}"
+                            TextTrimming="CharacterEllipsis" />
+
+                        <ui:Button
+                            Grid.Column="1"
+                            VerticalAlignment="Center"
+                            Command="{Binding SelectColorCommand}"
+                            CommandParameter="OofColor"
+                            Style="{StaticResource FlatButton}">
+                            <Rectangle
+                                MinWidth="30"
+                                MinHeight="20"
+                                RadiusX="5"
+                                RadiusY="5">
+                                <Rectangle.Fill>
+                                    <SolidColorBrush Color="{Binding OofColor, Mode=OneWay}" />
+                                </Rectangle.Fill>
+                            </Rectangle>
+                        </ui:Button>
+                    </Grid>
+                    <Grid HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <ui:TextBlock
+                            Grid.Column="0"
+                            VerticalAlignment="Center"
+                            Text="{x:Static r:Resources.WorkingElsewhere}"
+                            TextTrimming="CharacterEllipsis" />
+
+                        <ui:Button
+                            Grid.Column="1"
+                            VerticalAlignment="Center"
+                            Command="{Binding SelectColorCommand}"
+                            CommandParameter="WorkingelsewhereColor"
+                            Style="{StaticResource FlatButton}">
+                            <Rectangle
+                                MinWidth="30"
+                                MinHeight="20"
+                                RadiusX="5"
+                                RadiusY="5">
+                                <Rectangle.Fill>
+                                    <SolidColorBrush Color="{Binding WorkingelsewhereColor, Mode=OneWay}" />
+                                </Rectangle.Fill>
+                            </Rectangle>
+                        </ui:Button>
+                    </Grid>
+                </StackPanel>
+            </c:ExpanderSettingView.Content>
+        </c:ExpanderSettingView>
+    </c:WidgetSettingsView.Settings>
+    <c:WidgetSettingsView.Content>
+        <StackPanel Margin="36,5,36,20">
+            <Grid Name="AccountBoxUI" Visibility="{Binding IsMicrosoftSignedIn, Mode=OneWay, Converter={StaticResource BoolToVisibility}}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <ui:TextBlock
+                    Grid.Row="0"
+                    Grid.ColumnSpan="2"
+                    Margin="1,-5,0,15"
+                    FontWeight="SemiBold"
+                    Text="{x:Static r:Resources.MSAccount}"
+                    TextTrimming="CharacterEllipsis" />
+
+                <c:PersonPicture
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Width="46"
+                    Height="46"
+                    VerticalAlignment="Center"
+                    PersonImageSource="{Binding Account.AvatarImageSource, Mode=OneWay}" />
+                <StackPanel
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="15,0"
+                    VerticalAlignment="Center"
+                    h:MarginSetter.LastItemMargin="0"
+                    h:MarginSetter.Margin="0, 0, 0, 2">
+                    <ui:TextBlock
+                        HorizontalAlignment="Stretch"
+                        FontSize="20"
+                        Text="{Binding Account.DisplayName, Mode=OneWay}"
+                        TextTrimming="CharacterEllipsis" />
+                    <ui:TextBlock
+                        FontSize="13"
+                        Opacity="0.8"
+                        Text="{Binding Account.Email, Mode=OneWay}"
+                        TextTrimming="CharacterEllipsis" />
+                </StackPanel>
+                <StackPanel
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
+                    <ui:Button
+                        VerticalAlignment="Center"
+                        Command="{Binding SignOutCommand}"
+                        Content="{x:Static r:Resources.SignOutLabel}" />
+                </StackPanel>
+            </Grid>
+            <ui:InfoBar
+                Title="{x:Static r:Resources.SignInLabel}"
+                Margin="-6"
+                HorizontalAlignment="Stretch"
+                IsClosable="False"
+                IsOpen="{Binding IsNotSignedIn, Mode=OneWay}"
+                Message="{x:Static r:Resources.SignInMessage}"
+                Severity="Informational">
+                <ui:InfoBar.Content>
+                    <ui:Button Content="{x:Static r:Resources.SignInLabel}" />
+                </ui:InfoBar.Content>
+            </ui:InfoBar>
+        </StackPanel>
+    </c:WidgetSettingsView.Content>
+
+</c:WidgetSettingsView>

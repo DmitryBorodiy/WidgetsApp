@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="BetterWidgets.Views.Dialogs.ListDialogView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:BetterWidgets.Views.Dialogs"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:r="clr-namespace:BetterWidgets.Resources"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    x:Name="Root"
+    mc:Ignorable="d">
+
+    <Grid
+        x:Name="RootLayout"
+        Width="250"
+        Height="190">
+        <ui:ListView
+            x:Name="UIListView"
+            Margin="-10,0"
+            VerticalAlignment="Top"
+            ItemTemplate="{Binding ItemTemplate, Mode=OneWay}"
+            ItemsSource="{Binding ItemsSource, Mode=OneWay}"
+            SelectedItem="{Binding SelectedItem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+        <ui:ProgressRing
+            Width="32"
+            Height="32"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            d:Visibility="Collapsed"
+            IsIndeterminate="True"
+            Visibility="{Binding IsLoading, Mode=OneWay, Converter={StaticResource BoolToVisibility}}" />
+    </Grid>
+</Page>

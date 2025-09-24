@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\dimab\\source\\Workspaces\\Power Widgets - customize your at-a-glance info\\BetterWidgets.Wpf\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{187B12CA-2AB9-4C66-AF31-E64908443D85}|BetterWidgets.Wpf.csproj|c:\\users\\dimab\\source\\workspaces\\power widgets - customize your at-a-glance info\\betterwidgets.wpf\\resources\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{187B12CA-2AB9-4C66-AF31-E64908443D85}|BetterWidgets.Wpf.csproj|solutionrelative:resources\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{99b8fa2f-ab90-4f57-9c32-949f146f1914}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:5:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{8ab2cef3-7c52-4e4a-8d07-1dd7f9f90a1c}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "299f61db-cfdb-4d1f-88be-804b4e7626bd",
+        "Display": 0,
+        "X": 409,
+        "Y": 141,
+        "Width": 1135,
+        "Height": 725,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "C:\\Users\\dimab\\source\\Workspaces\\Power Widgets - customize your at-a-glance info\\BetterWidgets.Wpf\\Resources\\Resources.resx",
+              "RelativeDocumentMoniker": "Resources\\Resources.resx",
+              "ToolTip": "C:\\Users\\dimab\\source\\Workspaces\\Power Widgets - customize your at-a-glance info\\BetterWidgets.Wpf\\Resources\\Resources.resx",
+              "RelativeToolTip": "Resources\\Resources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-03-17T17:57:34.274Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
