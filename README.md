@@ -1,11 +1,11 @@
-<img src="Assets/Hero art.png" style="border-radius: 10px; margin-bottom: 20px;" />
+<img src="Assets/Hero art.png" style="margin-bottom: 15px" />
 
 # Widgets App
 
 Boost your productivity and personalize your Windows desktop with powerful, beautiful widgets. Keep your essential information always visible — whether it's your schedule, tasks, weather, or quick notes — right on the desktop, always up to date and beautifully styled.
 
 <a href="https://apps.microsoft.com/detail/9mw29r6qcr68">
-    <img height="50px" src="Assets/ms-store-badge.svg" />
+    <img style="height: 50px;" src="Assets/ms-store-badge.svg" />
 </a>
 
 ## Available Widgets
