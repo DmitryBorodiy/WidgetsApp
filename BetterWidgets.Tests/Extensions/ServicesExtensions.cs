@@ -2,6 +2,7 @@
 using BetterWidgets.Tests.Services;
 using Microsoft.Extensions.DependencyInjection;
 using DataService = BetterWidgets.Tests.Services.DataService;
+using PermissionManager = BetterWidgets.Tests.Services.PermissionManager;
 
 namespace BetterWidgets.Tests.Extensions
 {
@@ -15,6 +16,7 @@ namespace BetterWidgets.Tests.Extensions
                        .AddScoped(typeof(DataService<>));
 
         internal static IServiceCollection AddTestPermissionManager(this IServiceCollection services)
-            => services.AddScoped(typeof(IPermissionManager<>), typeof(TestPermissionManager<>));
+            => services.AddScoped<IPermissionManager, PermissionManager>()
+                       .AddScoped(typeof(IPermissionManager<>), typeof(TestPermissionManager<>));
     }
 }

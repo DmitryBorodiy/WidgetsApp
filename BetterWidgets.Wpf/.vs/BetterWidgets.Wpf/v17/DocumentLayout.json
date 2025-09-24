@@ -1,9 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\dimab\\source\\Workspaces\\Power Widgets - customize your at-a-glance info\\BetterWidgets.Wpf\\",
+  "WorkspaceRootPath": "C:\\Users\\dimab\\git\\WidgetsApp\\BetterWidgets.Wpf\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{187B12CA-2AB9-4C66-AF31-E64908443D85}|BetterWidgets.Wpf.csproj|c:\\users\\dimab\\source\\workspaces\\power widgets - customize your at-a-glance info\\betterwidgets.wpf\\resources\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "AbsoluteMoniker": "D:0:0:{187B12CA-2AB9-4C66-AF31-E64908443D85}|BetterWidgets.Wpf.csproj|c:\\users\\dimab\\git\\widgetsapp\\betterwidgets.wpf\\services\\gpuperformancewatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{187B12CA-2AB9-4C66-AF31-E64908443D85}|BetterWidgets.Wpf.csproj|solutionrelative:services\\gpuperformancewatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{187B12CA-2AB9-4C66-AF31-E64908443D85}|BetterWidgets.Wpf.csproj|c:\\users\\dimab\\git\\widgetsapp\\betterwidgets.wpf\\resources\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
       "RelativeMoniker": "D:0:0:{187B12CA-2AB9-4C66-AF31-E64908443D85}|BetterWidgets.Wpf.csproj|solutionrelative:resources\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
     }
   ],
@@ -14,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GpuPerformanceWatcher.cs",
+              "DocumentMoniker": "C:\\Users\\dimab\\git\\WidgetsApp\\BetterWidgets.Wpf\\Services\\GpuPerformanceWatcher.cs",
+              "RelativeDocumentMoniker": "Services\\GpuPerformanceWatcher.cs",
+              "ToolTip": "C:\\Users\\dimab\\git\\WidgetsApp\\BetterWidgets.Wpf\\Services\\GpuPerformanceWatcher.cs",
+              "RelativeToolTip": "Services\\GpuPerformanceWatcher.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAewIIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T09:43:10.133Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -71,11 +88,11 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Resources.resx",
-              "DocumentMoniker": "C:\\Users\\dimab\\source\\Workspaces\\Power Widgets - customize your at-a-glance info\\BetterWidgets.Wpf\\Resources\\Resources.resx",
+              "DocumentMoniker": "C:\\Users\\dimab\\git\\WidgetsApp\\BetterWidgets.Wpf\\Resources\\Resources.resx",
               "RelativeDocumentMoniker": "Resources\\Resources.resx",
-              "ToolTip": "C:\\Users\\dimab\\source\\Workspaces\\Power Widgets - customize your at-a-glance info\\BetterWidgets.Wpf\\Resources\\Resources.resx",
+              "ToolTip": "C:\\Users\\dimab\\git\\WidgetsApp\\BetterWidgets.Wpf\\Resources\\Resources.resx",
               "RelativeToolTip": "Resources\\Resources.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
               "WhenOpened": "2025-03-17T17:57:34.274Z",

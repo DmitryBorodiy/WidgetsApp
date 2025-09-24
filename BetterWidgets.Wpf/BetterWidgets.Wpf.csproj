@@ -84,9 +84,6 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="..\BetterWidgets.Msix\Images\StoreLogo.png" Link="Assets\StoreLogo.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Assets\BlankWidget\icon-48.png" />
     <Resource Include="Assets\CalendarWidget\icon-48.png" />
     <Resource Include="Assets\ClockWidget\icon-48.png" />
@@ -115,6 +112,7 @@
     <Resource Include="Assets\WeatherWidget\UnitAssets\13n.png" />
     <Resource Include="Assets\WeatherWidget\UnitAssets\50d.png" />
     <Resource Include="Assets\WeatherWidget\UnitAssets\50n.png" />
+    <Resource Include="Assets\StoreLogo.png" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />

@@ -16,19 +16,21 @@ namespace BetterWidgets.Services
         private readonly IDataService _dataService;
         private readonly IWidgetManager _widgetManager;
         private readonly IPermissionManager _permissions;
+        private readonly IPermissionManager<T> _widgetPermissions;
         private readonly ILogger<GpuPerformanceWatcher<T>> _logger;
 
         private readonly Computer _computer;
         private readonly GpuUpdateVisitor _gpuUpdateVisitor;
         #endregion
 
-        public GpuPerformanceWatcher(ILogger<GpuPerformanceWatcher<T>> logger, IDataService dataService, GpuUpdateVisitor gpuUpdateVisitor, IPermissionManager permissions)
+        public GpuPerformanceWatcher(ILogger<GpuPerformanceWatcher<T>> logger, IDataService dataService, GpuUpdateVisitor gpuUpdateVisitor, IPermissionManager permissions, IPermissionManager<T> widgetPermissions)
         {
             _logger = logger;
             _permissions = permissions;
             _dataService = dataService;
             _gpuUpdateVisitor = gpuUpdateVisitor;
             _widgetManager = WidgetManager.Current;
+            _widgetPermissions = widgetPermissions;
 
             _computer = new Computer() { IsGpuEnabled = true };
         }
@@ -126,9 +128,7 @@ namespace BetterWidgets.Services
 
         public Task<PermissionState> RequestAccessAsync(PermissionLevel level = PermissionLevel.HighLevel)
         {
-            var widget = _widgetManager?.GetWidgetByType<T>();
-
-            var access = _permissions.TryCheckPermissionState(widget.Id, new Permission(Scopes.SystemInformation));
+            var access = _widgetPermissions.TryCheckPermissionState(new Permission(Scopes.SystemInformation));
             _hasAccess = access == PermissionState.Allowed;
 
             return Task.FromResult(access);

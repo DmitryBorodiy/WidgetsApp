@@ -13,7 +13,7 @@ namespace BetterWidgets.Tests
         #region Services
         private readonly ICpuWatcher _cpuWatcher;
         private readonly ITestOutputHelper _output;
-        private readonly IPerformanceWatcher _gpuWatcher;
+        private readonly IPerformanceWatcher<GpuWidget> _gpuWatcher;
         private readonly ISystemInformation<CpuWidget> _sysInfo;
         #endregion
 
@@ -22,7 +22,7 @@ namespace BetterWidgets.Tests
             _output = output;
             _cpuWatcher = fixture.Services?.GetRequiredService<ICpuWatcher>();
             _sysInfo = fixture.Services?.GetRequiredService<ISystemInformation<CpuWidget>>();
-            _gpuWatcher = fixture.Services?.GetRequiredKeyedService<IPerformanceWatcher>(nameof(GpuPerformanceWatcher));
+            _gpuWatcher = fixture.Services?.GetRequiredKeyedService<IPerformanceWatcher<GpuWidget>>(nameof(GpuPerformanceWatcher<IWidget>));
         }
 
         [Fact]
