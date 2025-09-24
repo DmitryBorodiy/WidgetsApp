@@ -1,4 +1,4 @@
-<img src="Assets/Hero art.png" style="margin-bottom: 15px" />
+<img src="Assets/Hero art.png" style="margin: 10px 5px; 10px 5px;" />
 
 # Widgets App
 
